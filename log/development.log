@@ -337,3 +337,166 @@ Processing by DomainsController#index as */*
 Completed 200 OK in 9ms (Views: 5.9ms | ActiveRecord: 1.9ms)
 
 
+Started GET "/" for ::1 at 2020-07-29 21:30:42 -0300
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/macministant/.rvm/gems/ruby-2.7.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/macministant/.rvm/gems/ruby-2.7.0/gems/railties-5.2.4.3/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/macministant/.rvm/gems/ruby-2.7.0/gems/railties-5.2.4.3/lib/rails/templates/rails/welcome/index.html.erb (2.3ms)
+Completed 200 OK in 7ms (Views: 5.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/favicon.ico" for ::1 at 2020-07-29 21:30:42 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+actionpack (5.2.4.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+actionpack (5.2.4.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.3) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.4.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.4.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/" for ::1 at 2020-07-29 21:30:42 -0300
+Processing by Rails::WelcomeController#index as */*
+  Rendering /Users/macministant/.rvm/gems/ruby-2.7.0/gems/railties-5.2.4.3/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/macministant/.rvm/gems/ruby-2.7.0/gems/railties-5.2.4.3/lib/rails/templates/rails/welcome/index.html.erb (1.9ms)
+Completed 200 OK in 10ms (Views: 5.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/domains" for ::1 at 2020-07-29 21:30:49 -0300
+Processing by DomainsController#index as HTML
+  [1m[36mDomain Load (0.4ms)[0m  [1m[34mSELECT "domains".* FROM "domains"[0m
+  ↳ app/controllers/domains_controller.rb:8
+Completed 200 OK in 10ms (Views: 6.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/domains" for ::1 at 2020-07-29 21:30:49 -0300
+Processing by DomainsController#index as */*
+  [1m[36mDomain Load (0.1ms)[0m  [1m[34mSELECT "domains".* FROM "domains"[0m
+  ↳ app/controllers/domains_controller.rb:8
+Completed 200 OK in 2ms (Views: 2.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/domains" for ::1 at 2020-07-29 21:31:54 -0300
+Processing by DomainsController#index as */*
+  [1m[36mDomain Load (0.2ms)[0m  [1m[34mSELECT "domains".* FROM "domains"[0m
+  ↳ app/controllers/domains_controller.rb:8
+Completed 200 OK in 3ms (Views: 2.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/domains" for ::1 at 2020-07-29 22:10:05 -0300
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/macministant/.rvm/gems/ruby-2.7.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+Processing by DomainsController#index as */*
+  [1m[36mDomain Load (0.4ms)[0m  [1m[34mSELECT "domains".* FROM "domains"[0m
+  ↳ app/controllers/domains_controller.rb:8
+Completed 200 OK in 12ms (Views: 8.1ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/domains" for ::1 at 2020-07-29 22:11:17 -0300
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/macministant/.rvm/gems/ruby-2.7.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+Processing by DomainsController#index as */*
+  [1m[36mDomain Load (0.5ms)[0m  [1m[34mSELECT "domains".* FROM "domains"[0m
+  ↳ app/controllers/domains_controller.rb:8
+Completed 200 OK in 11ms (Views: 7.9ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/domains" for ::1 at 2020-07-29 22:28:40 -0300
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/macministant/.rvm/gems/ruby-2.7.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+Processing by DomainsController#index as */*
+  [1m[36mDomain Load (0.7ms)[0m  [1m[34mSELECT "domains".* FROM "domains"[0m
+  ↳ app/controllers/domains_controller.rb:8
+Completed 200 OK in 23ms (Views: 13.1ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/domains" for 127.0.0.1 at 2020-07-29 22:29:17 -0300
+Processing by DomainsController#index as */*
+  [1m[36mDomain Load (0.5ms)[0m  [1m[34mSELECT "domains".* FROM "domains"[0m
+  ↳ app/controllers/domains_controller.rb:8
+Completed 200 OK in 3ms (Views: 2.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/domains" for 127.0.0.1 at 2020-07-29 22:30:47 -0300
+Processing by DomainsController#index as */*
+  [1m[36mDomain Load (0.2ms)[0m  [1m[34mSELECT "domains".* FROM "domains"[0m
+  ↳ app/controllers/domains_controller.rb:8
+Completed 200 OK in 5ms (Views: 4.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/domains" for 127.0.0.1 at 2020-07-29 23:14:21 -0300
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/macministant/.rvm/gems/ruby-2.7.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+Processing by DomainsController#index as */*
+  [1m[36mDomain Load (0.5ms)[0m  [1m[34mSELECT "domains".* FROM "domains"[0m
+  ↳ app/controllers/domains_controller.rb:8
+Completed 200 OK in 37ms (Views: 14.5ms | ActiveRecord: 4.3ms)
+
+
+Started GET "/domains" for 192.168.10.102 at 2020-07-29 23:14:33 -0300
+Processing by DomainsController#index as */*
+  [1m[36mDomain Load (0.8ms)[0m  [1m[34mSELECT "domains".* FROM "domains"[0m
+  ↳ app/controllers/domains_controller.rb:8
+Completed 200 OK in 5ms (Views: 3.5ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/domains" for 192.168.10.102 at 2020-07-29 23:14:43 -0300
+Processing by DomainsController#index as HTML
+  [1m[36mDomain Load (0.3ms)[0m  [1m[34mSELECT "domains".* FROM "domains"[0m
+  ↳ app/controllers/domains_controller.rb:8
+Completed 200 OK in 3ms (Views: 2.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/domains" for 192.168.10.102 at 2020-07-29 23:14:43 -0300
+Processing by DomainsController#index as */*
+  [1m[36mDomain Load (0.2ms)[0m  [1m[34mSELECT "domains".* FROM "domains"[0m
+  ↳ app/controllers/domains_controller.rb:8
+Completed 200 OK in 5ms (Views: 4.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/domains" for 192.168.10.102 at 2020-07-29 23:14:49 -0300
+Processing by DomainsController#index as HTML
+  [1m[36mDomain Load (0.3ms)[0m  [1m[34mSELECT "domains".* FROM "domains"[0m
+  ↳ app/controllers/domains_controller.rb:8
+Completed 200 OK in 77ms (Views: 76.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/domains" for 192.168.10.102 at 2020-07-29 23:15:43 -0300
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/macministant/.rvm/gems/ruby-2.7.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+Processing by DomainsController#index as */*
+  [1m[36mDomain Load (0.4ms)[0m  [1m[34mSELECT "domains".* FROM "domains"[0m
+  ↳ app/controllers/domains_controller.rb:8
+Completed 200 OK in 8ms (Views: 5.8ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/domains/" for 127.0.0.1 at 2020-07-29 23:15:52 -0300
+Processing by DomainsController#index as HTML
+  [1m[36mDomain Load (0.2ms)[0m  [1m[34mSELECT "domains".* FROM "domains"[0m
+  ↳ app/controllers/domains_controller.rb:8
+Completed 200 OK in 3ms (Views: 2.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/domains/" for 127.0.0.1 at 2020-07-29 23:16:00 -0300
+Processing by DomainsController#index as HTML
+  [1m[36mDomain Load (0.1ms)[0m  [1m[34mSELECT "domains".* FROM "domains"[0m
+  ↳ app/controllers/domains_controller.rb:8
+Completed 200 OK in 2ms (Views: 2.0ms | ActiveRecord: 0.1ms)
+
+
