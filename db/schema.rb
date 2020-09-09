@@ -10,12 +10,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_05_27_011136) do
+ActiveRecord::Schema.define(version: 2020_09_09_020743) do
 
   create_table "domains", force: :cascade do |t|
     t.string "description"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "image_classes", force: :cascade do |t|
+    t.string "name"
+    t.integer "domain_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["domain_id"], name: "index_image_classes_on_domain_id"
   end
 
 end

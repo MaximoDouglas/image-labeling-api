@@ -10,7 +10,14 @@ class DomainsController < ApplicationController
 
   # GET /domains/1
   def show
-    render json: @domain
+    render json: {
+      description: @domain.description, 
+      classes: domain_classes(@domain)
+    }
+  end
+
+  def domain_classes(domain)
+    return ImageClass.where(domain: domain.id)
   end
 
   # POST /domains

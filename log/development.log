@@ -651,3 +651,400 @@ Processing by DomainsController#create as HTML
 Completed 201 Created in 547ms (Views: 1.0ms | ActiveRecord: 540.9ms)
 
 
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/doug/.rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+Migrating to CreateImageClasses (20200909020743)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /home/doug/.rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ db/migrate/20200909020743_create_image_classes.rb:3
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TABLE "image_classes" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "domain_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, CONSTRAINT "fk_rails_c373751daa"
+FOREIGN KEY ("domain_id")
+  REFERENCES "domains" ("id")
+)[0m
+  ↳ db/migrate/20200909020743_create_image_classes.rb:3
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_image_classes_on_domain_id" ON "image_classes" ("domain_id")[0m
+  ↳ db/migrate/20200909020743_create_image_classes.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20200909020743"]]
+  ↳ /home/doug/.rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[35m (6.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /home/doug/.rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /home/doug/.rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /home/doug/.rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /home/doug/.rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/doug/.rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+Started GET "/domains/" for 127.0.0.1 at 2020-09-08 23:12:55 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/doug/.rvm/gems/ruby-2.7.1/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+Processing by DomainsController#index as */*
+  [1m[36mDomain Load (0.1ms)[0m  [1m[34mSELECT "domains".* FROM "domains"[0m
+  ↳ app/controllers/domains_controller.rb:8
+Completed 200 OK in 6ms (Views: 4.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/imageclasses/" for 127.0.0.1 at 2020-09-08 23:13:01 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/imageclasses"):
+  
+actionpack (5.2.4.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+actionpack (5.2.4.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.3) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.4.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.4.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/imageclass/" for 127.0.0.1 at 2020-09-08 23:13:04 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/imageclass"):
+  
+actionpack (5.2.4.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+actionpack (5.2.4.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.3) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.4.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.4.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/imageclasses/" for 127.0.0.1 at 2020-09-08 23:13:07 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/imageclasses"):
+  
+actionpack (5.2.4.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+actionpack (5.2.4.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.3) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.4.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.4.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/image_classes/" for 127.0.0.1 at 2020-09-08 23:13:11 -0300
+Processing by ImageClassesController#index as */*
+  [1m[36mImageClass Load (0.2ms)[0m  [1m[34mSELECT "image_classes".* FROM "image_classes"[0m
+  ↳ app/controllers/image_classes_controller.rb:8
+Completed 200 OK in 6ms (Views: 1.3ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/image_classes/" for 127.0.0.1 at 2020-09-08 23:15:12 -0300
+Processing by ImageClassesController#create as */*
+  Parameters: {"name"=>"gato", "domain"=>1, "image_class"=>{"name"=>"gato"}}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/image_classes_controller.rb:20
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/image_classes_controller.rb:20
+Completed 422 Unprocessable Entity in 557ms (Views: 0.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/domains/" for 127.0.0.1 at 2020-09-08 23:15:25 -0300
+Processing by DomainsController#index as */*
+  [1m[36mDomain Load (0.1ms)[0m  [1m[34mSELECT "domains".* FROM "domains"[0m
+  ↳ app/controllers/domains_controller.rb:8
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/image_classes/" for 127.0.0.1 at 2020-09-08 23:15:37 -0300
+Processing by ImageClassesController#create as */*
+  Parameters: {"name"=>"gato", "domain_id"=>1, "image_class"=>{"name"=>"gato", "domain_id"=>1}}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/image_classes_controller.rb:20
+  [1m[36mDomain Load (0.2ms)[0m  [1m[34mSELECT  "domains".* FROM "domains" WHERE "domains"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/image_classes_controller.rb:20
+  [1m[36mImageClass Create (0.2ms)[0m  [1m[32mINSERT INTO "image_classes" ("name", "domain_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "gato"], ["domain_id", 1], ["created_at", "2020-09-09 02:15:37.253925"], ["updated_at", "2020-09-09 02:15:37.253925"]]
+  ↳ app/controllers/image_classes_controller.rb:20
+  [1m[35m (2.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/image_classes_controller.rb:20
+Completed 201 Created in 10ms (Views: 0.6ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/domains/" for 127.0.0.1 at 2020-09-08 23:20:27 -0300
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/doug/.rvm/gems/ruby-2.7.1/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+Processing by DomainsController#index as */*
+  [1m[36mDomain Load (0.1ms)[0m  [1m[34mSELECT "domains".* FROM "domains"[0m
+  ↳ app/controllers/domains_controller.rb:8
+Completed 200 OK in 7ms (Views: 5.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/domains/1" for 127.0.0.1 at 2020-09-08 23:20:30 -0300
+Processing by DomainsController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mDomain Load (0.2ms)[0m  [1m[34mSELECT  "domains".* FROM "domains" WHERE "domains"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/domains_controller.rb:44
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/domains/1" for 127.0.0.1 at 2020-09-08 23:22:08 -0300
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/doug/.rvm/gems/ruby-2.7.1/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+Processing by DomainsController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mDomain Load (0.2ms)[0m  [1m[34mSELECT  "domains".* FROM "domains" WHERE "domains"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/domains_controller.rb:48
+Completed 200 OK in 6ms (Views: 0.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/domains/1" for 127.0.0.1 at 2020-09-08 23:23:11 -0300
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/doug/.rvm/gems/ruby-2.7.1/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+Processing by DomainsController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mDomain Load (0.1ms)[0m  [1m[34mSELECT  "domains".* FROM "domains" WHERE "domains"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/domains_controller.rb:51
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.5ms)
+
+
+  
+NameError (uninitialized constant DomainsController::ImageClasses):
+  
+app/controllers/domains_controller.rb:20:in `domain_classes'
+app/controllers/domains_controller.rb:15:in `show'
+Started GET "/domains/1" for 127.0.0.1 at 2020-09-08 23:23:33 -0300
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/doug/.rvm/gems/ruby-2.7.1/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+  
+SyntaxError (/home/doug/dev/git/image-labeling-api/app/controllers/domains_controller.rb:21: syntax error, unexpected `end', expecting ':'
+  end
+  ^~~
+/home/doug/dev/git/image-labeling-api/app/controllers/domains_controller.rb:58: syntax error, unexpected end-of-input, expecting `end'):
+  
+app/controllers/domains_controller.rb:21: syntax error, unexpected `end', expecting ':'
+app/controllers/domains_controller.rb:58: syntax error, unexpected end-of-input, expecting `end'
+Started GET "/domains/1" for 127.0.0.1 at 2020-09-08 23:24:31 -0300
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/doug/.rvm/gems/ruby-2.7.1/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+  
+SyntaxError (/home/doug/dev/git/image-labeling-api/app/controllers/domains_controller.rb:20: syntax error, unexpected `else', expecting ':'
+...main_id = domain.id) ? "a" else "b" 
+...                           ^~~~
+):
+  
+app/controllers/domains_controller.rb:20: syntax error, unexpected `else', expecting ':'
+Started GET "/domains/1" for 127.0.0.1 at 2020-09-08 23:25:30 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/doug/.rvm/gems/ruby-2.7.1/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+  
+SyntaxError (/home/doug/dev/git/image-labeling-api/app/controllers/domains_controller.rb:21: syntax error, unexpected `else', expecting ':'
+...   if (image_classes)? "a" else "b"
+...                           ^~~~
+):
+  
+app/controllers/domains_controller.rb:21: syntax error, unexpected `else', expecting ':'
+Started GET "/domains/1" for 127.0.0.1 at 2020-09-08 23:25:52 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/doug/.rvm/gems/ruby-2.7.1/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+  
+SyntaxError (/home/doug/dev/git/image-labeling-api/app/controllers/domains_controller.rb:59: syntax error, unexpected end-of-input, expecting `end'):
+  
+app/controllers/domains_controller.rb:59: syntax error, unexpected end-of-input, expecting `end'
+Started GET "/domains/1" for 127.0.0.1 at 2020-09-08 23:26:14 -0300
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/doug/.rvm/gems/ruby-2.7.1/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+Processing by DomainsController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mDomain Load (0.1ms)[0m  [1m[34mSELECT  "domains".* FROM "domains" WHERE "domains"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/domains_controller.rb:51
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.4ms)
+
+
+  
+NameError (uninitialized constant DomainsController::ImageClasses):
+  
+app/controllers/domains_controller.rb:20:in `domain_classes'
+app/controllers/domains_controller.rb:15:in `show'
+Started GET "/domains/1" for 127.0.0.1 at 2020-09-08 23:26:48 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/doug/.rvm/gems/ruby-2.7.1/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+Processing by DomainsController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mDomain Load (0.1ms)[0m  [1m[34mSELECT  "domains".* FROM "domains" WHERE "domains"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/domains_controller.rb:51
+  [1m[36mImageClass Load (0.1ms)[0m  [1m[34mSELECT  "image_classes".* FROM "image_classes" WHERE "image_classes"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/domains_controller.rb:20
+Completed 404 Not Found in 7ms (ActiveRecord: 0.8ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find ImageClass with 'id'={:domain_id=>1}):
+  
+app/controllers/domains_controller.rb:20:in `domain_classes'
+app/controllers/domains_controller.rb:15:in `show'
+Started GET "/domains/1" for 127.0.0.1 at 2020-09-08 23:27:09 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/doug/.rvm/gems/ruby-2.7.1/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+Processing by DomainsController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mDomain Load (0.1ms)[0m  [1m[34mSELECT  "domains".* FROM "domains" WHERE "domains"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/domains_controller.rb:51
+  [1m[36mImageClass Load (0.1ms)[0m  [1m[34mSELECT  "image_classes".* FROM "image_classes" WHERE "image_classes"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/domains_controller.rb:20
+Completed 404 Not Found in 9ms (ActiveRecord: 0.9ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find ImageClass with 'id'={:domain=>1}):
+  
+app/controllers/domains_controller.rb:20:in `domain_classes'
+app/controllers/domains_controller.rb:15:in `show'
+Started GET "/domains/1" for 127.0.0.1 at 2020-09-08 23:27:19 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/doug/.rvm/gems/ruby-2.7.1/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+Processing by DomainsController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mDomain Load (0.1ms)[0m  [1m[34mSELECT  "domains".* FROM "domains" WHERE "domains"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/domains_controller.rb:51
+  [1m[36mImageClass Load (0.1ms)[0m  [1m[34mSELECT  "image_classes".* FROM "image_classes" WHERE "image_classes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/domains_controller.rb:20
+Completed 200 OK in 12ms (Views: 0.8ms | ActiveRecord: 1.1ms)
+
+
+Started POST "/image_classes/" for 127.0.0.1 at 2020-09-08 23:27:35 -0300
+Processing by ImageClassesController#create as */*
+  Parameters: {"name"=>"catioro", "domain_id"=>1, "image_class"=>{"name"=>"catioro", "domain_id"=>1}}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/image_classes_controller.rb:20
+  [1m[36mDomain Load (0.2ms)[0m  [1m[34mSELECT  "domains".* FROM "domains" WHERE "domains"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/image_classes_controller.rb:20
+  [1m[36mImageClass Create (0.8ms)[0m  [1m[32mINSERT INTO "image_classes" ("name", "domain_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "catioro"], ["domain_id", 1], ["created_at", "2020-09-09 02:27:35.452671"], ["updated_at", "2020-09-09 02:27:35.452671"]]
+  ↳ app/controllers/image_classes_controller.rb:20
+  [1m[35m (3.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/image_classes_controller.rb:20
+Completed 201 Created in 11ms (Views: 0.5ms | ActiveRecord: 4.3ms)
+
+
+Started GET "/domains/1" for 127.0.0.1 at 2020-09-08 23:27:39 -0300
+Processing by DomainsController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mDomain Load (0.1ms)[0m  [1m[34mSELECT  "domains".* FROM "domains" WHERE "domains"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/domains_controller.rb:51
+  [1m[36mImageClass Load (0.0ms)[0m  [1m[34mSELECT  "image_classes".* FROM "image_classes" WHERE "image_classes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/domains_controller.rb:20
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/image_classes/" for 127.0.0.1 at 2020-09-08 23:27:53 -0300
+Processing by ImageClassesController#index as */*
+  [1m[36mImageClass Load (0.1ms)[0m  [1m[34mSELECT "image_classes".* FROM "image_classes"[0m
+  ↳ app/controllers/image_classes_controller.rb:8
+Completed 200 OK in 1ms (Views: 0.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/domains/1" for 127.0.0.1 at 2020-09-08 23:28:01 -0300
+Processing by DomainsController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mDomain Load (0.1ms)[0m  [1m[34mSELECT  "domains".* FROM "domains" WHERE "domains"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/domains_controller.rb:51
+  [1m[36mImageClass Load (0.0ms)[0m  [1m[34mSELECT  "image_classes".* FROM "image_classes" WHERE "image_classes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/domains_controller.rb:20
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/domains/1" for 127.0.0.1 at 2020-09-08 23:28:03 -0300
+Processing by DomainsController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mDomain Load (0.1ms)[0m  [1m[34mSELECT  "domains".* FROM "domains" WHERE "domains"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/domains_controller.rb:51
+  [1m[36mImageClass Load (0.0ms)[0m  [1m[34mSELECT  "image_classes".* FROM "image_classes" WHERE "image_classes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/domains_controller.rb:20
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/domains/1" for 127.0.0.1 at 2020-09-08 23:28:17 -0300
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/doug/.rvm/gems/ruby-2.7.1/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+Processing by DomainsController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mDomain Load (0.1ms)[0m  [1m[34mSELECT  "domains".* FROM "domains" WHERE "domains"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/domains_controller.rb:51
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.4ms)
+
+
+  
+ArgumentError (wrong number of arguments (given 1, expected 0)):
+  
+app/controllers/domains_controller.rb:20:in `domain_classes'
+app/controllers/domains_controller.rb:15:in `show'
+Started GET "/domains/1" for 127.0.0.1 at 2020-09-08 23:29:13 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/doug/.rvm/gems/ruby-2.7.1/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+Processing by DomainsController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mDomain Load (0.1ms)[0m  [1m[34mSELECT  "domains".* FROM "domains" WHERE "domains"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/domains_controller.rb:51
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.5ms)
+
+
+  
+ArgumentError (Unsupported argument type: 1 (Integer)):
+  
+app/controllers/domains_controller.rb:20:in `domain_classes'
+app/controllers/domains_controller.rb:15:in `show'
+Started GET "/domains/1" for 127.0.0.1 at 2020-09-08 23:29:30 -0300
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/doug/.rvm/gems/ruby-2.7.1/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+Processing by DomainsController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mDomain Load (0.1ms)[0m  [1m[34mSELECT  "domains".* FROM "domains" WHERE "domains"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/domains_controller.rb:51
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.4ms)
+
+
+  
+ArgumentError (Unsupported argument type: 1 (Integer)):
+  
+app/controllers/domains_controller.rb:20:in `domain_classes'
+app/controllers/domains_controller.rb:15:in `show'
+Started GET "/domains/1" for 127.0.0.1 at 2020-09-08 23:30:19 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/doug/.rvm/gems/ruby-2.7.1/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+Processing by DomainsController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mDomain Load (0.3ms)[0m  [1m[34mSELECT  "domains".* FROM "domains" WHERE "domains"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/domains_controller.rb:51
+  [1m[36mImageClass Load (0.1ms)[0m  [1m[34mSELECT "image_classes".* FROM "image_classes" WHERE "image_classes"."domain_id" = ?[0m  [["domain_id", 1]]
+  ↳ app/controllers/domains_controller.rb:13
+Completed 200 OK in 12ms (Views: 4.2ms | ActiveRecord: 1.2ms)
+
+
