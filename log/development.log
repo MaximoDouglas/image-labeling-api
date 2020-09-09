@@ -500,3 +500,154 @@ Processing by DomainsController#index as HTML
 Completed 200 OK in 2ms (Views: 2.0ms | ActiveRecord: 0.1ms)
 
 
+Started GET "/domains/" for 127.0.0.1 at 2020-09-03 22:51:31 -0300
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/doug/.rvm/gems/ruby-2.7.1/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+Processing by DomainsController#index as HTML
+  [1m[36mDomain Load (0.2ms)[0m  [1m[34mSELECT "domains".* FROM "domains"[0m
+  ↳ app/controllers/domains_controller.rb:8
+Completed 200 OK in 7ms (Views: 5.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/domains" for 127.0.0.1 at 2020-09-03 22:59:41 -0300
+Processing by DomainsController#index as */*
+  [1m[36mDomain Load (0.3ms)[0m  [1m[34mSELECT "domains".* FROM "domains"[0m
+  ↳ app/controllers/domains_controller.rb:8
+Completed 200 OK in 3ms (Views: 2.5ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/domains/" for 127.0.0.1 at 2020-09-03 23:00:27 -0300
+Processing by DomainsController#create as */*
+  Parameters: {"description"=>"new-domain", "domain"=>{"description"=>"new-domain"}}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/domains_controller.rb:20
+  [1m[36mDomain Create (0.2ms)[0m  [1m[32mINSERT INTO "domains" ("description", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["description", "new-domain"], ["created_at", "2020-09-04 02:00:27.205782"], ["updated_at", "2020-09-04 02:00:27.205782"]]
+  ↳ app/controllers/domains_controller.rb:20
+  [1m[35m (3.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/domains_controller.rb:20
+Completed 201 Created in 8ms (Views: 1.2ms | ActiveRecord: 4.2ms)
+
+
+Started GET "/domains/" for 127.0.0.1 at 2020-09-03 23:15:00 -0300
+Processing by DomainsController#index as HTML
+  [1m[36mDomain Load (0.1ms)[0m  [1m[34mSELECT "domains".* FROM "domains"[0m
+  ↳ app/controllers/domains_controller.rb:8
+Completed 200 OK in 2ms (Views: 2.0ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/domains/" for 127.0.0.1 at 2020-09-03 23:15:27 -0300
+Processing by DomainsController#create as HTML
+  Parameters: {"description"=>"sera que funciona", "domain"=>{"description"=>"sera que funciona"}}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/domains_controller.rb:20
+  [1m[36mDomain Create (0.5ms)[0m  [1m[32mINSERT INTO "domains" ("description", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["description", "sera que funciona"], ["created_at", "2020-09-04 02:15:27.594089"], ["updated_at", "2020-09-04 02:15:27.594089"]]
+  ↳ app/controllers/domains_controller.rb:20
+  [1m[35m (3.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/domains_controller.rb:20
+Completed 201 Created in 14ms (Views: 1.1ms | ActiveRecord: 3.9ms)
+
+
+Started GET "/domains/" for 127.0.0.1 at 2020-09-04 12:47:41 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/doug/.rvm/gems/ruby-2.7.1/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+Processing by DomainsController#index as HTML
+  [1m[36mDomain Load (0.2ms)[0m  [1m[34mSELECT "domains".* FROM "domains"[0m
+  ↳ app/controllers/domains_controller.rb:8
+Completed 200 OK in 10ms (Views: 6.6ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/domains/" for 127.0.0.1 at 2020-09-04 12:48:10 -0300
+Processing by DomainsController#create as HTML
+  Parameters: {"description"=>"Uhtred", "domain"=>{"description"=>"Uhtred"}}
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/domains_controller.rb:20
+  [1m[36mDomain Create (0.5ms)[0m  [1m[32mINSERT INTO "domains" ("description", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["description", "Uhtred"], ["created_at", "2020-09-04 15:48:10.038264"], ["updated_at", "2020-09-04 15:48:10.038264"]]
+  ↳ app/controllers/domains_controller.rb:20
+  [1m[35m (4.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/domains_controller.rb:20
+Completed 201 Created in 12ms (Views: 0.9ms | ActiveRecord: 5.3ms)
+
+
+Started GET "/domains/" for 127.0.0.1 at 2020-09-04 12:50:09 -0300
+Processing by DomainsController#index as HTML
+  [1m[36mDomain Load (0.1ms)[0m  [1m[34mSELECT "domains".* FROM "domains"[0m
+  ↳ app/controllers/domains_controller.rb:8
+Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/domains/" for 127.0.0.1 at 2020-09-04 12:50:27 -0300
+Processing by DomainsController#create as HTML
+  Parameters: {"description"=>"Uhtred 1", "domain"=>{"description"=>"Uhtred 1"}}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/domains_controller.rb:20
+  [1m[36mDomain Create (0.7ms)[0m  [1m[32mINSERT INTO "domains" ("description", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["description", "Uhtred 1"], ["created_at", "2020-09-04 15:50:27.472012"], ["updated_at", "2020-09-04 15:50:27.472012"]]
+  ↳ app/controllers/domains_controller.rb:20
+  [1m[35m (3.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/domains_controller.rb:20
+Completed 201 Created in 13ms (Views: 1.0ms | ActiveRecord: 4.2ms)
+
+
+Started GET "/domains/" for 127.0.0.1 at 2020-09-04 12:52:32 -0300
+Processing by DomainsController#index as HTML
+  [1m[36mDomain Load (0.1ms)[0m  [1m[34mSELECT "domains".* FROM "domains"[0m
+  ↳ app/controllers/domains_controller.rb:8
+Completed 200 OK in 3ms (Views: 2.7ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/domains/" for 127.0.0.1 at 2020-09-04 12:52:37 -0300
+Processing by DomainsController#create as HTML
+  Parameters: {"description"=>"Uhtred 2", "domain"=>{"description"=>"Uhtred 2"}}
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/domains_controller.rb:20
+  [1m[36mDomain Create (0.6ms)[0m  [1m[32mINSERT INTO "domains" ("description", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["description", "Uhtred 2"], ["created_at", "2020-09-04 15:52:37.772956"], ["updated_at", "2020-09-04 15:52:37.772956"]]
+  ↳ app/controllers/domains_controller.rb:20
+  [1m[35m (5.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/domains_controller.rb:20
+Completed 201 Created in 14ms (Views: 1.0ms | ActiveRecord: 6.0ms)
+
+
+Started GET "/domains/" for 127.0.0.1 at 2020-09-04 13:27:46 -0300
+Processing by DomainsController#index as HTML
+  [1m[36mDomain Load (0.2ms)[0m  [1m[34mSELECT "domains".* FROM "domains"[0m
+  ↳ app/controllers/domains_controller.rb:8
+Completed 200 OK in 3ms (Views: 2.9ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/domains/" for 127.0.0.1 at 2020-09-04 13:28:17 -0300
+Processing by DomainsController#create as HTML
+  Parameters: {"description"=>"domain-creation-test", "domain"=>{"description"=>"domain-creation-test"}}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/domains_controller.rb:20
+  [1m[36mDomain Create (0.3ms)[0m  [1m[32mINSERT INTO "domains" ("description", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["description", "domain-creation-test"], ["created_at", "2020-09-04 16:28:17.605973"], ["updated_at", "2020-09-04 16:28:17.605973"]]
+  ↳ app/controllers/domains_controller.rb:20
+  [1m[35m (2.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/domains_controller.rb:20
+Completed 201 Created in 7ms (Views: 0.5ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/domains/" for 127.0.0.1 at 2020-09-04 13:29:33 -0300
+Processing by DomainsController#index as HTML
+  [1m[36mDomain Load (0.2ms)[0m  [1m[34mSELECT "domains".* FROM "domains"[0m
+  ↳ app/controllers/domains_controller.rb:8
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/domains/" for 127.0.0.1 at 2020-09-04 13:29:36 -0300
+Processing by DomainsController#index as HTML
+  [1m[36mDomain Load (0.1ms)[0m  [1m[34mSELECT "domains".* FROM "domains"[0m
+  ↳ app/controllers/domains_controller.rb:8
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/domains/" for 127.0.0.1 at 2020-09-04 13:29:48 -0300
+Processing by DomainsController#create as HTML
+  Parameters: {"description"=>"Uhtred 2", "domain"=>{"description"=>"Uhtred 2"}}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/domains_controller.rb:20
+  [1m[36mDomain Create (0.5ms)[0m  [1m[32mINSERT INTO "domains" ("description", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["description", "Uhtred 2"], ["created_at", "2020-09-04 16:29:48.413854"], ["updated_at", "2020-09-04 16:29:48.413854"]]
+  ↳ app/controllers/domains_controller.rb:20
+  [1m[35m (540.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/domains_controller.rb:20
+Completed 201 Created in 547ms (Views: 1.0ms | ActiveRecord: 540.9ms)
+
+
