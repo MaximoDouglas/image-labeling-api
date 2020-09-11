@@ -1174,3 +1174,2181 @@ Processing by ImageClassesController#index as */*
 Completed 200 OK in 7ms (Views: 4.3ms | ActiveRecord: 0.6ms)
 
 
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /usr/share/rvm/rubies/ruby-2.7.0/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+Migrating to CreateImageClasses (20200909020743)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /usr/share/rvm/rubies/ruby-2.7.0/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ db/migrate/20200909020743_create_image_classes.rb:3
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TABLE "image_classes" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "domain_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, CONSTRAINT "fk_rails_c373751daa"
+FOREIGN KEY ("domain_id")
+  REFERENCES "domains" ("id")
+)[0m
+  ↳ db/migrate/20200909020743_create_image_classes.rb:3
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_image_classes_on_domain_id" ON "image_classes" ("domain_id")[0m
+  ↳ db/migrate/20200909020743_create_image_classes.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20200909020743"]]
+  ↳ /usr/share/rvm/rubies/ruby-2.7.0/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[35m (6.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /usr/share/rvm/rubies/ruby-2.7.0/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /usr/share/rvm/rubies/ruby-2.7.0/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /usr/share/rvm/rubies/ruby-2.7.0/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /usr/share/rvm/rubies/ruby-2.7.0/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /usr/share/rvm/rubies/ruby-2.7.0/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:7
+  [1m[36mDomain Create (0.1ms)[0m  [1m[32mINSERT INTO "domains" ("description", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["description", "Ibizan Hound"], ["created_at", "2020-09-11 00:57:26.958429"], ["updated_at", "2020-09-11 00:57:26.958429"]]
+  ↳ lib/tasks/dev.rake:7
+  [1m[35m (5.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:7
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:7
+  [1m[36mDomain Create (0.2ms)[0m  [1m[32mINSERT INTO "domains" ("description", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["description", "Dingo"], ["created_at", "2020-09-11 00:57:26.967442"], ["updated_at", "2020-09-11 00:57:26.967442"]]
+  ↳ lib/tasks/dev.rake:7
+  [1m[35m (2.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:7
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:7
+  [1m[36mDomain Create (0.2ms)[0m  [1m[32mINSERT INTO "domains" ("description", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["description", "German Pointer"], ["created_at", "2020-09-11 00:57:26.973461"], ["updated_at", "2020-09-11 00:57:26.973461"]]
+  ↳ lib/tasks/dev.rake:7
+  [1m[35m (2.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:7
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:7
+  [1m[36mDomain Create (0.2ms)[0m  [1m[32mINSERT INTO "domains" ("description", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["description", "Chesapeake Retriever"], ["created_at", "2020-09-11 00:57:26.978737"], ["updated_at", "2020-09-11 00:57:26.978737"]]
+  ↳ lib/tasks/dev.rake:7
+  [1m[35m (2.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:7
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:7
+  [1m[36mDomain Create (0.2ms)[0m  [1m[32mINSERT INTO "domains" ("description", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["description", "Leonberg"], ["created_at", "2020-09-11 00:57:26.983402"], ["updated_at", "2020-09-11 00:57:26.983402"]]
+  ↳ lib/tasks/dev.rake:7
+  [1m[35m (4.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:7
+  [1m[36mDomain Load (0.2ms)[0m  [1m[34mSELECT  "domains".* FROM "domains" LIMIT ?[0m  [["LIMIT", 11]]
+  ↳ /usr/share/rvm/rubies/ruby-2.7.0/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/application.rb:241
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:7
+  [1m[36mDomain Create (0.1ms)[0m  [1m[32mINSERT INTO "domains" ("description", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["description", "Leonberg"], ["created_at", "2020-09-11 00:57:47.056914"], ["updated_at", "2020-09-11 00:57:47.056914"]]
+  ↳ lib/tasks/dev.rake:7
+  [1m[35m (3.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:7
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:7
+  [1m[36mDomain Create (0.3ms)[0m  [1m[32mINSERT INTO "domains" ("description", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["description", "Shetland Sheepdog"], ["created_at", "2020-09-11 00:57:47.063379"], ["updated_at", "2020-09-11 00:57:47.063379"]]
+  ↳ lib/tasks/dev.rake:7
+  [1m[35m (3.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:7
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:7
+  [1m[36mDomain Create (0.2ms)[0m  [1m[32mINSERT INTO "domains" ("description", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["description", "Westhighland Terrier"], ["created_at", "2020-09-11 00:57:47.069104"], ["updated_at", "2020-09-11 00:57:47.069104"]]
+  ↳ lib/tasks/dev.rake:7
+  [1m[35m (2.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:7
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:7
+  [1m[36mDomain Create (0.1ms)[0m  [1m[32mINSERT INTO "domains" ("description", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["description", "Scottish Deerhound"], ["created_at", "2020-09-11 00:57:47.075422"], ["updated_at", "2020-09-11 00:57:47.075422"]]
+  ↳ lib/tasks/dev.rake:7
+  [1m[35m (2.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:7
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:7
+  [1m[36mDomain Create (0.1ms)[0m  [1m[32mINSERT INTO "domains" ("description", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["description", "Irish Terrier"], ["created_at", "2020-09-11 00:57:47.079980"], ["updated_at", "2020-09-11 00:57:47.079980"]]
+  ↳ lib/tasks/dev.rake:7
+  [1m[35m (2.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:7
+  [1m[36mDomain Load (0.1ms)[0m  [1m[34mSELECT  "domains".* FROM "domains" LIMIT ?[0m  [["LIMIT", 11]]
+  ↳ /usr/share/rvm/rubies/ruby-2.7.0/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/application.rb:241
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:7
+  [1m[36mDomain Create (0.1ms)[0m  [1m[32mINSERT INTO "domains" ("description", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["description", "Cairn"], ["created_at", "2020-09-11 00:58:57.971517"], ["updated_at", "2020-09-11 00:58:57.971517"]]
+  ↳ lib/tasks/dev.rake:7
+  [1m[35m (3.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:7
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:7
+  [1m[36mDomain Create (0.1ms)[0m  [1m[32mINSERT INTO "domains" ("description", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["description", "Akita"], ["created_at", "2020-09-11 00:58:57.976888"], ["updated_at", "2020-09-11 00:58:57.976888"]]
+  ↳ lib/tasks/dev.rake:7
+  [1m[35m (2.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:7
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:7
+  [1m[36mDomain Create (0.1ms)[0m  [1m[32mINSERT INTO "domains" ("description", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["description", "Tibetan Terrier"], ["created_at", "2020-09-11 00:58:57.980262"], ["updated_at", "2020-09-11 00:58:57.980262"]]
+  ↳ lib/tasks/dev.rake:7
+  [1m[35m (2.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:7
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:7
+  [1m[36mDomain Create (0.1ms)[0m  [1m[32mINSERT INTO "domains" ("description", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["description", "Toy Terrier"], ["created_at", "2020-09-11 00:58:57.983645"], ["updated_at", "2020-09-11 00:58:57.983645"]]
+  ↳ lib/tasks/dev.rake:7
+  [1m[35m (2.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:7
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:7
+  [1m[36mDomain Create (0.1ms)[0m  [1m[32mINSERT INTO "domains" ("description", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["description", "Giant Schnauzer"], ["created_at", "2020-09-11 00:58:57.987875"], ["updated_at", "2020-09-11 00:58:57.987875"]]
+  ↳ lib/tasks/dev.rake:7
+  [1m[35m (3.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:7
+  [1m[36mDomain Load (0.1ms)[0m  [1m[34mSELECT  "domains".* FROM "domains" WHERE "domains"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ lib/tasks/dev.rake:14
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:7
+  [1m[36mDomain Create (0.1ms)[0m  [1m[32mINSERT INTO "domains" ("description", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["description", "Pembroke"], ["created_at", "2020-09-11 00:59:44.883363"], ["updated_at", "2020-09-11 00:59:44.883363"]]
+  ↳ lib/tasks/dev.rake:7
+  [1m[35m (2.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:7
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:7
+  [1m[36mDomain Create (0.2ms)[0m  [1m[32mINSERT INTO "domains" ("description", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["description", "Scottish Deerhound"], ["created_at", "2020-09-11 00:59:44.888326"], ["updated_at", "2020-09-11 00:59:44.888326"]]
+  ↳ lib/tasks/dev.rake:7
+  [1m[35m (2.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:7
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:7
+  [1m[36mDomain Create (0.1ms)[0m  [1m[32mINSERT INTO "domains" ("description", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["description", "Cairn"], ["created_at", "2020-09-11 00:59:44.891839"], ["updated_at", "2020-09-11 00:59:44.891839"]]
+  ↳ lib/tasks/dev.rake:7
+  [1m[35m (3.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:7
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:7
+  [1m[36mDomain Create (0.1ms)[0m  [1m[32mINSERT INTO "domains" ("description", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["description", "Whippet"], ["created_at", "2020-09-11 00:59:44.896192"], ["updated_at", "2020-09-11 00:59:44.896192"]]
+  ↳ lib/tasks/dev.rake:7
+  [1m[35m (2.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:7
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:7
+  [1m[36mDomain Create (0.1ms)[0m  [1m[32mINSERT INTO "domains" ("description", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["description", "Flatcoated Retriever"], ["created_at", "2020-09-11 00:59:44.900916"], ["updated_at", "2020-09-11 00:59:44.900916"]]
+  ↳ lib/tasks/dev.rake:7
+  [1m[35m (2.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:7
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:7
+  [1m[36mDomain Create (0.1ms)[0m  [1m[32mINSERT INTO "domains" ("description", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["description", "Samoyed"], ["created_at", "2020-09-11 01:00:58.364468"], ["updated_at", "2020-09-11 01:00:58.364468"]]
+  ↳ lib/tasks/dev.rake:7
+  [1m[35m (3.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:7
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:7
+  [1m[36mDomain Create (0.1ms)[0m  [1m[32mINSERT INTO "domains" ("description", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["description", "Lhasa"], ["created_at", "2020-09-11 01:00:58.369963"], ["updated_at", "2020-09-11 01:00:58.369963"]]
+  ↳ lib/tasks/dev.rake:7
+  [1m[35m (2.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:7
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:7
+  [1m[36mDomain Create (0.1ms)[0m  [1m[32mINSERT INTO "domains" ("description", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["description", "Toy Poodle"], ["created_at", "2020-09-11 01:00:58.374161"], ["updated_at", "2020-09-11 01:00:58.374161"]]
+  ↳ lib/tasks/dev.rake:7
+  [1m[35m (2.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:7
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:7
+  [1m[36mDomain Create (0.1ms)[0m  [1m[32mINSERT INTO "domains" ("description", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["description", "German Pointer"], ["created_at", "2020-09-11 01:00:58.378193"], ["updated_at", "2020-09-11 01:00:58.378193"]]
+  ↳ lib/tasks/dev.rake:7
+  [1m[35m (3.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:7
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:7
+  [1m[36mDomain Create (0.1ms)[0m  [1m[32mINSERT INTO "domains" ("description", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["description", "Dachshund"], ["created_at", "2020-09-11 01:00:58.382325"], ["updated_at", "2020-09-11 01:00:58.382325"]]
+  ↳ lib/tasks/dev.rake:7
+  [1m[35m (2.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:7
+  [1m[36mDomain Load (0.1ms)[0m  [1m[34mSELECT "domains".* FROM "domains"[0m
+  ↳ lib/tasks/dev.rake:14
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:16
+  [1m[36mImageClass Create (0.1ms)[0m  [1m[32mINSERT INTO "image_classes" ("name", "domain_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "puppy"], ["domain_id", 1], ["created_at", "2020-09-11 01:00:58.394564"], ["updated_at", "2020-09-11 01:00:58.394564"]]
+  ↳ lib/tasks/dev.rake:16
+  [1m[35m (5.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:16
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:16
+  [1m[36mImageClass Create (0.2ms)[0m  [1m[32mINSERT INTO "image_classes" ("name", "domain_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "puppy"], ["domain_id", 1], ["created_at", "2020-09-11 01:00:58.401964"], ["updated_at", "2020-09-11 01:00:58.401964"]]
+  ↳ lib/tasks/dev.rake:16
+  [1m[35m (4.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:16
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:16
+  [1m[36mImageClass Create (0.1ms)[0m  [1m[32mINSERT INTO "image_classes" ("name", "domain_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "puppy"], ["domain_id", 1], ["created_at", "2020-09-11 01:00:58.407407"], ["updated_at", "2020-09-11 01:00:58.407407"]]
+  ↳ lib/tasks/dev.rake:16
+  [1m[35m (2.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:16
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:16
+  [1m[36mImageClass Create (0.1ms)[0m  [1m[32mINSERT INTO "image_classes" ("name", "domain_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "senior"], ["domain_id", 2], ["created_at", "2020-09-11 01:00:58.411113"], ["updated_at", "2020-09-11 01:00:58.411113"]]
+  ↳ lib/tasks/dev.rake:16
+  [1m[35m (2.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:16
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:16
+  [1m[36mImageClass Create (0.1ms)[0m  [1m[32mINSERT INTO "image_classes" ("name", "domain_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "puppy"], ["domain_id", 2], ["created_at", "2020-09-11 01:00:58.415077"], ["updated_at", "2020-09-11 01:00:58.415077"]]
+  ↳ lib/tasks/dev.rake:16
+  [1m[35m (3.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:16
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:16
+  [1m[36mImageClass Create (0.2ms)[0m  [1m[32mINSERT INTO "image_classes" ("name", "domain_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "senior"], ["domain_id", 2], ["created_at", "2020-09-11 01:00:58.420199"], ["updated_at", "2020-09-11 01:00:58.420199"]]
+  ↳ lib/tasks/dev.rake:16
+  [1m[35m (2.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:16
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:16
+  [1m[36mImageClass Create (0.1ms)[0m  [1m[32mINSERT INTO "image_classes" ("name", "domain_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "senior"], ["domain_id", 3], ["created_at", "2020-09-11 01:00:58.424670"], ["updated_at", "2020-09-11 01:00:58.424670"]]
+  ↳ lib/tasks/dev.rake:16
+  [1m[35m (2.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:16
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:16
+  [1m[36mImageClass Create (0.1ms)[0m  [1m[32mINSERT INTO "image_classes" ("name", "domain_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "senior"], ["domain_id", 3], ["created_at", "2020-09-11 01:00:58.428510"], ["updated_at", "2020-09-11 01:00:58.428510"]]
+  ↳ lib/tasks/dev.rake:16
+  [1m[35m (3.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:16
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:16
+  [1m[36mImageClass Create (0.1ms)[0m  [1m[32mINSERT INTO "image_classes" ("name", "domain_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "senior"], ["domain_id", 3], ["created_at", "2020-09-11 01:00:58.432982"], ["updated_at", "2020-09-11 01:00:58.432982"]]
+  ↳ lib/tasks/dev.rake:16
+  [1m[35m (2.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:16
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:16
+  [1m[36mImageClass Create (0.1ms)[0m  [1m[32mINSERT INTO "image_classes" ("name", "domain_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "adult"], ["domain_id", 4], ["created_at", "2020-09-11 01:00:58.436985"], ["updated_at", "2020-09-11 01:00:58.436985"]]
+  ↳ lib/tasks/dev.rake:16
+  [1m[35m (2.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:16
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:16
+  [1m[36mImageClass Create (0.1ms)[0m  [1m[32mINSERT INTO "image_classes" ("name", "domain_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "adult"], ["domain_id", 4], ["created_at", "2020-09-11 01:00:58.441007"], ["updated_at", "2020-09-11 01:00:58.441007"]]
+  ↳ lib/tasks/dev.rake:16
+  [1m[35m (2.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:16
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:16
+  [1m[36mImageClass Create (0.1ms)[0m  [1m[32mINSERT INTO "image_classes" ("name", "domain_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "senior"], ["domain_id", 4], ["created_at", "2020-09-11 01:00:58.444504"], ["updated_at", "2020-09-11 01:00:58.444504"]]
+  ↳ lib/tasks/dev.rake:16
+  [1m[35m (2.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:16
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:16
+  [1m[36mImageClass Create (0.1ms)[0m  [1m[32mINSERT INTO "image_classes" ("name", "domain_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "young"], ["domain_id", 5], ["created_at", "2020-09-11 01:00:58.448526"], ["updated_at", "2020-09-11 01:00:58.448526"]]
+  ↳ lib/tasks/dev.rake:16
+  [1m[35m (2.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:16
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:16
+  [1m[36mImageClass Create (0.1ms)[0m  [1m[32mINSERT INTO "image_classes" ("name", "domain_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "senior"], ["domain_id", 5], ["created_at", "2020-09-11 01:00:58.452390"], ["updated_at", "2020-09-11 01:00:58.452390"]]
+  ↳ lib/tasks/dev.rake:16
+  [1m[35m (2.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:16
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:16
+  [1m[36mImageClass Create (0.1ms)[0m  [1m[32mINSERT INTO "image_classes" ("name", "domain_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "puppy"], ["domain_id", 5], ["created_at", "2020-09-11 01:00:58.456450"], ["updated_at", "2020-09-11 01:00:58.456450"]]
+  ↳ lib/tasks/dev.rake:16
+  [1m[35m (2.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:16
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:16
+  [1m[36mImageClass Create (0.1ms)[0m  [1m[32mINSERT INTO "image_classes" ("name", "domain_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "senior"], ["domain_id", 6], ["created_at", "2020-09-11 01:00:58.460290"], ["updated_at", "2020-09-11 01:00:58.460290"]]
+  ↳ lib/tasks/dev.rake:16
+  [1m[35m (2.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:16
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:16
+  [1m[36mImageClass Create (0.2ms)[0m  [1m[32mINSERT INTO "image_classes" ("name", "domain_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "young"], ["domain_id", 6], ["created_at", "2020-09-11 01:00:58.464616"], ["updated_at", "2020-09-11 01:00:58.464616"]]
+  ↳ lib/tasks/dev.rake:16
+  [1m[35m (2.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:16
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:16
+  [1m[36mImageClass Create (0.2ms)[0m  [1m[32mINSERT INTO "image_classes" ("name", "domain_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "adult"], ["domain_id", 6], ["created_at", "2020-09-11 01:00:58.468876"], ["updated_at", "2020-09-11 01:00:58.468876"]]
+  ↳ lib/tasks/dev.rake:16
+  [1m[35m (2.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:16
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:16
+  [1m[36mImageClass Create (0.3ms)[0m  [1m[32mINSERT INTO "image_classes" ("name", "domain_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "adult"], ["domain_id", 7], ["created_at", "2020-09-11 01:00:58.473227"], ["updated_at", "2020-09-11 01:00:58.473227"]]
+  ↳ lib/tasks/dev.rake:16
+  [1m[35m (2.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:16
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:16
+  [1m[36mImageClass Create (0.1ms)[0m  [1m[32mINSERT INTO "image_classes" ("name", "domain_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "senior"], ["domain_id", 7], ["created_at", "2020-09-11 01:00:58.479572"], ["updated_at", "2020-09-11 01:00:58.479572"]]
+  ↳ lib/tasks/dev.rake:16
+  [1m[35m (3.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:16
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:16
+  [1m[36mImageClass Create (0.1ms)[0m  [1m[32mINSERT INTO "image_classes" ("name", "domain_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "adult"], ["domain_id", 7], ["created_at", "2020-09-11 01:00:58.485129"], ["updated_at", "2020-09-11 01:00:58.485129"]]
+  ↳ lib/tasks/dev.rake:16
+  [1m[35m (2.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:16
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:16
+  [1m[36mImageClass Create (0.1ms)[0m  [1m[32mINSERT INTO "image_classes" ("name", "domain_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "senior"], ["domain_id", 8], ["created_at", "2020-09-11 01:00:58.489212"], ["updated_at", "2020-09-11 01:00:58.489212"]]
+  ↳ lib/tasks/dev.rake:16
+  [1m[35m (2.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:16
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:16
+  [1m[36mImageClass Create (0.2ms)[0m  [1m[32mINSERT INTO "image_classes" ("name", "domain_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "puppy"], ["domain_id", 8], ["created_at", "2020-09-11 01:00:58.498463"], ["updated_at", "2020-09-11 01:00:58.498463"]]
+  ↳ lib/tasks/dev.rake:16
+  [1m[35m (3.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:16
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:16
+  [1m[36mImageClass Create (0.1ms)[0m  [1m[32mINSERT INTO "image_classes" ("name", "domain_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "puppy"], ["domain_id", 8], ["created_at", "2020-09-11 01:00:58.504008"], ["updated_at", "2020-09-11 01:00:58.504008"]]
+  ↳ lib/tasks/dev.rake:16
+  [1m[35m (2.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:16
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:16
+  [1m[36mImageClass Create (0.1ms)[0m  [1m[32mINSERT INTO "image_classes" ("name", "domain_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "puppy"], ["domain_id", 9], ["created_at", "2020-09-11 01:00:58.508243"], ["updated_at", "2020-09-11 01:00:58.508243"]]
+  ↳ lib/tasks/dev.rake:16
+  [1m[35m (2.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:16
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:16
+  [1m[36mImageClass Create (0.1ms)[0m  [1m[32mINSERT INTO "image_classes" ("name", "domain_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "senior"], ["domain_id", 9], ["created_at", "2020-09-11 01:00:58.512197"], ["updated_at", "2020-09-11 01:00:58.512197"]]
+  ↳ lib/tasks/dev.rake:16
+  [1m[35m (4.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:16
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:16
+  [1m[36mImageClass Create (0.1ms)[0m  [1m[32mINSERT INTO "image_classes" ("name", "domain_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "puppy"], ["domain_id", 9], ["created_at", "2020-09-11 01:00:58.518215"], ["updated_at", "2020-09-11 01:00:58.518215"]]
+  ↳ lib/tasks/dev.rake:16
+  [1m[35m (3.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:16
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:16
+  [1m[36mImageClass Create (0.1ms)[0m  [1m[32mINSERT INTO "image_classes" ("name", "domain_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "young"], ["domain_id", 10], ["created_at", "2020-09-11 01:00:58.522966"], ["updated_at", "2020-09-11 01:00:58.522966"]]
+  ↳ lib/tasks/dev.rake:16
+  [1m[35m (3.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:16
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:16
+  [1m[36mImageClass Create (0.2ms)[0m  [1m[32mINSERT INTO "image_classes" ("name", "domain_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "young"], ["domain_id", 10], ["created_at", "2020-09-11 01:00:58.528104"], ["updated_at", "2020-09-11 01:00:58.528104"]]
+  ↳ lib/tasks/dev.rake:16
+  [1m[35m (2.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:16
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:16
+  [1m[36mImageClass Create (0.2ms)[0m  [1m[32mINSERT INTO "image_classes" ("name", "domain_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "senior"], ["domain_id", 10], ["created_at", "2020-09-11 01:00:58.532444"], ["updated_at", "2020-09-11 01:00:58.532444"]]
+  ↳ lib/tasks/dev.rake:16
+  [1m[35m (2.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:16
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:16
+  [1m[36mImageClass Create (0.1ms)[0m  [1m[32mINSERT INTO "image_classes" ("name", "domain_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "puppy"], ["domain_id", 11], ["created_at", "2020-09-11 01:00:58.536773"], ["updated_at", "2020-09-11 01:00:58.536773"]]
+  ↳ lib/tasks/dev.rake:16
+  [1m[35m (2.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:16
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:16
+  [1m[36mImageClass Create (0.2ms)[0m  [1m[32mINSERT INTO "image_classes" ("name", "domain_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "young"], ["domain_id", 11], ["created_at", "2020-09-11 01:00:58.542103"], ["updated_at", "2020-09-11 01:00:58.542103"]]
+  ↳ lib/tasks/dev.rake:16
+  [1m[35m (2.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:16
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:16
+  [1m[36mImageClass Create (0.2ms)[0m  [1m[32mINSERT INTO "image_classes" ("name", "domain_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "adult"], ["domain_id", 11], ["created_at", "2020-09-11 01:00:58.547499"], ["updated_at", "2020-09-11 01:00:58.547499"]]
+  ↳ lib/tasks/dev.rake:16
+  [1m[35m (2.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:16
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:16
+  [1m[36mImageClass Create (0.1ms)[0m  [1m[32mINSERT INTO "image_classes" ("name", "domain_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "senior"], ["domain_id", 12], ["created_at", "2020-09-11 01:00:58.551958"], ["updated_at", "2020-09-11 01:00:58.551958"]]
+  ↳ lib/tasks/dev.rake:16
+  [1m[35m (3.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:16
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:16
+  [1m[36mImageClass Create (0.2ms)[0m  [1m[32mINSERT INTO "image_classes" ("name", "domain_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "senior"], ["domain_id", 12], ["created_at", "2020-09-11 01:00:58.557064"], ["updated_at", "2020-09-11 01:00:58.557064"]]
+  ↳ lib/tasks/dev.rake:16
+  [1m[35m (2.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:16
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:16
+  [1m[36mImageClass Create (0.2ms)[0m  [1m[32mINSERT INTO "image_classes" ("name", "domain_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "senior"], ["domain_id", 12], ["created_at", "2020-09-11 01:00:58.561351"], ["updated_at", "2020-09-11 01:00:58.561351"]]
+  ↳ lib/tasks/dev.rake:16
+  [1m[35m (4.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:16
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:16
+  [1m[36mImageClass Create (0.3ms)[0m  [1m[32mINSERT INTO "image_classes" ("name", "domain_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "young"], ["domain_id", 13], ["created_at", "2020-09-11 01:00:58.569435"], ["updated_at", "2020-09-11 01:00:58.569435"]]
+  ↳ lib/tasks/dev.rake:16
+  [1m[35m (2.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:16
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:16
+  [1m[36mImageClass Create (0.2ms)[0m  [1m[32mINSERT INTO "image_classes" ("name", "domain_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "young"], ["domain_id", 13], ["created_at", "2020-09-11 01:00:58.574475"], ["updated_at", "2020-09-11 01:00:58.574475"]]
+  ↳ lib/tasks/dev.rake:16
+  [1m[35m (3.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:16
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:16
+  [1m[36mImageClass Create (0.2ms)[0m  [1m[32mINSERT INTO "image_classes" ("name", "domain_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "senior"], ["domain_id", 13], ["created_at", "2020-09-11 01:00:58.582502"], ["updated_at", "2020-09-11 01:00:58.582502"]]
+  ↳ lib/tasks/dev.rake:16
+  [1m[35m (2.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:16
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:16
+  [1m[36mImageClass Create (0.2ms)[0m  [1m[32mINSERT INTO "image_classes" ("name", "domain_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "senior"], ["domain_id", 14], ["created_at", "2020-09-11 01:00:58.588694"], ["updated_at", "2020-09-11 01:00:58.588694"]]
+  ↳ lib/tasks/dev.rake:16
+  [1m[35m (2.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:16
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:16
+  [1m[36mImageClass Create (0.4ms)[0m  [1m[32mINSERT INTO "image_classes" ("name", "domain_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "adult"], ["domain_id", 14], ["created_at", "2020-09-11 01:00:58.593531"], ["updated_at", "2020-09-11 01:00:58.593531"]]
+  ↳ lib/tasks/dev.rake:16
+  [1m[35m (2.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:16
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:16
+  [1m[36mImageClass Create (0.3ms)[0m  [1m[32mINSERT INTO "image_classes" ("name", "domain_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "puppy"], ["domain_id", 14], ["created_at", "2020-09-11 01:00:58.599597"], ["updated_at", "2020-09-11 01:00:58.599597"]]
+  ↳ lib/tasks/dev.rake:16
+  [1m[35m (2.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:16
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:16
+  [1m[36mImageClass Create (0.2ms)[0m  [1m[32mINSERT INTO "image_classes" ("name", "domain_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "adult"], ["domain_id", 15], ["created_at", "2020-09-11 01:00:58.604780"], ["updated_at", "2020-09-11 01:00:58.604780"]]
+  ↳ lib/tasks/dev.rake:16
+  [1m[35m (2.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:16
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:16
+  [1m[36mImageClass Create (0.2ms)[0m  [1m[32mINSERT INTO "image_classes" ("name", "domain_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "adult"], ["domain_id", 15], ["created_at", "2020-09-11 01:00:58.609865"], ["updated_at", "2020-09-11 01:00:58.609865"]]
+  ↳ lib/tasks/dev.rake:16
+  [1m[35m (2.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:16
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:16
+  [1m[36mImageClass Create (0.2ms)[0m  [1m[32mINSERT INTO "image_classes" ("name", "domain_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "puppy"], ["domain_id", 15], ["created_at", "2020-09-11 01:00:58.614761"], ["updated_at", "2020-09-11 01:00:58.614761"]]
+  ↳ lib/tasks/dev.rake:16
+  [1m[35m (2.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:16
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:16
+  [1m[36mImageClass Create (0.3ms)[0m  [1m[32mINSERT INTO "image_classes" ("name", "domain_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "puppy"], ["domain_id", 16], ["created_at", "2020-09-11 01:00:58.619678"], ["updated_at", "2020-09-11 01:00:58.619678"]]
+  ↳ lib/tasks/dev.rake:16
+  [1m[35m (3.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:16
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:16
+  [1m[36mImageClass Create (0.2ms)[0m  [1m[32mINSERT INTO "image_classes" ("name", "domain_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "young"], ["domain_id", 16], ["created_at", "2020-09-11 01:00:58.625649"], ["updated_at", "2020-09-11 01:00:58.625649"]]
+  ↳ lib/tasks/dev.rake:16
+  [1m[35m (2.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:16
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:16
+  [1m[36mImageClass Create (0.2ms)[0m  [1m[32mINSERT INTO "image_classes" ("name", "domain_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "adult"], ["domain_id", 16], ["created_at", "2020-09-11 01:00:58.629969"], ["updated_at", "2020-09-11 01:00:58.629969"]]
+  ↳ lib/tasks/dev.rake:16
+  [1m[35m (2.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:16
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:16
+  [1m[36mImageClass Create (0.2ms)[0m  [1m[32mINSERT INTO "image_classes" ("name", "domain_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "adult"], ["domain_id", 17], ["created_at", "2020-09-11 01:00:58.635504"], ["updated_at", "2020-09-11 01:00:58.635504"]]
+  ↳ lib/tasks/dev.rake:16
+  [1m[35m (2.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:16
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:16
+  [1m[36mImageClass Create (0.2ms)[0m  [1m[32mINSERT INTO "image_classes" ("name", "domain_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "young"], ["domain_id", 17], ["created_at", "2020-09-11 01:00:58.640208"], ["updated_at", "2020-09-11 01:00:58.640208"]]
+  ↳ lib/tasks/dev.rake:16
+  [1m[35m (2.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:16
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:16
+  [1m[36mImageClass Create (0.1ms)[0m  [1m[32mINSERT INTO "image_classes" ("name", "domain_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "young"], ["domain_id", 17], ["created_at", "2020-09-11 01:00:58.644434"], ["updated_at", "2020-09-11 01:00:58.644434"]]
+  ↳ lib/tasks/dev.rake:16
+  [1m[35m (2.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:16
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:16
+  [1m[36mImageClass Create (0.1ms)[0m  [1m[32mINSERT INTO "image_classes" ("name", "domain_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "adult"], ["domain_id", 18], ["created_at", "2020-09-11 01:00:58.648523"], ["updated_at", "2020-09-11 01:00:58.648523"]]
+  ↳ lib/tasks/dev.rake:16
+  [1m[35m (2.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:16
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:16
+  [1m[36mImageClass Create (0.1ms)[0m  [1m[32mINSERT INTO "image_classes" ("name", "domain_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "puppy"], ["domain_id", 18], ["created_at", "2020-09-11 01:00:58.652731"], ["updated_at", "2020-09-11 01:00:58.652731"]]
+  ↳ lib/tasks/dev.rake:16
+  [1m[35m (2.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:16
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:16
+  [1m[36mImageClass Create (0.1ms)[0m  [1m[32mINSERT INTO "image_classes" ("name", "domain_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "adult"], ["domain_id", 18], ["created_at", "2020-09-11 01:00:58.656755"], ["updated_at", "2020-09-11 01:00:58.656755"]]
+  ↳ lib/tasks/dev.rake:16
+  [1m[35m (2.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:16
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:16
+  [1m[36mImageClass Create (0.1ms)[0m  [1m[32mINSERT INTO "image_classes" ("name", "domain_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "adult"], ["domain_id", 19], ["created_at", "2020-09-11 01:00:58.661106"], ["updated_at", "2020-09-11 01:00:58.661106"]]
+  ↳ lib/tasks/dev.rake:16
+  [1m[35m (2.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:16
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:16
+  [1m[36mImageClass Create (0.1ms)[0m  [1m[32mINSERT INTO "image_classes" ("name", "domain_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "senior"], ["domain_id", 19], ["created_at", "2020-09-11 01:00:58.665314"], ["updated_at", "2020-09-11 01:00:58.665314"]]
+  ↳ lib/tasks/dev.rake:16
+  [1m[35m (2.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:16
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:16
+  [1m[36mImageClass Create (0.1ms)[0m  [1m[32mINSERT INTO "image_classes" ("name", "domain_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "adult"], ["domain_id", 19], ["created_at", "2020-09-11 01:00:58.669445"], ["updated_at", "2020-09-11 01:00:58.669445"]]
+  ↳ lib/tasks/dev.rake:16
+  [1m[35m (2.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:16
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:16
+  [1m[36mImageClass Create (0.1ms)[0m  [1m[32mINSERT INTO "image_classes" ("name", "domain_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "senior"], ["domain_id", 20], ["created_at", "2020-09-11 01:00:58.673504"], ["updated_at", "2020-09-11 01:00:58.673504"]]
+  ↳ lib/tasks/dev.rake:16
+  [1m[35m (386.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:16
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:16
+  [1m[36mImageClass Create (0.5ms)[0m  [1m[32mINSERT INTO "image_classes" ("name", "domain_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "young"], ["domain_id", 20], ["created_at", "2020-09-11 01:00:59.063684"], ["updated_at", "2020-09-11 01:00:59.063684"]]
+  ↳ lib/tasks/dev.rake:16
+  [1m[35m (590.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:16
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:16
+  [1m[36mImageClass Create (0.6ms)[0m  [1m[32mINSERT INTO "image_classes" ("name", "domain_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "senior"], ["domain_id", 20], ["created_at", "2020-09-11 01:00:59.660350"], ["updated_at", "2020-09-11 01:00:59.660350"]]
+  ↳ lib/tasks/dev.rake:16
+  [1m[35m (64.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:16
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:16
+  [1m[36mImageClass Create (0.3ms)[0m  [1m[32mINSERT INTO "image_classes" ("name", "domain_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "adult"], ["domain_id", 21], ["created_at", "2020-09-11 01:00:59.731519"], ["updated_at", "2020-09-11 01:00:59.731519"]]
+  ↳ lib/tasks/dev.rake:16
+  [1m[35m (2.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:16
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:16
+  [1m[36mImageClass Create (0.1ms)[0m  [1m[32mINSERT INTO "image_classes" ("name", "domain_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "adult"], ["domain_id", 21], ["created_at", "2020-09-11 01:00:59.736392"], ["updated_at", "2020-09-11 01:00:59.736392"]]
+  ↳ lib/tasks/dev.rake:16
+  [1m[35m (2.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:16
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:16
+  [1m[36mImageClass Create (0.1ms)[0m  [1m[32mINSERT INTO "image_classes" ("name", "domain_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "adult"], ["domain_id", 21], ["created_at", "2020-09-11 01:00:59.740081"], ["updated_at", "2020-09-11 01:00:59.740081"]]
+  ↳ lib/tasks/dev.rake:16
+  [1m[35m (2.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:16
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:16
+  [1m[36mImageClass Create (0.1ms)[0m  [1m[32mINSERT INTO "image_classes" ("name", "domain_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "senior"], ["domain_id", 22], ["created_at", "2020-09-11 01:00:59.744167"], ["updated_at", "2020-09-11 01:00:59.744167"]]
+  ↳ lib/tasks/dev.rake:16
+  [1m[35m (4.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:16
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:16
+  [1m[36mImageClass Create (0.1ms)[0m  [1m[32mINSERT INTO "image_classes" ("name", "domain_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "puppy"], ["domain_id", 22], ["created_at", "2020-09-11 01:00:59.750067"], ["updated_at", "2020-09-11 01:00:59.750067"]]
+  ↳ lib/tasks/dev.rake:16
+  [1m[35m (2.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:16
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:16
+  [1m[36mImageClass Create (0.1ms)[0m  [1m[32mINSERT INTO "image_classes" ("name", "domain_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "puppy"], ["domain_id", 22], ["created_at", "2020-09-11 01:00:59.753900"], ["updated_at", "2020-09-11 01:00:59.753900"]]
+  ↳ lib/tasks/dev.rake:16
+  [1m[35m (2.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:16
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:16
+  [1m[36mImageClass Create (0.1ms)[0m  [1m[32mINSERT INTO "image_classes" ("name", "domain_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "puppy"], ["domain_id", 23], ["created_at", "2020-09-11 01:00:59.757698"], ["updated_at", "2020-09-11 01:00:59.757698"]]
+  ↳ lib/tasks/dev.rake:16
+  [1m[35m (2.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:16
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:16
+  [1m[36mImageClass Create (0.1ms)[0m  [1m[32mINSERT INTO "image_classes" ("name", "domain_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "puppy"], ["domain_id", 23], ["created_at", "2020-09-11 01:00:59.761900"], ["updated_at", "2020-09-11 01:00:59.761900"]]
+  ↳ lib/tasks/dev.rake:16
+  [1m[35m (2.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:16
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:16
+  [1m[36mImageClass Create (0.1ms)[0m  [1m[32mINSERT INTO "image_classes" ("name", "domain_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "senior"], ["domain_id", 23], ["created_at", "2020-09-11 01:00:59.765641"], ["updated_at", "2020-09-11 01:00:59.765641"]]
+  ↳ lib/tasks/dev.rake:16
+  [1m[35m (2.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:16
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:16
+  [1m[36mImageClass Create (0.1ms)[0m  [1m[32mINSERT INTO "image_classes" ("name", "domain_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "senior"], ["domain_id", 24], ["created_at", "2020-09-11 01:00:59.769692"], ["updated_at", "2020-09-11 01:00:59.769692"]]
+  ↳ lib/tasks/dev.rake:16
+  [1m[35m (4.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:16
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:16
+  [1m[36mImageClass Create (0.1ms)[0m  [1m[32mINSERT INTO "image_classes" ("name", "domain_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "senior"], ["domain_id", 24], ["created_at", "2020-09-11 01:00:59.774831"], ["updated_at", "2020-09-11 01:00:59.774831"]]
+  ↳ lib/tasks/dev.rake:16
+  [1m[35m (3.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:16
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:16
+  [1m[36mImageClass Create (0.1ms)[0m  [1m[32mINSERT INTO "image_classes" ("name", "domain_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "young"], ["domain_id", 24], ["created_at", "2020-09-11 01:00:59.779778"], ["updated_at", "2020-09-11 01:00:59.779778"]]
+  ↳ lib/tasks/dev.rake:16
+  [1m[35m (2.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:16
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:16
+  [1m[36mImageClass Create (0.1ms)[0m  [1m[32mINSERT INTO "image_classes" ("name", "domain_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "puppy"], ["domain_id", 25], ["created_at", "2020-09-11 01:00:59.784015"], ["updated_at", "2020-09-11 01:00:59.784015"]]
+  ↳ lib/tasks/dev.rake:16
+  [1m[35m (2.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:16
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:16
+  [1m[36mImageClass Create (0.1ms)[0m  [1m[32mINSERT INTO "image_classes" ("name", "domain_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "adult"], ["domain_id", 25], ["created_at", "2020-09-11 01:00:59.787749"], ["updated_at", "2020-09-11 01:00:59.787749"]]
+  ↳ lib/tasks/dev.rake:16
+  [1m[35m (2.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:16
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:16
+  [1m[36mImageClass Create (0.1ms)[0m  [1m[32mINSERT INTO "image_classes" ("name", "domain_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "adult"], ["domain_id", 25], ["created_at", "2020-09-11 01:00:59.791415"], ["updated_at", "2020-09-11 01:00:59.791415"]]
+  ↳ lib/tasks/dev.rake:16
+  [1m[35m (3.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:16
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:16
+  [1m[36mImageClass Create (0.1ms)[0m  [1m[32mINSERT INTO "image_classes" ("name", "domain_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "young"], ["domain_id", 26], ["created_at", "2020-09-11 01:00:59.796859"], ["updated_at", "2020-09-11 01:00:59.796859"]]
+  ↳ lib/tasks/dev.rake:16
+  [1m[35m (3.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:16
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:16
+  [1m[36mImageClass Create (0.1ms)[0m  [1m[32mINSERT INTO "image_classes" ("name", "domain_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "senior"], ["domain_id", 26], ["created_at", "2020-09-11 01:00:59.802372"], ["updated_at", "2020-09-11 01:00:59.802372"]]
+  ↳ lib/tasks/dev.rake:16
+  [1m[35m (3.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:16
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:16
+  [1m[36mImageClass Create (0.2ms)[0m  [1m[32mINSERT INTO "image_classes" ("name", "domain_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "puppy"], ["domain_id", 26], ["created_at", "2020-09-11 01:00:59.807485"], ["updated_at", "2020-09-11 01:00:59.807485"]]
+  ↳ lib/tasks/dev.rake:16
+  [1m[35m (2.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:16
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:16
+  [1m[36mImageClass Create (0.1ms)[0m  [1m[32mINSERT INTO "image_classes" ("name", "domain_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "adult"], ["domain_id", 27], ["created_at", "2020-09-11 01:00:59.811647"], ["updated_at", "2020-09-11 01:00:59.811647"]]
+  ↳ lib/tasks/dev.rake:16
+  [1m[35m (2.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:16
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:16
+  [1m[36mImageClass Create (0.1ms)[0m  [1m[32mINSERT INTO "image_classes" ("name", "domain_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "senior"], ["domain_id", 27], ["created_at", "2020-09-11 01:00:59.815769"], ["updated_at", "2020-09-11 01:00:59.815769"]]
+  ↳ lib/tasks/dev.rake:16
+  [1m[35m (2.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:16
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:16
+  [1m[36mImageClass Create (0.1ms)[0m  [1m[32mINSERT INTO "image_classes" ("name", "domain_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "adult"], ["domain_id", 27], ["created_at", "2020-09-11 01:00:59.819853"], ["updated_at", "2020-09-11 01:00:59.819853"]]
+  ↳ lib/tasks/dev.rake:16
+  [1m[35m (2.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:16
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:16
+  [1m[36mImageClass Create (0.2ms)[0m  [1m[32mINSERT INTO "image_classes" ("name", "domain_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "adult"], ["domain_id", 28], ["created_at", "2020-09-11 01:00:59.824189"], ["updated_at", "2020-09-11 01:00:59.824189"]]
+  ↳ lib/tasks/dev.rake:16
+  [1m[35m (2.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:16
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:16
+  [1m[36mImageClass Create (0.1ms)[0m  [1m[32mINSERT INTO "image_classes" ("name", "domain_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "adult"], ["domain_id", 28], ["created_at", "2020-09-11 01:00:59.828344"], ["updated_at", "2020-09-11 01:00:59.828344"]]
+  ↳ lib/tasks/dev.rake:16
+  [1m[35m (3.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:16
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:16
+  [1m[36mImageClass Create (0.1ms)[0m  [1m[32mINSERT INTO "image_classes" ("name", "domain_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "puppy"], ["domain_id", 28], ["created_at", "2020-09-11 01:00:59.833559"], ["updated_at", "2020-09-11 01:00:59.833559"]]
+  ↳ lib/tasks/dev.rake:16
+  [1m[35m (2.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:16
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:16
+  [1m[36mImageClass Create (0.1ms)[0m  [1m[32mINSERT INTO "image_classes" ("name", "domain_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "adult"], ["domain_id", 29], ["created_at", "2020-09-11 01:00:59.837837"], ["updated_at", "2020-09-11 01:00:59.837837"]]
+  ↳ lib/tasks/dev.rake:16
+  [1m[35m (2.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:16
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:16
+  [1m[36mImageClass Create (0.1ms)[0m  [1m[32mINSERT INTO "image_classes" ("name", "domain_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "adult"], ["domain_id", 29], ["created_at", "2020-09-11 01:00:59.842174"], ["updated_at", "2020-09-11 01:00:59.842174"]]
+  ↳ lib/tasks/dev.rake:16
+  [1m[35m (2.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:16
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:16
+  [1m[36mImageClass Create (0.1ms)[0m  [1m[32mINSERT INTO "image_classes" ("name", "domain_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "senior"], ["domain_id", 29], ["created_at", "2020-09-11 01:00:59.846343"], ["updated_at", "2020-09-11 01:00:59.846343"]]
+  ↳ lib/tasks/dev.rake:16
+  [1m[35m (2.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:16
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:16
+  [1m[36mImageClass Create (0.1ms)[0m  [1m[32mINSERT INTO "image_classes" ("name", "domain_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "senior"], ["domain_id", 30], ["created_at", "2020-09-11 01:00:59.850503"], ["updated_at", "2020-09-11 01:00:59.850503"]]
+  ↳ lib/tasks/dev.rake:16
+  [1m[35m (3.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:16
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:16
+  [1m[36mImageClass Create (0.1ms)[0m  [1m[32mINSERT INTO "image_classes" ("name", "domain_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "young"], ["domain_id", 30], ["created_at", "2020-09-11 01:00:59.855712"], ["updated_at", "2020-09-11 01:00:59.855712"]]
+  ↳ lib/tasks/dev.rake:16
+  [1m[35m (2.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:16
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:16
+  [1m[36mImageClass Create (0.1ms)[0m  [1m[32mINSERT INTO "image_classes" ("name", "domain_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "young"], ["domain_id", 30], ["created_at", "2020-09-11 01:00:59.859852"], ["updated_at", "2020-09-11 01:00:59.859852"]]
+  ↳ lib/tasks/dev.rake:16
+  [1m[35m (2.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:16
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:16
+  [1m[36mImageClass Create (0.1ms)[0m  [1m[32mINSERT INTO "image_classes" ("name", "domain_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "senior"], ["domain_id", 31], ["created_at", "2020-09-11 01:00:59.864683"], ["updated_at", "2020-09-11 01:00:59.864683"]]
+  ↳ lib/tasks/dev.rake:16
+  [1m[35m (2.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:16
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:16
+  [1m[36mImageClass Create (0.1ms)[0m  [1m[32mINSERT INTO "image_classes" ("name", "domain_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "senior"], ["domain_id", 31], ["created_at", "2020-09-11 01:00:59.869014"], ["updated_at", "2020-09-11 01:00:59.869014"]]
+  ↳ lib/tasks/dev.rake:16
+  [1m[35m (2.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:16
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:16
+  [1m[36mImageClass Create (0.1ms)[0m  [1m[32mINSERT INTO "image_classes" ("name", "domain_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "adult"], ["domain_id", 31], ["created_at", "2020-09-11 01:00:59.872979"], ["updated_at", "2020-09-11 01:00:59.872979"]]
+  ↳ lib/tasks/dev.rake:16
+  [1m[35m (2.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:16
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:16
+  [1m[36mImageClass Create (0.1ms)[0m  [1m[32mINSERT INTO "image_classes" ("name", "domain_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "young"], ["domain_id", 32], ["created_at", "2020-09-11 01:00:59.877341"], ["updated_at", "2020-09-11 01:00:59.877341"]]
+  ↳ lib/tasks/dev.rake:16
+  [1m[35m (2.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:16
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:16
+  [1m[36mImageClass Create (0.1ms)[0m  [1m[32mINSERT INTO "image_classes" ("name", "domain_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "young"], ["domain_id", 32], ["created_at", "2020-09-11 01:00:59.881551"], ["updated_at", "2020-09-11 01:00:59.881551"]]
+  ↳ lib/tasks/dev.rake:16
+  [1m[35m (3.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:16
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:16
+  [1m[36mImageClass Create (0.2ms)[0m  [1m[32mINSERT INTO "image_classes" ("name", "domain_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "adult"], ["domain_id", 32], ["created_at", "2020-09-11 01:00:59.886515"], ["updated_at", "2020-09-11 01:00:59.886515"]]
+  ↳ lib/tasks/dev.rake:16
+  [1m[35m (3.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:16
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:16
+  [1m[36mImageClass Create (0.1ms)[0m  [1m[32mINSERT INTO "image_classes" ("name", "domain_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "puppy"], ["domain_id", 33], ["created_at", "2020-09-11 01:00:59.891955"], ["updated_at", "2020-09-11 01:00:59.891955"]]
+  ↳ lib/tasks/dev.rake:16
+  [1m[35m (2.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:16
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:16
+  [1m[36mImageClass Create (0.1ms)[0m  [1m[32mINSERT INTO "image_classes" ("name", "domain_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "young"], ["domain_id", 33], ["created_at", "2020-09-11 01:00:59.896284"], ["updated_at", "2020-09-11 01:00:59.896284"]]
+  ↳ lib/tasks/dev.rake:16
+  [1m[35m (2.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:16
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:16
+  [1m[36mImageClass Create (0.1ms)[0m  [1m[32mINSERT INTO "image_classes" ("name", "domain_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "puppy"], ["domain_id", 33], ["created_at", "2020-09-11 01:00:59.900397"], ["updated_at", "2020-09-11 01:00:59.900397"]]
+  ↳ lib/tasks/dev.rake:16
+  [1m[35m (2.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:16
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:16
+  [1m[36mImageClass Create (0.1ms)[0m  [1m[32mINSERT INTO "image_classes" ("name", "domain_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "senior"], ["domain_id", 34], ["created_at", "2020-09-11 01:00:59.904527"], ["updated_at", "2020-09-11 01:00:59.904527"]]
+  ↳ lib/tasks/dev.rake:16
+  [1m[35m (2.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:16
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:16
+  [1m[36mImageClass Create (0.1ms)[0m  [1m[32mINSERT INTO "image_classes" ("name", "domain_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "young"], ["domain_id", 34], ["created_at", "2020-09-11 01:00:59.908654"], ["updated_at", "2020-09-11 01:00:59.908654"]]
+  ↳ lib/tasks/dev.rake:16
+  [1m[35m (2.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:16
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:16
+  [1m[36mImageClass Create (0.1ms)[0m  [1m[32mINSERT INTO "image_classes" ("name", "domain_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "puppy"], ["domain_id", 34], ["created_at", "2020-09-11 01:00:59.912801"], ["updated_at", "2020-09-11 01:00:59.912801"]]
+  ↳ lib/tasks/dev.rake:16
+  [1m[35m (3.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:16
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:16
+  [1m[36mImageClass Create (0.1ms)[0m  [1m[32mINSERT INTO "image_classes" ("name", "domain_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "young"], ["domain_id", 35], ["created_at", "2020-09-11 01:00:59.917816"], ["updated_at", "2020-09-11 01:00:59.917816"]]
+  ↳ lib/tasks/dev.rake:16
+  [1m[35m (6.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:16
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:16
+  [1m[36mImageClass Create (0.5ms)[0m  [1m[32mINSERT INTO "image_classes" ("name", "domain_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "adult"], ["domain_id", 35], ["created_at", "2020-09-11 01:00:59.928142"], ["updated_at", "2020-09-11 01:00:59.928142"]]
+  ↳ lib/tasks/dev.rake:16
+  [1m[35m (4.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:16
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:16
+  [1m[36mImageClass Create (0.5ms)[0m  [1m[32mINSERT INTO "image_classes" ("name", "domain_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "adult"], ["domain_id", 35], ["created_at", "2020-09-11 01:00:59.938807"], ["updated_at", "2020-09-11 01:00:59.938807"]]
+  ↳ lib/tasks/dev.rake:16
+  [1m[35m (3.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:16
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:16
+  [1m[36mImageClass Create (0.3ms)[0m  [1m[32mINSERT INTO "image_classes" ("name", "domain_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "senior"], ["domain_id", 36], ["created_at", "2020-09-11 01:00:59.947580"], ["updated_at", "2020-09-11 01:00:59.947580"]]
+  ↳ lib/tasks/dev.rake:16
+  [1m[35m (2.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:16
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:16
+  [1m[36mImageClass Create (0.2ms)[0m  [1m[32mINSERT INTO "image_classes" ("name", "domain_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "puppy"], ["domain_id", 36], ["created_at", "2020-09-11 01:00:59.953649"], ["updated_at", "2020-09-11 01:00:59.953649"]]
+  ↳ lib/tasks/dev.rake:16
+  [1m[35m (4.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:16
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:16
+  [1m[36mImageClass Create (0.2ms)[0m  [1m[32mINSERT INTO "image_classes" ("name", "domain_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "senior"], ["domain_id", 36], ["created_at", "2020-09-11 01:00:59.960320"], ["updated_at", "2020-09-11 01:00:59.960320"]]
+  ↳ lib/tasks/dev.rake:16
+  [1m[35m (2.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:16
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:16
+  [1m[36mImageClass Create (0.2ms)[0m  [1m[32mINSERT INTO "image_classes" ("name", "domain_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "adult"], ["domain_id", 37], ["created_at", "2020-09-11 01:00:59.964881"], ["updated_at", "2020-09-11 01:00:59.964881"]]
+  ↳ lib/tasks/dev.rake:16
+  [1m[35m (2.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:16
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:16
+  [1m[36mImageClass Create (0.1ms)[0m  [1m[32mINSERT INTO "image_classes" ("name", "domain_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "puppy"], ["domain_id", 37], ["created_at", "2020-09-11 01:00:59.969930"], ["updated_at", "2020-09-11 01:00:59.969930"]]
+  ↳ lib/tasks/dev.rake:16
+  [1m[35m (2.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:16
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:16
+  [1m[36mImageClass Create (0.1ms)[0m  [1m[32mINSERT INTO "image_classes" ("name", "domain_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "young"], ["domain_id", 37], ["created_at", "2020-09-11 01:00:59.973982"], ["updated_at", "2020-09-11 01:00:59.973982"]]
+  ↳ lib/tasks/dev.rake:16
+  [1m[35m (2.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:16
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:16
+  [1m[36mImageClass Create (0.1ms)[0m  [1m[32mINSERT INTO "image_classes" ("name", "domain_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "adult"], ["domain_id", 38], ["created_at", "2020-09-11 01:00:59.977883"], ["updated_at", "2020-09-11 01:00:59.977883"]]
+  ↳ lib/tasks/dev.rake:16
+  [1m[35m (2.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:16
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:16
+  [1m[36mImageClass Create (0.1ms)[0m  [1m[32mINSERT INTO "image_classes" ("name", "domain_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "senior"], ["domain_id", 38], ["created_at", "2020-09-11 01:00:59.981640"], ["updated_at", "2020-09-11 01:00:59.981640"]]
+  ↳ lib/tasks/dev.rake:16
+  [1m[35m (2.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:16
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:16
+  [1m[36mImageClass Create (0.1ms)[0m  [1m[32mINSERT INTO "image_classes" ("name", "domain_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "adult"], ["domain_id", 38], ["created_at", "2020-09-11 01:00:59.985718"], ["updated_at", "2020-09-11 01:00:59.985718"]]
+  ↳ lib/tasks/dev.rake:16
+  [1m[35m (2.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:16
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:16
+  [1m[36mImageClass Create (0.1ms)[0m  [1m[32mINSERT INTO "image_classes" ("name", "domain_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "adult"], ["domain_id", 39], ["created_at", "2020-09-11 01:00:59.989359"], ["updated_at", "2020-09-11 01:00:59.989359"]]
+  ↳ lib/tasks/dev.rake:16
+  [1m[35m (2.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:16
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:16
+  [1m[36mImageClass Create (0.1ms)[0m  [1m[32mINSERT INTO "image_classes" ("name", "domain_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "adult"], ["domain_id", 39], ["created_at", "2020-09-11 01:00:59.993052"], ["updated_at", "2020-09-11 01:00:59.993052"]]
+  ↳ lib/tasks/dev.rake:16
+  [1m[35m (2.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:16
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:16
+  [1m[36mImageClass Create (0.1ms)[0m  [1m[32mINSERT INTO "image_classes" ("name", "domain_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "puppy"], ["domain_id", 39], ["created_at", "2020-09-11 01:00:59.996502"], ["updated_at", "2020-09-11 01:00:59.996502"]]
+  ↳ lib/tasks/dev.rake:16
+  [1m[35m (2.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:16
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:16
+  [1m[36mImageClass Create (0.1ms)[0m  [1m[32mINSERT INTO "image_classes" ("name", "domain_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "adult"], ["domain_id", 40], ["created_at", "2020-09-11 01:01:00.000062"], ["updated_at", "2020-09-11 01:01:00.000062"]]
+  ↳ lib/tasks/dev.rake:16
+  [1m[35m (2.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:16
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:16
+  [1m[36mImageClass Create (0.1ms)[0m  [1m[32mINSERT INTO "image_classes" ("name", "domain_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "young"], ["domain_id", 40], ["created_at", "2020-09-11 01:01:00.004190"], ["updated_at", "2020-09-11 01:01:00.004190"]]
+  ↳ lib/tasks/dev.rake:16
+  [1m[35m (3.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:16
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:16
+  [1m[36mImageClass Create (0.1ms)[0m  [1m[32mINSERT INTO "image_classes" ("name", "domain_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "senior"], ["domain_id", 40], ["created_at", "2020-09-11 01:01:00.008885"], ["updated_at", "2020-09-11 01:01:00.008885"]]
+  ↳ lib/tasks/dev.rake:16
+  [1m[35m (2.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:16
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:16
+  [1m[36mImageClass Create (0.1ms)[0m  [1m[32mINSERT INTO "image_classes" ("name", "domain_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "senior"], ["domain_id", 41], ["created_at", "2020-09-11 01:01:00.012586"], ["updated_at", "2020-09-11 01:01:00.012586"]]
+  ↳ lib/tasks/dev.rake:16
+  [1m[35m (2.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:16
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:16
+  [1m[36mImageClass Create (0.1ms)[0m  [1m[32mINSERT INTO "image_classes" ("name", "domain_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "adult"], ["domain_id", 41], ["created_at", "2020-09-11 01:01:00.016089"], ["updated_at", "2020-09-11 01:01:00.016089"]]
+  ↳ lib/tasks/dev.rake:16
+  [1m[35m (2.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:16
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:16
+  [1m[36mImageClass Create (0.1ms)[0m  [1m[32mINSERT INTO "image_classes" ("name", "domain_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "senior"], ["domain_id", 41], ["created_at", "2020-09-11 01:01:00.019806"], ["updated_at", "2020-09-11 01:01:00.019806"]]
+  ↳ lib/tasks/dev.rake:16
+  [1m[35m (2.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:16
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:16
+  [1m[36mImageClass Create (0.1ms)[0m  [1m[32mINSERT INTO "image_classes" ("name", "domain_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "puppy"], ["domain_id", 42], ["created_at", "2020-09-11 01:01:00.023112"], ["updated_at", "2020-09-11 01:01:00.023112"]]
+  ↳ lib/tasks/dev.rake:16
+  [1m[35m (2.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:16
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:16
+  [1m[36mImageClass Create (0.1ms)[0m  [1m[32mINSERT INTO "image_classes" ("name", "domain_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "adult"], ["domain_id", 42], ["created_at", "2020-09-11 01:01:00.026855"], ["updated_at", "2020-09-11 01:01:00.026855"]]
+  ↳ lib/tasks/dev.rake:16
+  [1m[35m (2.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:16
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:16
+  [1m[36mImageClass Create (0.1ms)[0m  [1m[32mINSERT INTO "image_classes" ("name", "domain_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "adult"], ["domain_id", 42], ["created_at", "2020-09-11 01:01:00.030251"], ["updated_at", "2020-09-11 01:01:00.030251"]]
+  ↳ lib/tasks/dev.rake:16
+  [1m[35m (2.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:16
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:16
+  [1m[36mImageClass Create (0.1ms)[0m  [1m[32mINSERT INTO "image_classes" ("name", "domain_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "senior"], ["domain_id", 43], ["created_at", "2020-09-11 01:01:00.033846"], ["updated_at", "2020-09-11 01:01:00.033846"]]
+  ↳ lib/tasks/dev.rake:16
+  [1m[35m (2.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:16
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:16
+  [1m[36mImageClass Create (0.1ms)[0m  [1m[32mINSERT INTO "image_classes" ("name", "domain_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "puppy"], ["domain_id", 43], ["created_at", "2020-09-11 01:01:00.037226"], ["updated_at", "2020-09-11 01:01:00.037226"]]
+  ↳ lib/tasks/dev.rake:16
+  [1m[35m (2.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:16
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:16
+  [1m[36mImageClass Create (0.1ms)[0m  [1m[32mINSERT INTO "image_classes" ("name", "domain_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "young"], ["domain_id", 43], ["created_at", "2020-09-11 01:01:00.040885"], ["updated_at", "2020-09-11 01:01:00.040885"]]
+  ↳ lib/tasks/dev.rake:16
+  [1m[35m (2.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:16
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:16
+  [1m[36mImageClass Create (0.1ms)[0m  [1m[32mINSERT INTO "image_classes" ("name", "domain_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "senior"], ["domain_id", 44], ["created_at", "2020-09-11 01:01:00.044402"], ["updated_at", "2020-09-11 01:01:00.044402"]]
+  ↳ lib/tasks/dev.rake:16
+  [1m[35m (2.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:16
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:16
+  [1m[36mImageClass Create (0.1ms)[0m  [1m[32mINSERT INTO "image_classes" ("name", "domain_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "adult"], ["domain_id", 44], ["created_at", "2020-09-11 01:01:00.047987"], ["updated_at", "2020-09-11 01:01:00.047987"]]
+  ↳ lib/tasks/dev.rake:16
+  [1m[35m (2.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:16
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:16
+  [1m[36mImageClass Create (0.1ms)[0m  [1m[32mINSERT INTO "image_classes" ("name", "domain_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "young"], ["domain_id", 44], ["created_at", "2020-09-11 01:01:00.051354"], ["updated_at", "2020-09-11 01:01:00.051354"]]
+  ↳ lib/tasks/dev.rake:16
+  [1m[35m (2.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:16
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:16
+  [1m[36mImageClass Create (0.1ms)[0m  [1m[32mINSERT INTO "image_classes" ("name", "domain_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "puppy"], ["domain_id", 45], ["created_at", "2020-09-11 01:01:00.055437"], ["updated_at", "2020-09-11 01:01:00.055437"]]
+  ↳ lib/tasks/dev.rake:16
+  [1m[35m (2.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:16
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:16
+  [1m[36mImageClass Create (0.1ms)[0m  [1m[32mINSERT INTO "image_classes" ("name", "domain_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "young"], ["domain_id", 45], ["created_at", "2020-09-11 01:01:00.059216"], ["updated_at", "2020-09-11 01:01:00.059216"]]
+  ↳ lib/tasks/dev.rake:16
+  [1m[35m (2.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:16
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:16
+  [1m[36mImageClass Create (0.1ms)[0m  [1m[32mINSERT INTO "image_classes" ("name", "domain_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "adult"], ["domain_id", 45], ["created_at", "2020-09-11 01:01:00.062944"], ["updated_at", "2020-09-11 01:01:00.062944"]]
+  ↳ lib/tasks/dev.rake:16
+  [1m[35m (3.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:16
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:16
+  [1m[36mImageClass Create (0.1ms)[0m  [1m[32mINSERT INTO "image_classes" ("name", "domain_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "young"], ["domain_id", 46], ["created_at", "2020-09-11 01:01:00.067859"], ["updated_at", "2020-09-11 01:01:00.067859"]]
+  ↳ lib/tasks/dev.rake:16
+  [1m[35m (2.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:16
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:16
+  [1m[36mImageClass Create (0.1ms)[0m  [1m[32mINSERT INTO "image_classes" ("name", "domain_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "adult"], ["domain_id", 46], ["created_at", "2020-09-11 01:01:00.072279"], ["updated_at", "2020-09-11 01:01:00.072279"]]
+  ↳ lib/tasks/dev.rake:16
+  [1m[35m (2.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:16
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:16
+  [1m[36mImageClass Create (0.1ms)[0m  [1m[32mINSERT INTO "image_classes" ("name", "domain_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "senior"], ["domain_id", 46], ["created_at", "2020-09-11 01:01:00.076276"], ["updated_at", "2020-09-11 01:01:00.076276"]]
+  ↳ lib/tasks/dev.rake:16
+  [1m[35m (2.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:16
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:16
+  [1m[36mImageClass Create (0.1ms)[0m  [1m[32mINSERT INTO "image_classes" ("name", "domain_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "puppy"], ["domain_id", 47], ["created_at", "2020-09-11 01:01:00.080326"], ["updated_at", "2020-09-11 01:01:00.080326"]]
+  ↳ lib/tasks/dev.rake:16
+  [1m[35m (2.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:16
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:16
+  [1m[36mImageClass Create (0.1ms)[0m  [1m[32mINSERT INTO "image_classes" ("name", "domain_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "young"], ["domain_id", 47], ["created_at", "2020-09-11 01:01:00.084180"], ["updated_at", "2020-09-11 01:01:00.084180"]]
+  ↳ lib/tasks/dev.rake:16
+  [1m[35m (2.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:16
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:16
+  [1m[36mImageClass Create (0.1ms)[0m  [1m[32mINSERT INTO "image_classes" ("name", "domain_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "young"], ["domain_id", 47], ["created_at", "2020-09-11 01:01:00.088036"], ["updated_at", "2020-09-11 01:01:00.088036"]]
+  ↳ lib/tasks/dev.rake:16
+  [1m[35m (2.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:16
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:16
+  [1m[36mImageClass Create (0.1ms)[0m  [1m[32mINSERT INTO "image_classes" ("name", "domain_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "young"], ["domain_id", 48], ["created_at", "2020-09-11 01:01:00.091627"], ["updated_at", "2020-09-11 01:01:00.091627"]]
+  ↳ lib/tasks/dev.rake:16
+  [1m[35m (2.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:16
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:16
+  [1m[36mImageClass Create (0.1ms)[0m  [1m[32mINSERT INTO "image_classes" ("name", "domain_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "young"], ["domain_id", 48], ["created_at", "2020-09-11 01:01:00.095530"], ["updated_at", "2020-09-11 01:01:00.095530"]]
+  ↳ lib/tasks/dev.rake:16
+  [1m[35m (2.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:16
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:16
+  [1m[36mImageClass Create (0.1ms)[0m  [1m[32mINSERT INTO "image_classes" ("name", "domain_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "puppy"], ["domain_id", 48], ["created_at", "2020-09-11 01:01:00.099051"], ["updated_at", "2020-09-11 01:01:00.099051"]]
+  ↳ lib/tasks/dev.rake:16
+  [1m[35m (3.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:16
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:16
+  [1m[36mImageClass Create (0.1ms)[0m  [1m[32mINSERT INTO "image_classes" ("name", "domain_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "puppy"], ["domain_id", 49], ["created_at", "2020-09-11 01:01:00.104029"], ["updated_at", "2020-09-11 01:01:00.104029"]]
+  ↳ lib/tasks/dev.rake:16
+  [1m[35m (2.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:16
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:16
+  [1m[36mImageClass Create (0.1ms)[0m  [1m[32mINSERT INTO "image_classes" ("name", "domain_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "adult"], ["domain_id", 49], ["created_at", "2020-09-11 01:01:00.107673"], ["updated_at", "2020-09-11 01:01:00.107673"]]
+  ↳ lib/tasks/dev.rake:16
+  [1m[35m (2.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:16
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:16
+  [1m[36mImageClass Create (0.1ms)[0m  [1m[32mINSERT INTO "image_classes" ("name", "domain_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "senior"], ["domain_id", 49], ["created_at", "2020-09-11 01:01:00.111624"], ["updated_at", "2020-09-11 01:01:00.111624"]]
+  ↳ lib/tasks/dev.rake:16
+  [1m[35m (2.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:16
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:16
+  [1m[36mImageClass Create (0.1ms)[0m  [1m[32mINSERT INTO "image_classes" ("name", "domain_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "senior"], ["domain_id", 50], ["created_at", "2020-09-11 01:01:00.115523"], ["updated_at", "2020-09-11 01:01:00.115523"]]
+  ↳ lib/tasks/dev.rake:16
+  [1m[35m (2.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:16
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:16
+  [1m[36mImageClass Create (0.1ms)[0m  [1m[32mINSERT INTO "image_classes" ("name", "domain_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "senior"], ["domain_id", 50], ["created_at", "2020-09-11 01:01:00.119615"], ["updated_at", "2020-09-11 01:01:00.119615"]]
+  ↳ lib/tasks/dev.rake:16
+  [1m[35m (2.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:16
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:16
+  [1m[36mImageClass Create (0.1ms)[0m  [1m[32mINSERT INTO "image_classes" ("name", "domain_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "young"], ["domain_id", 50], ["created_at", "2020-09-11 01:01:00.123387"], ["updated_at", "2020-09-11 01:01:00.123387"]]
+  ↳ lib/tasks/dev.rake:16
+  [1m[35m (2.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:16
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:16
+  [1m[36mImageClass Create (0.1ms)[0m  [1m[32mINSERT INTO "image_classes" ("name", "domain_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "young"], ["domain_id", 51], ["created_at", "2020-09-11 01:01:00.127202"], ["updated_at", "2020-09-11 01:01:00.127202"]]
+  ↳ lib/tasks/dev.rake:16
+  [1m[35m (2.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:16
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:16
+  [1m[36mImageClass Create (0.1ms)[0m  [1m[32mINSERT INTO "image_classes" ("name", "domain_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "young"], ["domain_id", 51], ["created_at", "2020-09-11 01:01:00.130959"], ["updated_at", "2020-09-11 01:01:00.130959"]]
+  ↳ lib/tasks/dev.rake:16
+  [1m[35m (3.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:16
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:16
+  [1m[36mImageClass Create (0.1ms)[0m  [1m[32mINSERT INTO "image_classes" ("name", "domain_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "young"], ["domain_id", 51], ["created_at", "2020-09-11 01:01:00.136087"], ["updated_at", "2020-09-11 01:01:00.136087"]]
+  ↳ lib/tasks/dev.rake:16
+  [1m[35m (2.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:16
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:16
+  [1m[36mImageClass Create (0.1ms)[0m  [1m[32mINSERT INTO "image_classes" ("name", "domain_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "senior"], ["domain_id", 52], ["created_at", "2020-09-11 01:01:00.141555"], ["updated_at", "2020-09-11 01:01:00.141555"]]
+  ↳ lib/tasks/dev.rake:16
+  [1m[35m (2.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:16
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:16
+  [1m[36mImageClass Create (0.1ms)[0m  [1m[32mINSERT INTO "image_classes" ("name", "domain_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "puppy"], ["domain_id", 52], ["created_at", "2020-09-11 01:01:00.145584"], ["updated_at", "2020-09-11 01:01:00.145584"]]
+  ↳ lib/tasks/dev.rake:16
+  [1m[35m (2.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:16
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:16
+  [1m[36mImageClass Create (0.1ms)[0m  [1m[32mINSERT INTO "image_classes" ("name", "domain_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "senior"], ["domain_id", 52], ["created_at", "2020-09-11 01:01:00.149343"], ["updated_at", "2020-09-11 01:01:00.149343"]]
+  ↳ lib/tasks/dev.rake:16
+  [1m[35m (2.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:16
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:8
+  [1m[36mDomain Create (0.1ms)[0m  [1m[32mINSERT INTO "domains" ("description", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["description", "Fox Terrier"], ["created_at", "2020-09-11 01:01:26.038479"], ["updated_at", "2020-09-11 01:01:26.038479"]]
+  ↳ lib/tasks/dev.rake:8
+  [1m[35m (2.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:8
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:8
+  [1m[36mDomain Create (0.1ms)[0m  [1m[32mINSERT INTO "domains" ("description", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["description", "German Pointer"], ["created_at", "2020-09-11 01:01:26.043535"], ["updated_at", "2020-09-11 01:01:26.043535"]]
+  ↳ lib/tasks/dev.rake:8
+  [1m[35m (2.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:8
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:8
+  [1m[36mDomain Create (0.1ms)[0m  [1m[32mINSERT INTO "domains" ("description", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["description", "Shetland Sheepdog"], ["created_at", "2020-09-11 01:01:26.047652"], ["updated_at", "2020-09-11 01:01:26.047652"]]
+  ↳ lib/tasks/dev.rake:8
+  [1m[35m (2.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:8
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:8
+  [1m[36mDomain Create (0.1ms)[0m  [1m[32mINSERT INTO "domains" ("description", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["description", "Papillon"], ["created_at", "2020-09-11 01:01:26.051350"], ["updated_at", "2020-09-11 01:01:26.051350"]]
+  ↳ lib/tasks/dev.rake:8
+  [1m[35m (4.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:8
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:8
+  [1m[36mDomain Create (0.1ms)[0m  [1m[32mINSERT INTO "domains" ("description", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["description", "Bedlington Terrier"], ["created_at", "2020-09-11 01:01:26.056993"], ["updated_at", "2020-09-11 01:01:26.056993"]]
+  ↳ lib/tasks/dev.rake:8
+  [1m[35m (2.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:8
+  [1m[36mDomain Load (0.2ms)[0m  [1m[34mSELECT "domains".* FROM "domains"[0m
+  ↳ lib/tasks/dev.rake:17
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:19
+  [1m[36mImageClass Create (0.2ms)[0m  [1m[32mINSERT INTO "image_classes" ("name", "domain_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "senior"], ["domain_id", 1], ["created_at", "2020-09-11 01:01:26.067068"], ["updated_at", "2020-09-11 01:01:26.067068"]]
+  ↳ lib/tasks/dev.rake:19
+  [1m[35m (2.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:19
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:19
+  [1m[36mImageClass Create (0.2ms)[0m  [1m[32mINSERT INTO "image_classes" ("name", "domain_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "puppy"], ["domain_id", 1], ["created_at", "2020-09-11 01:01:26.072035"], ["updated_at", "2020-09-11 01:01:26.072035"]]
+  ↳ lib/tasks/dev.rake:19
+  [1m[35m (2.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:19
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:19
+  [1m[36mImageClass Create (0.1ms)[0m  [1m[32mINSERT INTO "image_classes" ("name", "domain_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "puppy"], ["domain_id", 1], ["created_at", "2020-09-11 01:01:26.076864"], ["updated_at", "2020-09-11 01:01:26.076864"]]
+  ↳ lib/tasks/dev.rake:19
+  [1m[35m (2.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:19
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:19
+  [1m[36mImageClass Create (0.1ms)[0m  [1m[32mINSERT INTO "image_classes" ("name", "domain_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "young"], ["domain_id", 2], ["created_at", "2020-09-11 01:01:26.080306"], ["updated_at", "2020-09-11 01:01:26.080306"]]
+  ↳ lib/tasks/dev.rake:19
+  [1m[35m (2.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:19
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:19
+  [1m[36mImageClass Create (0.1ms)[0m  [1m[32mINSERT INTO "image_classes" ("name", "domain_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "puppy"], ["domain_id", 2], ["created_at", "2020-09-11 01:01:26.083947"], ["updated_at", "2020-09-11 01:01:26.083947"]]
+  ↳ lib/tasks/dev.rake:19
+  [1m[35m (2.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:19
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:19
+  [1m[36mImageClass Create (0.1ms)[0m  [1m[32mINSERT INTO "image_classes" ("name", "domain_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "adult"], ["domain_id", 2], ["created_at", "2020-09-11 01:01:26.087461"], ["updated_at", "2020-09-11 01:01:26.087461"]]
+  ↳ lib/tasks/dev.rake:19
+  [1m[35m (2.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:19
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:19
+  [1m[36mImageClass Create (0.1ms)[0m  [1m[32mINSERT INTO "image_classes" ("name", "domain_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "adult"], ["domain_id", 3], ["created_at", "2020-09-11 01:01:26.091228"], ["updated_at", "2020-09-11 01:01:26.091228"]]
+  ↳ lib/tasks/dev.rake:19
+  [1m[35m (2.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:19
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:19
+  [1m[36mImageClass Create (0.1ms)[0m  [1m[32mINSERT INTO "image_classes" ("name", "domain_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "adult"], ["domain_id", 3], ["created_at", "2020-09-11 01:01:26.094620"], ["updated_at", "2020-09-11 01:01:26.094620"]]
+  ↳ lib/tasks/dev.rake:19
+  [1m[35m (2.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:19
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:19
+  [1m[36mImageClass Create (0.1ms)[0m  [1m[32mINSERT INTO "image_classes" ("name", "domain_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "young"], ["domain_id", 3], ["created_at", "2020-09-11 01:01:26.098384"], ["updated_at", "2020-09-11 01:01:26.098384"]]
+  ↳ lib/tasks/dev.rake:19
+  [1m[35m (2.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:19
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:19
+  [1m[36mImageClass Create (0.1ms)[0m  [1m[32mINSERT INTO "image_classes" ("name", "domain_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "senior"], ["domain_id", 4], ["created_at", "2020-09-11 01:01:26.101749"], ["updated_at", "2020-09-11 01:01:26.101749"]]
+  ↳ lib/tasks/dev.rake:19
+  [1m[35m (3.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:19
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:19
+  [1m[36mImageClass Create (0.1ms)[0m  [1m[32mINSERT INTO "image_classes" ("name", "domain_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "young"], ["domain_id", 4], ["created_at", "2020-09-11 01:01:26.106389"], ["updated_at", "2020-09-11 01:01:26.106389"]]
+  ↳ lib/tasks/dev.rake:19
+  [1m[35m (2.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:19
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:19
+  [1m[36mImageClass Create (0.1ms)[0m  [1m[32mINSERT INTO "image_classes" ("name", "domain_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "puppy"], ["domain_id", 4], ["created_at", "2020-09-11 01:01:26.110081"], ["updated_at", "2020-09-11 01:01:26.110081"]]
+  ↳ lib/tasks/dev.rake:19
+  [1m[35m (2.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:19
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:19
+  [1m[36mImageClass Create (0.1ms)[0m  [1m[32mINSERT INTO "image_classes" ("name", "domain_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "adult"], ["domain_id", 5], ["created_at", "2020-09-11 01:01:26.114058"], ["updated_at", "2020-09-11 01:01:26.114058"]]
+  ↳ lib/tasks/dev.rake:19
+  [1m[35m (2.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:19
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:19
+  [1m[36mImageClass Create (0.1ms)[0m  [1m[32mINSERT INTO "image_classes" ("name", "domain_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "young"], ["domain_id", 5], ["created_at", "2020-09-11 01:01:26.117633"], ["updated_at", "2020-09-11 01:01:26.117633"]]
+  ↳ lib/tasks/dev.rake:19
+  [1m[35m (2.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:19
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:19
+  [1m[36mImageClass Create (0.1ms)[0m  [1m[32mINSERT INTO "image_classes" ("name", "domain_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "adult"], ["domain_id", 5], ["created_at", "2020-09-11 01:01:26.121610"], ["updated_at", "2020-09-11 01:01:26.121610"]]
+  ↳ lib/tasks/dev.rake:19
+  [1m[35m (2.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:19
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:19
+  [1m[36mImageClass Create (0.1ms)[0m  [1m[32mINSERT INTO "image_classes" ("name", "domain_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "young"], ["domain_id", 6], ["created_at", "2020-09-11 01:01:26.125282"], ["updated_at", "2020-09-11 01:01:26.125282"]]
+  ↳ lib/tasks/dev.rake:19
+  [1m[35m (2.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:19
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:19
+  [1m[36mImageClass Create (0.1ms)[0m  [1m[32mINSERT INTO "image_classes" ("name", "domain_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "young"], ["domain_id", 6], ["created_at", "2020-09-11 01:01:26.129152"], ["updated_at", "2020-09-11 01:01:26.129152"]]
+  ↳ lib/tasks/dev.rake:19
+  [1m[35m (2.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:19
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:19
+  [1m[36mImageClass Create (0.1ms)[0m  [1m[32mINSERT INTO "image_classes" ("name", "domain_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "young"], ["domain_id", 6], ["created_at", "2020-09-11 01:01:26.132869"], ["updated_at", "2020-09-11 01:01:26.132869"]]
+  ↳ lib/tasks/dev.rake:19
+  [1m[35m (2.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:19
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:19
+  [1m[36mImageClass Create (0.1ms)[0m  [1m[32mINSERT INTO "image_classes" ("name", "domain_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "young"], ["domain_id", 7], ["created_at", "2020-09-11 01:01:26.136586"], ["updated_at", "2020-09-11 01:01:26.136586"]]
+  ↳ lib/tasks/dev.rake:19
+  [1m[35m (2.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:19
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:19
+  [1m[36mImageClass Create (0.1ms)[0m  [1m[32mINSERT INTO "image_classes" ("name", "domain_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "puppy"], ["domain_id", 7], ["created_at", "2020-09-11 01:01:26.140287"], ["updated_at", "2020-09-11 01:01:26.140287"]]
+  ↳ lib/tasks/dev.rake:19
+  [1m[35m (2.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:19
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:19
+  [1m[36mImageClass Create (0.1ms)[0m  [1m[32mINSERT INTO "image_classes" ("name", "domain_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "puppy"], ["domain_id", 7], ["created_at", "2020-09-11 01:01:26.144125"], ["updated_at", "2020-09-11 01:01:26.144125"]]
+  ↳ lib/tasks/dev.rake:19
+  [1m[35m (2.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:19
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:19
+  [1m[36mImageClass Create (0.1ms)[0m  [1m[32mINSERT INTO "image_classes" ("name", "domain_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "puppy"], ["domain_id", 8], ["created_at", "2020-09-11 01:01:26.148538"], ["updated_at", "2020-09-11 01:01:26.148538"]]
+  ↳ lib/tasks/dev.rake:19
+  [1m[35m (3.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:19
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:19
+  [1m[36mImageClass Create (0.1ms)[0m  [1m[32mINSERT INTO "image_classes" ("name", "domain_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "adult"], ["domain_id", 8], ["created_at", "2020-09-11 01:01:26.153303"], ["updated_at", "2020-09-11 01:01:26.153303"]]
+  ↳ lib/tasks/dev.rake:19
+  [1m[35m (2.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:19
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:19
+  [1m[36mImageClass Create (0.1ms)[0m  [1m[32mINSERT INTO "image_classes" ("name", "domain_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "puppy"], ["domain_id", 8], ["created_at", "2020-09-11 01:01:26.161782"], ["updated_at", "2020-09-11 01:01:26.161782"]]
+  ↳ lib/tasks/dev.rake:19
+  [1m[35m (2.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:19
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:19
+  [1m[36mImageClass Create (0.1ms)[0m  [1m[32mINSERT INTO "image_classes" ("name", "domain_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "adult"], ["domain_id", 9], ["created_at", "2020-09-11 01:01:26.165293"], ["updated_at", "2020-09-11 01:01:26.165293"]]
+  ↳ lib/tasks/dev.rake:19
+  [1m[35m (2.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:19
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:19
+  [1m[36mImageClass Create (0.1ms)[0m  [1m[32mINSERT INTO "image_classes" ("name", "domain_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "puppy"], ["domain_id", 9], ["created_at", "2020-09-11 01:01:26.168870"], ["updated_at", "2020-09-11 01:01:26.168870"]]
+  ↳ lib/tasks/dev.rake:19
+  [1m[35m (2.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:19
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:19
+  [1m[36mImageClass Create (0.1ms)[0m  [1m[32mINSERT INTO "image_classes" ("name", "domain_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "puppy"], ["domain_id", 9], ["created_at", "2020-09-11 01:01:26.172421"], ["updated_at", "2020-09-11 01:01:26.172421"]]
+  ↳ lib/tasks/dev.rake:19
+  [1m[35m (2.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:19
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:19
+  [1m[36mImageClass Create (0.1ms)[0m  [1m[32mINSERT INTO "image_classes" ("name", "domain_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "young"], ["domain_id", 10], ["created_at", "2020-09-11 01:01:26.176006"], ["updated_at", "2020-09-11 01:01:26.176006"]]
+  ↳ lib/tasks/dev.rake:19
+  [1m[35m (2.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:19
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:19
+  [1m[36mImageClass Create (0.1ms)[0m  [1m[32mINSERT INTO "image_classes" ("name", "domain_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "young"], ["domain_id", 10], ["created_at", "2020-09-11 01:01:26.179628"], ["updated_at", "2020-09-11 01:01:26.179628"]]
+  ↳ lib/tasks/dev.rake:19
+  [1m[35m (6.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:19
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:19
+  [1m[36mImageClass Create (0.1ms)[0m  [1m[32mINSERT INTO "image_classes" ("name", "domain_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "puppy"], ["domain_id", 10], ["created_at", "2020-09-11 01:01:26.187408"], ["updated_at", "2020-09-11 01:01:26.187408"]]
+  ↳ lib/tasks/dev.rake:19
+  [1m[35m (2.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:19
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:19
+  [1m[36mImageClass Create (0.1ms)[0m  [1m[32mINSERT INTO "image_classes" ("name", "domain_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "puppy"], ["domain_id", 11], ["created_at", "2020-09-11 01:01:26.191219"], ["updated_at", "2020-09-11 01:01:26.191219"]]
+  ↳ lib/tasks/dev.rake:19
+  [1m[35m (2.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:19
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:19
+  [1m[36mImageClass Create (0.1ms)[0m  [1m[32mINSERT INTO "image_classes" ("name", "domain_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "young"], ["domain_id", 11], ["created_at", "2020-09-11 01:01:26.195115"], ["updated_at", "2020-09-11 01:01:26.195115"]]
+  ↳ lib/tasks/dev.rake:19
+  [1m[35m (2.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:19
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:19
+  [1m[36mImageClass Create (0.1ms)[0m  [1m[32mINSERT INTO "image_classes" ("name", "domain_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "puppy"], ["domain_id", 11], ["created_at", "2020-09-11 01:01:26.198779"], ["updated_at", "2020-09-11 01:01:26.198779"]]
+  ↳ lib/tasks/dev.rake:19
+  [1m[35m (3.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:19
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:19
+  [1m[36mImageClass Create (0.1ms)[0m  [1m[32mINSERT INTO "image_classes" ("name", "domain_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "young"], ["domain_id", 12], ["created_at", "2020-09-11 01:01:26.203757"], ["updated_at", "2020-09-11 01:01:26.203757"]]
+  ↳ lib/tasks/dev.rake:19
+  [1m[35m (2.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:19
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:19
+  [1m[36mImageClass Create (0.1ms)[0m  [1m[32mINSERT INTO "image_classes" ("name", "domain_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "senior"], ["domain_id", 12], ["created_at", "2020-09-11 01:01:26.207713"], ["updated_at", "2020-09-11 01:01:26.207713"]]
+  ↳ lib/tasks/dev.rake:19
+  [1m[35m (2.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:19
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:19
+  [1m[36mImageClass Create (0.1ms)[0m  [1m[32mINSERT INTO "image_classes" ("name", "domain_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "adult"], ["domain_id", 12], ["created_at", "2020-09-11 01:01:26.211844"], ["updated_at", "2020-09-11 01:01:26.211844"]]
+  ↳ lib/tasks/dev.rake:19
+  [1m[35m (2.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:19
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:19
+  [1m[36mImageClass Create (0.1ms)[0m  [1m[32mINSERT INTO "image_classes" ("name", "domain_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "adult"], ["domain_id", 13], ["created_at", "2020-09-11 01:01:26.215752"], ["updated_at", "2020-09-11 01:01:26.215752"]]
+  ↳ lib/tasks/dev.rake:19
+  [1m[35m (2.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:19
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:19
+  [1m[36mImageClass Create (0.1ms)[0m  [1m[32mINSERT INTO "image_classes" ("name", "domain_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "senior"], ["domain_id", 13], ["created_at", "2020-09-11 01:01:26.219822"], ["updated_at", "2020-09-11 01:01:26.219822"]]
+  ↳ lib/tasks/dev.rake:19
+  [1m[35m (2.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:19
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:19
+  [1m[36mImageClass Create (0.1ms)[0m  [1m[32mINSERT INTO "image_classes" ("name", "domain_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "puppy"], ["domain_id", 13], ["created_at", "2020-09-11 01:01:26.223846"], ["updated_at", "2020-09-11 01:01:26.223846"]]
+  ↳ lib/tasks/dev.rake:19
+  [1m[35m (2.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:19
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:19
+  [1m[36mImageClass Create (0.1ms)[0m  [1m[32mINSERT INTO "image_classes" ("name", "domain_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "young"], ["domain_id", 14], ["created_at", "2020-09-11 01:01:26.227956"], ["updated_at", "2020-09-11 01:01:26.227956"]]
+  ↳ lib/tasks/dev.rake:19
+  [1m[35m (2.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:19
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:19
+  [1m[36mImageClass Create (0.1ms)[0m  [1m[32mINSERT INTO "image_classes" ("name", "domain_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "puppy"], ["domain_id", 14], ["created_at", "2020-09-11 01:01:26.231770"], ["updated_at", "2020-09-11 01:01:26.231770"]]
+  ↳ lib/tasks/dev.rake:19
+  [1m[35m (4.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:19
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:19
+  [1m[36mImageClass Create (0.1ms)[0m  [1m[32mINSERT INTO "image_classes" ("name", "domain_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "puppy"], ["domain_id", 14], ["created_at", "2020-09-11 01:01:26.238026"], ["updated_at", "2020-09-11 01:01:26.238026"]]
+  ↳ lib/tasks/dev.rake:19
+  [1m[35m (2.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:19
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:19
+  [1m[36mImageClass Create (0.1ms)[0m  [1m[32mINSERT INTO "image_classes" ("name", "domain_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "young"], ["domain_id", 15], ["created_at", "2020-09-11 01:01:26.241911"], ["updated_at", "2020-09-11 01:01:26.241911"]]
+  ↳ lib/tasks/dev.rake:19
+  [1m[35m (2.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:19
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:19
+  [1m[36mImageClass Create (0.1ms)[0m  [1m[32mINSERT INTO "image_classes" ("name", "domain_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "adult"], ["domain_id", 15], ["created_at", "2020-09-11 01:01:26.246051"], ["updated_at", "2020-09-11 01:01:26.246051"]]
+  ↳ lib/tasks/dev.rake:19
+  [1m[35m (2.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:19
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:19
+  [1m[36mImageClass Create (0.1ms)[0m  [1m[32mINSERT INTO "image_classes" ("name", "domain_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "adult"], ["domain_id", 15], ["created_at", "2020-09-11 01:01:26.250070"], ["updated_at", "2020-09-11 01:01:26.250070"]]
+  ↳ lib/tasks/dev.rake:19
+  [1m[35m (2.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:19
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:19
+  [1m[36mImageClass Create (0.1ms)[0m  [1m[32mINSERT INTO "image_classes" ("name", "domain_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "adult"], ["domain_id", 16], ["created_at", "2020-09-11 01:01:26.254975"], ["updated_at", "2020-09-11 01:01:26.254975"]]
+  ↳ lib/tasks/dev.rake:19
+  [1m[35m (3.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:19
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:19
+  [1m[36mImageClass Create (0.1ms)[0m  [1m[32mINSERT INTO "image_classes" ("name", "domain_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "senior"], ["domain_id", 16], ["created_at", "2020-09-11 01:01:26.260223"], ["updated_at", "2020-09-11 01:01:26.260223"]]
+  ↳ lib/tasks/dev.rake:19
+  [1m[35m (3.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:19
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:19
+  [1m[36mImageClass Create (0.1ms)[0m  [1m[32mINSERT INTO "image_classes" ("name", "domain_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "senior"], ["domain_id", 16], ["created_at", "2020-09-11 01:01:26.265434"], ["updated_at", "2020-09-11 01:01:26.265434"]]
+  ↳ lib/tasks/dev.rake:19
+  [1m[35m (2.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:19
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:19
+  [1m[36mImageClass Create (0.1ms)[0m  [1m[32mINSERT INTO "image_classes" ("name", "domain_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "young"], ["domain_id", 17], ["created_at", "2020-09-11 01:01:26.269304"], ["updated_at", "2020-09-11 01:01:26.269304"]]
+  ↳ lib/tasks/dev.rake:19
+  [1m[35m (2.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:19
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:19
+  [1m[36mImageClass Create (0.1ms)[0m  [1m[32mINSERT INTO "image_classes" ("name", "domain_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "puppy"], ["domain_id", 17], ["created_at", "2020-09-11 01:01:26.273259"], ["updated_at", "2020-09-11 01:01:26.273259"]]
+  ↳ lib/tasks/dev.rake:19
+  [1m[35m (2.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:19
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:19
+  [1m[36mImageClass Create (0.1ms)[0m  [1m[32mINSERT INTO "image_classes" ("name", "domain_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "senior"], ["domain_id", 17], ["created_at", "2020-09-11 01:01:26.277081"], ["updated_at", "2020-09-11 01:01:26.277081"]]
+  ↳ lib/tasks/dev.rake:19
+  [1m[35m (2.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:19
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:19
+  [1m[36mImageClass Create (0.1ms)[0m  [1m[32mINSERT INTO "image_classes" ("name", "domain_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "puppy"], ["domain_id", 18], ["created_at", "2020-09-11 01:01:26.280985"], ["updated_at", "2020-09-11 01:01:26.280985"]]
+  ↳ lib/tasks/dev.rake:19
+  [1m[35m (2.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:19
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:19
+  [1m[36mImageClass Create (0.1ms)[0m  [1m[32mINSERT INTO "image_classes" ("name", "domain_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "puppy"], ["domain_id", 18], ["created_at", "2020-09-11 01:01:26.284975"], ["updated_at", "2020-09-11 01:01:26.284975"]]
+  ↳ lib/tasks/dev.rake:19
+  [1m[35m (2.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:19
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:19
+  [1m[36mImageClass Create (0.1ms)[0m  [1m[32mINSERT INTO "image_classes" ("name", "domain_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "adult"], ["domain_id", 18], ["created_at", "2020-09-11 01:01:26.289181"], ["updated_at", "2020-09-11 01:01:26.289181"]]
+  ↳ lib/tasks/dev.rake:19
+  [1m[35m (2.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:19
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:19
+  [1m[36mImageClass Create (0.2ms)[0m  [1m[32mINSERT INTO "image_classes" ("name", "domain_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "adult"], ["domain_id", 19], ["created_at", "2020-09-11 01:01:26.293192"], ["updated_at", "2020-09-11 01:01:26.293192"]]
+  ↳ lib/tasks/dev.rake:19
+  [1m[35m (2.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:19
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:19
+  [1m[36mImageClass Create (0.1ms)[0m  [1m[32mINSERT INTO "image_classes" ("name", "domain_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "adult"], ["domain_id", 19], ["created_at", "2020-09-11 01:01:26.297397"], ["updated_at", "2020-09-11 01:01:26.297397"]]
+  ↳ lib/tasks/dev.rake:19
+  [1m[35m (2.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:19
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:19
+  [1m[36mImageClass Create (0.1ms)[0m  [1m[32mINSERT INTO "image_classes" ("name", "domain_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "young"], ["domain_id", 19], ["created_at", "2020-09-11 01:01:26.301478"], ["updated_at", "2020-09-11 01:01:26.301478"]]
+  ↳ lib/tasks/dev.rake:19
+  [1m[35m (2.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:19
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:19
+  [1m[36mImageClass Create (0.1ms)[0m  [1m[32mINSERT INTO "image_classes" ("name", "domain_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "young"], ["domain_id", 20], ["created_at", "2020-09-11 01:01:26.305512"], ["updated_at", "2020-09-11 01:01:26.305512"]]
+  ↳ lib/tasks/dev.rake:19
+  [1m[35m (2.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:19
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:19
+  [1m[36mImageClass Create (0.1ms)[0m  [1m[32mINSERT INTO "image_classes" ("name", "domain_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "puppy"], ["domain_id", 20], ["created_at", "2020-09-11 01:01:26.309234"], ["updated_at", "2020-09-11 01:01:26.309234"]]
+  ↳ lib/tasks/dev.rake:19
+  [1m[35m (2.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:19
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:19
+  [1m[36mImageClass Create (0.1ms)[0m  [1m[32mINSERT INTO "image_classes" ("name", "domain_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "young"], ["domain_id", 20], ["created_at", "2020-09-11 01:01:26.313241"], ["updated_at", "2020-09-11 01:01:26.313241"]]
+  ↳ lib/tasks/dev.rake:19
+  [1m[35m (2.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:19
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:19
+  [1m[36mImageClass Create (0.1ms)[0m  [1m[32mINSERT INTO "image_classes" ("name", "domain_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "senior"], ["domain_id", 21], ["created_at", "2020-09-11 01:01:26.317116"], ["updated_at", "2020-09-11 01:01:26.317116"]]
+  ↳ lib/tasks/dev.rake:19
+  [1m[35m (2.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:19
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:19
+  [1m[36mImageClass Create (0.1ms)[0m  [1m[32mINSERT INTO "image_classes" ("name", "domain_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "senior"], ["domain_id", 21], ["created_at", "2020-09-11 01:01:26.321222"], ["updated_at", "2020-09-11 01:01:26.321222"]]
+  ↳ lib/tasks/dev.rake:19
+  [1m[35m (2.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:19
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:19
+  [1m[36mImageClass Create (0.1ms)[0m  [1m[32mINSERT INTO "image_classes" ("name", "domain_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "senior"], ["domain_id", 21], ["created_at", "2020-09-11 01:01:26.325089"], ["updated_at", "2020-09-11 01:01:26.325089"]]
+  ↳ lib/tasks/dev.rake:19
+  [1m[35m (2.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:19
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:19
+  [1m[36mImageClass Create (0.1ms)[0m  [1m[32mINSERT INTO "image_classes" ("name", "domain_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "young"], ["domain_id", 22], ["created_at", "2020-09-11 01:01:26.329370"], ["updated_at", "2020-09-11 01:01:26.329370"]]
+  ↳ lib/tasks/dev.rake:19
+  [1m[35m (2.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:19
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:19
+  [1m[36mImageClass Create (0.1ms)[0m  [1m[32mINSERT INTO "image_classes" ("name", "domain_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "young"], ["domain_id", 22], ["created_at", "2020-09-11 01:01:26.333411"], ["updated_at", "2020-09-11 01:01:26.333411"]]
+  ↳ lib/tasks/dev.rake:19
+  [1m[35m (2.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:19
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:19
+  [1m[36mImageClass Create (0.1ms)[0m  [1m[32mINSERT INTO "image_classes" ("name", "domain_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "young"], ["domain_id", 22], ["created_at", "2020-09-11 01:01:26.337554"], ["updated_at", "2020-09-11 01:01:26.337554"]]
+  ↳ lib/tasks/dev.rake:19
+  [1m[35m (2.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:19
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:19
+  [1m[36mImageClass Create (0.1ms)[0m  [1m[32mINSERT INTO "image_classes" ("name", "domain_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "senior"], ["domain_id", 23], ["created_at", "2020-09-11 01:01:26.341376"], ["updated_at", "2020-09-11 01:01:26.341376"]]
+  ↳ lib/tasks/dev.rake:19
+  [1m[35m (2.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:19
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:19
+  [1m[36mImageClass Create (0.1ms)[0m  [1m[32mINSERT INTO "image_classes" ("name", "domain_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "senior"], ["domain_id", 23], ["created_at", "2020-09-11 01:01:26.345341"], ["updated_at", "2020-09-11 01:01:26.345341"]]
+  ↳ lib/tasks/dev.rake:19
+  [1m[35m (3.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:19
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:19
+  [1m[36mImageClass Create (0.1ms)[0m  [1m[32mINSERT INTO "image_classes" ("name", "domain_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "senior"], ["domain_id", 23], ["created_at", "2020-09-11 01:01:26.349897"], ["updated_at", "2020-09-11 01:01:26.349897"]]
+  ↳ lib/tasks/dev.rake:19
+  [1m[35m (3.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:19
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:19
+  [1m[36mImageClass Create (0.1ms)[0m  [1m[32mINSERT INTO "image_classes" ("name", "domain_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "puppy"], ["domain_id", 24], ["created_at", "2020-09-11 01:01:26.354865"], ["updated_at", "2020-09-11 01:01:26.354865"]]
+  ↳ lib/tasks/dev.rake:19
+  [1m[35m (2.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:19
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:19
+  [1m[36mImageClass Create (0.1ms)[0m  [1m[32mINSERT INTO "image_classes" ("name", "domain_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "young"], ["domain_id", 24], ["created_at", "2020-09-11 01:01:26.359922"], ["updated_at", "2020-09-11 01:01:26.359922"]]
+  ↳ lib/tasks/dev.rake:19
+  [1m[35m (2.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:19
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:19
+  [1m[36mImageClass Create (0.1ms)[0m  [1m[32mINSERT INTO "image_classes" ("name", "domain_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "puppy"], ["domain_id", 24], ["created_at", "2020-09-11 01:01:26.364084"], ["updated_at", "2020-09-11 01:01:26.364084"]]
+  ↳ lib/tasks/dev.rake:19
+  [1m[35m (2.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:19
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:19
+  [1m[36mImageClass Create (0.2ms)[0m  [1m[32mINSERT INTO "image_classes" ("name", "domain_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "senior"], ["domain_id", 25], ["created_at", "2020-09-11 01:01:26.368005"], ["updated_at", "2020-09-11 01:01:26.368005"]]
+  ↳ lib/tasks/dev.rake:19
+  [1m[35m (2.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:19
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:19
+  [1m[36mImageClass Create (0.1ms)[0m  [1m[32mINSERT INTO "image_classes" ("name", "domain_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "young"], ["domain_id", 25], ["created_at", "2020-09-11 01:01:26.372039"], ["updated_at", "2020-09-11 01:01:26.372039"]]
+  ↳ lib/tasks/dev.rake:19
+  [1m[35m (2.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:19
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:19
+  [1m[36mImageClass Create (0.1ms)[0m  [1m[32mINSERT INTO "image_classes" ("name", "domain_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "adult"], ["domain_id", 25], ["created_at", "2020-09-11 01:01:26.376014"], ["updated_at", "2020-09-11 01:01:26.376014"]]
+  ↳ lib/tasks/dev.rake:19
+  [1m[35m (3.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:19
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:19
+  [1m[36mImageClass Create (0.1ms)[0m  [1m[32mINSERT INTO "image_classes" ("name", "domain_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "adult"], ["domain_id", 26], ["created_at", "2020-09-11 01:01:26.381083"], ["updated_at", "2020-09-11 01:01:26.381083"]]
+  ↳ lib/tasks/dev.rake:19
+  [1m[35m (2.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:19
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:19
+  [1m[36mImageClass Create (0.1ms)[0m  [1m[32mINSERT INTO "image_classes" ("name", "domain_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "adult"], ["domain_id", 26], ["created_at", "2020-09-11 01:01:26.384934"], ["updated_at", "2020-09-11 01:01:26.384934"]]
+  ↳ lib/tasks/dev.rake:19
+  [1m[35m (2.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:19
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:19
+  [1m[36mImageClass Create (0.1ms)[0m  [1m[32mINSERT INTO "image_classes" ("name", "domain_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "puppy"], ["domain_id", 26], ["created_at", "2020-09-11 01:01:26.389073"], ["updated_at", "2020-09-11 01:01:26.389073"]]
+  ↳ lib/tasks/dev.rake:19
+  [1m[35m (2.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:19
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:19
+  [1m[36mImageClass Create (0.1ms)[0m  [1m[32mINSERT INTO "image_classes" ("name", "domain_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "puppy"], ["domain_id", 27], ["created_at", "2020-09-11 01:01:26.393024"], ["updated_at", "2020-09-11 01:01:26.393024"]]
+  ↳ lib/tasks/dev.rake:19
+  [1m[35m (2.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:19
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:19
+  [1m[36mImageClass Create (0.1ms)[0m  [1m[32mINSERT INTO "image_classes" ("name", "domain_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "young"], ["domain_id", 27], ["created_at", "2020-09-11 01:01:26.397100"], ["updated_at", "2020-09-11 01:01:26.397100"]]
+  ↳ lib/tasks/dev.rake:19
+  [1m[35m (2.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:19
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:19
+  [1m[36mImageClass Create (0.1ms)[0m  [1m[32mINSERT INTO "image_classes" ("name", "domain_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "senior"], ["domain_id", 27], ["created_at", "2020-09-11 01:01:26.401099"], ["updated_at", "2020-09-11 01:01:26.401099"]]
+  ↳ lib/tasks/dev.rake:19
+  [1m[35m (3.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:19
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:19
+  [1m[36mImageClass Create (0.5ms)[0m  [1m[32mINSERT INTO "image_classes" ("name", "domain_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "young"], ["domain_id", 28], ["created_at", "2020-09-11 01:01:26.408799"], ["updated_at", "2020-09-11 01:01:26.408799"]]
+  ↳ lib/tasks/dev.rake:19
+  [1m[35m (5.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:19
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:19
+  [1m[36mImageClass Create (0.5ms)[0m  [1m[32mINSERT INTO "image_classes" ("name", "domain_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "senior"], ["domain_id", 28], ["created_at", "2020-09-11 01:01:26.420044"], ["updated_at", "2020-09-11 01:01:26.420044"]]
+  ↳ lib/tasks/dev.rake:19
+  [1m[35m (4.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:19
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:19
+  [1m[36mImageClass Create (0.2ms)[0m  [1m[32mINSERT INTO "image_classes" ("name", "domain_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "young"], ["domain_id", 28], ["created_at", "2020-09-11 01:01:26.429596"], ["updated_at", "2020-09-11 01:01:26.429596"]]
+  ↳ lib/tasks/dev.rake:19
+  [1m[35m (4.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:19
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:19
+  [1m[36mImageClass Create (0.2ms)[0m  [1m[32mINSERT INTO "image_classes" ("name", "domain_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "young"], ["domain_id", 29], ["created_at", "2020-09-11 01:01:26.436332"], ["updated_at", "2020-09-11 01:01:26.436332"]]
+  ↳ lib/tasks/dev.rake:19
+  [1m[35m (2.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:19
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:19
+  [1m[36mImageClass Create (0.2ms)[0m  [1m[32mINSERT INTO "image_classes" ("name", "domain_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "senior"], ["domain_id", 29], ["created_at", "2020-09-11 01:01:26.440980"], ["updated_at", "2020-09-11 01:01:26.440980"]]
+  ↳ lib/tasks/dev.rake:19
+  [1m[35m (2.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:19
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:19
+  [1m[36mImageClass Create (0.1ms)[0m  [1m[32mINSERT INTO "image_classes" ("name", "domain_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "young"], ["domain_id", 29], ["created_at", "2020-09-11 01:01:26.445490"], ["updated_at", "2020-09-11 01:01:26.445490"]]
+  ↳ lib/tasks/dev.rake:19
+  [1m[35m (2.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:19
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:19
+  [1m[36mImageClass Create (0.1ms)[0m  [1m[32mINSERT INTO "image_classes" ("name", "domain_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "young"], ["domain_id", 30], ["created_at", "2020-09-11 01:01:26.449637"], ["updated_at", "2020-09-11 01:01:26.449637"]]
+  ↳ lib/tasks/dev.rake:19
+  [1m[35m (2.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:19
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:19
+  [1m[36mImageClass Create (0.1ms)[0m  [1m[32mINSERT INTO "image_classes" ("name", "domain_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "puppy"], ["domain_id", 30], ["created_at", "2020-09-11 01:01:26.454008"], ["updated_at", "2020-09-11 01:01:26.454008"]]
+  ↳ lib/tasks/dev.rake:19
+  [1m[35m (2.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:19
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:19
+  [1m[36mImageClass Create (0.1ms)[0m  [1m[32mINSERT INTO "image_classes" ("name", "domain_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "young"], ["domain_id", 30], ["created_at", "2020-09-11 01:01:26.458121"], ["updated_at", "2020-09-11 01:01:26.458121"]]
+  ↳ lib/tasks/dev.rake:19
+  [1m[35m (2.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:19
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:19
+  [1m[36mImageClass Create (0.2ms)[0m  [1m[32mINSERT INTO "image_classes" ("name", "domain_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "adult"], ["domain_id", 31], ["created_at", "2020-09-11 01:01:26.463243"], ["updated_at", "2020-09-11 01:01:26.463243"]]
+  ↳ lib/tasks/dev.rake:19
+  [1m[35m (2.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:19
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:19
+  [1m[36mImageClass Create (0.1ms)[0m  [1m[32mINSERT INTO "image_classes" ("name", "domain_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "adult"], ["domain_id", 31], ["created_at", "2020-09-11 01:01:26.467562"], ["updated_at", "2020-09-11 01:01:26.467562"]]
+  ↳ lib/tasks/dev.rake:19
+  [1m[35m (2.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:19
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:19
+  [1m[36mImageClass Create (0.1ms)[0m  [1m[32mINSERT INTO "image_classes" ("name", "domain_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "puppy"], ["domain_id", 31], ["created_at", "2020-09-11 01:01:26.471907"], ["updated_at", "2020-09-11 01:01:26.471907"]]
+  ↳ lib/tasks/dev.rake:19
+  [1m[35m (2.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:19
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:19
+  [1m[36mImageClass Create (0.1ms)[0m  [1m[32mINSERT INTO "image_classes" ("name", "domain_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "young"], ["domain_id", 32], ["created_at", "2020-09-11 01:01:26.475969"], ["updated_at", "2020-09-11 01:01:26.475969"]]
+  ↳ lib/tasks/dev.rake:19
+  [1m[35m (2.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:19
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:19
+  [1m[36mImageClass Create (0.1ms)[0m  [1m[32mINSERT INTO "image_classes" ("name", "domain_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "adult"], ["domain_id", 32], ["created_at", "2020-09-11 01:01:26.480211"], ["updated_at", "2020-09-11 01:01:26.480211"]]
+  ↳ lib/tasks/dev.rake:19
+  [1m[35m (2.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:19
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:19
+  [1m[36mImageClass Create (0.1ms)[0m  [1m[32mINSERT INTO "image_classes" ("name", "domain_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "young"], ["domain_id", 32], ["created_at", "2020-09-11 01:01:26.484467"], ["updated_at", "2020-09-11 01:01:26.484467"]]
+  ↳ lib/tasks/dev.rake:19
+  [1m[35m (2.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:19
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:19
+  [1m[36mImageClass Create (0.1ms)[0m  [1m[32mINSERT INTO "image_classes" ("name", "domain_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "young"], ["domain_id", 33], ["created_at", "2020-09-11 01:01:26.488745"], ["updated_at", "2020-09-11 01:01:26.488745"]]
+  ↳ lib/tasks/dev.rake:19
+  [1m[35m (2.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:19
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:19
+  [1m[36mImageClass Create (0.1ms)[0m  [1m[32mINSERT INTO "image_classes" ("name", "domain_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "adult"], ["domain_id", 33], ["created_at", "2020-09-11 01:01:26.492901"], ["updated_at", "2020-09-11 01:01:26.492901"]]
+  ↳ lib/tasks/dev.rake:19
+  [1m[35m (2.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:19
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:19
+  [1m[36mImageClass Create (0.1ms)[0m  [1m[32mINSERT INTO "image_classes" ("name", "domain_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "puppy"], ["domain_id", 33], ["created_at", "2020-09-11 01:01:26.497041"], ["updated_at", "2020-09-11 01:01:26.497041"]]
+  ↳ lib/tasks/dev.rake:19
+  [1m[35m (2.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:19
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:19
+  [1m[36mImageClass Create (0.1ms)[0m  [1m[32mINSERT INTO "image_classes" ("name", "domain_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "senior"], ["domain_id", 34], ["created_at", "2020-09-11 01:01:26.500967"], ["updated_at", "2020-09-11 01:01:26.500967"]]
+  ↳ lib/tasks/dev.rake:19
+  [1m[35m (3.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:19
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:19
+  [1m[36mImageClass Create (0.1ms)[0m  [1m[32mINSERT INTO "image_classes" ("name", "domain_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "young"], ["domain_id", 34], ["created_at", "2020-09-11 01:01:26.505412"], ["updated_at", "2020-09-11 01:01:26.505412"]]
+  ↳ lib/tasks/dev.rake:19
+  [1m[35m (2.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:19
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:19
+  [1m[36mImageClass Create (0.1ms)[0m  [1m[32mINSERT INTO "image_classes" ("name", "domain_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "senior"], ["domain_id", 34], ["created_at", "2020-09-11 01:01:26.509647"], ["updated_at", "2020-09-11 01:01:26.509647"]]
+  ↳ lib/tasks/dev.rake:19
+  [1m[35m (2.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:19
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:19
+  [1m[36mImageClass Create (0.2ms)[0m  [1m[32mINSERT INTO "image_classes" ("name", "domain_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "young"], ["domain_id", 35], ["created_at", "2020-09-11 01:01:26.513988"], ["updated_at", "2020-09-11 01:01:26.513988"]]
+  ↳ lib/tasks/dev.rake:19
+  [1m[35m (2.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:19
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:19
+  [1m[36mImageClass Create (0.1ms)[0m  [1m[32mINSERT INTO "image_classes" ("name", "domain_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "puppy"], ["domain_id", 35], ["created_at", "2020-09-11 01:01:26.518291"], ["updated_at", "2020-09-11 01:01:26.518291"]]
+  ↳ lib/tasks/dev.rake:19
+  [1m[35m (3.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:19
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:19
+  [1m[36mImageClass Create (0.1ms)[0m  [1m[32mINSERT INTO "image_classes" ("name", "domain_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "young"], ["domain_id", 35], ["created_at", "2020-09-11 01:01:26.523772"], ["updated_at", "2020-09-11 01:01:26.523772"]]
+  ↳ lib/tasks/dev.rake:19
+  [1m[35m (2.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:19
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:19
+  [1m[36mImageClass Create (0.1ms)[0m  [1m[32mINSERT INTO "image_classes" ("name", "domain_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "young"], ["domain_id", 36], ["created_at", "2020-09-11 01:01:26.527799"], ["updated_at", "2020-09-11 01:01:26.527799"]]
+  ↳ lib/tasks/dev.rake:19
+  [1m[35m (3.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:19
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:19
+  [1m[36mImageClass Create (0.5ms)[0m  [1m[32mINSERT INTO "image_classes" ("name", "domain_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "young"], ["domain_id", 36], ["created_at", "2020-09-11 01:01:26.534827"], ["updated_at", "2020-09-11 01:01:26.534827"]]
+  ↳ lib/tasks/dev.rake:19
+  [1m[35m (3.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:19
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:19
+  [1m[36mImageClass Create (0.5ms)[0m  [1m[32mINSERT INTO "image_classes" ("name", "domain_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "young"], ["domain_id", 36], ["created_at", "2020-09-11 01:01:26.543875"], ["updated_at", "2020-09-11 01:01:26.543875"]]
+  ↳ lib/tasks/dev.rake:19
+  [1m[35m (5.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:19
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:19
+  [1m[36mImageClass Create (0.5ms)[0m  [1m[32mINSERT INTO "image_classes" ("name", "domain_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "young"], ["domain_id", 37], ["created_at", "2020-09-11 01:01:26.554974"], ["updated_at", "2020-09-11 01:01:26.554974"]]
+  ↳ lib/tasks/dev.rake:19
+  [1m[35m (3.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:19
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:19
+  [1m[36mImageClass Create (0.3ms)[0m  [1m[32mINSERT INTO "image_classes" ("name", "domain_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "adult"], ["domain_id", 37], ["created_at", "2020-09-11 01:01:26.566225"], ["updated_at", "2020-09-11 01:01:26.566225"]]
+  ↳ lib/tasks/dev.rake:19
+  [1m[35m (3.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:19
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:19
+  [1m[36mImageClass Create (0.3ms)[0m  [1m[32mINSERT INTO "image_classes" ("name", "domain_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "senior"], ["domain_id", 37], ["created_at", "2020-09-11 01:01:26.572934"], ["updated_at", "2020-09-11 01:01:26.572934"]]
+  ↳ lib/tasks/dev.rake:19
+  [1m[35m (2.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:19
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:19
+  [1m[36mImageClass Create (0.2ms)[0m  [1m[32mINSERT INTO "image_classes" ("name", "domain_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "senior"], ["domain_id", 38], ["created_at", "2020-09-11 01:01:26.578173"], ["updated_at", "2020-09-11 01:01:26.578173"]]
+  ↳ lib/tasks/dev.rake:19
+  [1m[35m (3.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:19
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:19
+  [1m[36mImageClass Create (0.2ms)[0m  [1m[32mINSERT INTO "image_classes" ("name", "domain_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "adult"], ["domain_id", 38], ["created_at", "2020-09-11 01:01:26.584018"], ["updated_at", "2020-09-11 01:01:26.584018"]]
+  ↳ lib/tasks/dev.rake:19
+  [1m[35m (2.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:19
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:19
+  [1m[36mImageClass Create (0.1ms)[0m  [1m[32mINSERT INTO "image_classes" ("name", "domain_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "young"], ["domain_id", 38], ["created_at", "2020-09-11 01:01:26.588001"], ["updated_at", "2020-09-11 01:01:26.588001"]]
+  ↳ lib/tasks/dev.rake:19
+  [1m[35m (2.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:19
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:19
+  [1m[36mImageClass Create (0.1ms)[0m  [1m[32mINSERT INTO "image_classes" ("name", "domain_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "senior"], ["domain_id", 39], ["created_at", "2020-09-11 01:01:26.592005"], ["updated_at", "2020-09-11 01:01:26.592005"]]
+  ↳ lib/tasks/dev.rake:19
+  [1m[35m (2.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:19
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:19
+  [1m[36mImageClass Create (0.1ms)[0m  [1m[32mINSERT INTO "image_classes" ("name", "domain_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "senior"], ["domain_id", 39], ["created_at", "2020-09-11 01:01:26.595834"], ["updated_at", "2020-09-11 01:01:26.595834"]]
+  ↳ lib/tasks/dev.rake:19
+  [1m[35m (2.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:19
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:19
+  [1m[36mImageClass Create (0.1ms)[0m  [1m[32mINSERT INTO "image_classes" ("name", "domain_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "senior"], ["domain_id", 39], ["created_at", "2020-09-11 01:01:26.599818"], ["updated_at", "2020-09-11 01:01:26.599818"]]
+  ↳ lib/tasks/dev.rake:19
+  [1m[35m (2.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:19
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:19
+  [1m[36mImageClass Create (0.1ms)[0m  [1m[32mINSERT INTO "image_classes" ("name", "domain_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "senior"], ["domain_id", 40], ["created_at", "2020-09-11 01:01:26.603672"], ["updated_at", "2020-09-11 01:01:26.603672"]]
+  ↳ lib/tasks/dev.rake:19
+  [1m[35m (2.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:19
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:19
+  [1m[36mImageClass Create (0.1ms)[0m  [1m[32mINSERT INTO "image_classes" ("name", "domain_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "puppy"], ["domain_id", 40], ["created_at", "2020-09-11 01:01:26.607631"], ["updated_at", "2020-09-11 01:01:26.607631"]]
+  ↳ lib/tasks/dev.rake:19
+  [1m[35m (2.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:19
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:19
+  [1m[36mImageClass Create (0.1ms)[0m  [1m[32mINSERT INTO "image_classes" ("name", "domain_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "young"], ["domain_id", 40], ["created_at", "2020-09-11 01:01:26.611352"], ["updated_at", "2020-09-11 01:01:26.611352"]]
+  ↳ lib/tasks/dev.rake:19
+  [1m[35m (2.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:19
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:19
+  [1m[36mImageClass Create (0.1ms)[0m  [1m[32mINSERT INTO "image_classes" ("name", "domain_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "senior"], ["domain_id", 41], ["created_at", "2020-09-11 01:01:26.615272"], ["updated_at", "2020-09-11 01:01:26.615272"]]
+  ↳ lib/tasks/dev.rake:19
+  [1m[35m (2.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:19
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:19
+  [1m[36mImageClass Create (0.1ms)[0m  [1m[32mINSERT INTO "image_classes" ("name", "domain_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "adult"], ["domain_id", 41], ["created_at", "2020-09-11 01:01:26.619032"], ["updated_at", "2020-09-11 01:01:26.619032"]]
+  ↳ lib/tasks/dev.rake:19
+  [1m[35m (2.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:19
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:19
+  [1m[36mImageClass Create (0.1ms)[0m  [1m[32mINSERT INTO "image_classes" ("name", "domain_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "young"], ["domain_id", 41], ["created_at", "2020-09-11 01:01:26.623186"], ["updated_at", "2020-09-11 01:01:26.623186"]]
+  ↳ lib/tasks/dev.rake:19
+  [1m[35m (2.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:19
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:19
+  [1m[36mImageClass Create (0.1ms)[0m  [1m[32mINSERT INTO "image_classes" ("name", "domain_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "young"], ["domain_id", 42], ["created_at", "2020-09-11 01:01:26.626999"], ["updated_at", "2020-09-11 01:01:26.626999"]]
+  ↳ lib/tasks/dev.rake:19
+  [1m[35m (3.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:19
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:19
+  [1m[36mImageClass Create (0.1ms)[0m  [1m[32mINSERT INTO "image_classes" ("name", "domain_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "senior"], ["domain_id", 42], ["created_at", "2020-09-11 01:01:26.632212"], ["updated_at", "2020-09-11 01:01:26.632212"]]
+  ↳ lib/tasks/dev.rake:19
+  [1m[35m (2.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:19
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:19
+  [1m[36mImageClass Create (0.1ms)[0m  [1m[32mINSERT INTO "image_classes" ("name", "domain_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "puppy"], ["domain_id", 42], ["created_at", "2020-09-11 01:01:26.636263"], ["updated_at", "2020-09-11 01:01:26.636263"]]
+  ↳ lib/tasks/dev.rake:19
+  [1m[35m (2.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:19
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:19
+  [1m[36mImageClass Create (0.1ms)[0m  [1m[32mINSERT INTO "image_classes" ("name", "domain_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "young"], ["domain_id", 43], ["created_at", "2020-09-11 01:01:26.640521"], ["updated_at", "2020-09-11 01:01:26.640521"]]
+  ↳ lib/tasks/dev.rake:19
+  [1m[35m (2.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:19
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:19
+  [1m[36mImageClass Create (0.1ms)[0m  [1m[32mINSERT INTO "image_classes" ("name", "domain_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "young"], ["domain_id", 43], ["created_at", "2020-09-11 01:01:26.644558"], ["updated_at", "2020-09-11 01:01:26.644558"]]
+  ↳ lib/tasks/dev.rake:19
+  [1m[35m (2.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:19
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:19
+  [1m[36mImageClass Create (0.1ms)[0m  [1m[32mINSERT INTO "image_classes" ("name", "domain_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "senior"], ["domain_id", 43], ["created_at", "2020-09-11 01:01:26.648681"], ["updated_at", "2020-09-11 01:01:26.648681"]]
+  ↳ lib/tasks/dev.rake:19
+  [1m[35m (2.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:19
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:19
+  [1m[36mImageClass Create (0.1ms)[0m  [1m[32mINSERT INTO "image_classes" ("name", "domain_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "adult"], ["domain_id", 44], ["created_at", "2020-09-11 01:01:26.652629"], ["updated_at", "2020-09-11 01:01:26.652629"]]
+  ↳ lib/tasks/dev.rake:19
+  [1m[35m (2.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:19
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:19
+  [1m[36mImageClass Create (0.1ms)[0m  [1m[32mINSERT INTO "image_classes" ("name", "domain_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "young"], ["domain_id", 44], ["created_at", "2020-09-11 01:01:26.656859"], ["updated_at", "2020-09-11 01:01:26.656859"]]
+  ↳ lib/tasks/dev.rake:19
+  [1m[35m (2.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:19
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:19
+  [1m[36mImageClass Create (0.1ms)[0m  [1m[32mINSERT INTO "image_classes" ("name", "domain_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "puppy"], ["domain_id", 44], ["created_at", "2020-09-11 01:01:26.660745"], ["updated_at", "2020-09-11 01:01:26.660745"]]
+  ↳ lib/tasks/dev.rake:19
+  [1m[35m (2.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:19
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:19
+  [1m[36mImageClass Create (0.1ms)[0m  [1m[32mINSERT INTO "image_classes" ("name", "domain_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "senior"], ["domain_id", 45], ["created_at", "2020-09-11 01:01:26.664816"], ["updated_at", "2020-09-11 01:01:26.664816"]]
+  ↳ lib/tasks/dev.rake:19
+  [1m[35m (2.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:19
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:19
+  [1m[36mImageClass Create (0.1ms)[0m  [1m[32mINSERT INTO "image_classes" ("name", "domain_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "young"], ["domain_id", 45], ["created_at", "2020-09-11 01:01:26.668901"], ["updated_at", "2020-09-11 01:01:26.668901"]]
+  ↳ lib/tasks/dev.rake:19
+  [1m[35m (2.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:19
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:19
+  [1m[36mImageClass Create (0.1ms)[0m  [1m[32mINSERT INTO "image_classes" ("name", "domain_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "puppy"], ["domain_id", 45], ["created_at", "2020-09-11 01:01:26.673949"], ["updated_at", "2020-09-11 01:01:26.673949"]]
+  ↳ lib/tasks/dev.rake:19
+  [1m[35m (2.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:19
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:19
+  [1m[36mImageClass Create (0.1ms)[0m  [1m[32mINSERT INTO "image_classes" ("name", "domain_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "senior"], ["domain_id", 46], ["created_at", "2020-09-11 01:01:26.677992"], ["updated_at", "2020-09-11 01:01:26.677992"]]
+  ↳ lib/tasks/dev.rake:19
+  [1m[35m (2.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:19
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:19
+  [1m[36mImageClass Create (0.1ms)[0m  [1m[32mINSERT INTO "image_classes" ("name", "domain_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "young"], ["domain_id", 46], ["created_at", "2020-09-11 01:01:26.682484"], ["updated_at", "2020-09-11 01:01:26.682484"]]
+  ↳ lib/tasks/dev.rake:19
+  [1m[35m (3.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:19
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:19
+  [1m[36mImageClass Create (0.1ms)[0m  [1m[32mINSERT INTO "image_classes" ("name", "domain_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "young"], ["domain_id", 46], ["created_at", "2020-09-11 01:01:26.687651"], ["updated_at", "2020-09-11 01:01:26.687651"]]
+  ↳ lib/tasks/dev.rake:19
+  [1m[35m (2.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:19
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:19
+  [1m[36mImageClass Create (0.1ms)[0m  [1m[32mINSERT INTO "image_classes" ("name", "domain_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "puppy"], ["domain_id", 47], ["created_at", "2020-09-11 01:01:26.691857"], ["updated_at", "2020-09-11 01:01:26.691857"]]
+  ↳ lib/tasks/dev.rake:19
+  [1m[35m (2.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:19
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:19
+  [1m[36mImageClass Create (0.1ms)[0m  [1m[32mINSERT INTO "image_classes" ("name", "domain_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "puppy"], ["domain_id", 47], ["created_at", "2020-09-11 01:01:26.695881"], ["updated_at", "2020-09-11 01:01:26.695881"]]
+  ↳ lib/tasks/dev.rake:19
+  [1m[35m (3.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:19
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:19
+  [1m[36mImageClass Create (0.1ms)[0m  [1m[32mINSERT INTO "image_classes" ("name", "domain_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "young"], ["domain_id", 47], ["created_at", "2020-09-11 01:01:26.700870"], ["updated_at", "2020-09-11 01:01:26.700870"]]
+  ↳ lib/tasks/dev.rake:19
+  [1m[35m (2.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:19
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:19
+  [1m[36mImageClass Create (0.1ms)[0m  [1m[32mINSERT INTO "image_classes" ("name", "domain_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "puppy"], ["domain_id", 48], ["created_at", "2020-09-11 01:01:26.705125"], ["updated_at", "2020-09-11 01:01:26.705125"]]
+  ↳ lib/tasks/dev.rake:19
+  [1m[35m (2.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:19
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:19
+  [1m[36mImageClass Create (0.1ms)[0m  [1m[32mINSERT INTO "image_classes" ("name", "domain_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "senior"], ["domain_id", 48], ["created_at", "2020-09-11 01:01:26.709120"], ["updated_at", "2020-09-11 01:01:26.709120"]]
+  ↳ lib/tasks/dev.rake:19
+  [1m[35m (2.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:19
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:19
+  [1m[36mImageClass Create (0.1ms)[0m  [1m[32mINSERT INTO "image_classes" ("name", "domain_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "puppy"], ["domain_id", 48], ["created_at", "2020-09-11 01:01:26.713414"], ["updated_at", "2020-09-11 01:01:26.713414"]]
+  ↳ lib/tasks/dev.rake:19
+  [1m[35m (2.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:19
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:19
+  [1m[36mImageClass Create (0.1ms)[0m  [1m[32mINSERT INTO "image_classes" ("name", "domain_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "young"], ["domain_id", 49], ["created_at", "2020-09-11 01:01:26.717505"], ["updated_at", "2020-09-11 01:01:26.717505"]]
+  ↳ lib/tasks/dev.rake:19
+  [1m[35m (2.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:19
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:19
+  [1m[36mImageClass Create (0.1ms)[0m  [1m[32mINSERT INTO "image_classes" ("name", "domain_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "young"], ["domain_id", 49], ["created_at", "2020-09-11 01:01:26.721884"], ["updated_at", "2020-09-11 01:01:26.721884"]]
+  ↳ lib/tasks/dev.rake:19
+  [1m[35m (2.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:19
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:19
+  [1m[36mImageClass Create (0.1ms)[0m  [1m[32mINSERT INTO "image_classes" ("name", "domain_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "senior"], ["domain_id", 49], ["created_at", "2020-09-11 01:01:26.725953"], ["updated_at", "2020-09-11 01:01:26.725953"]]
+  ↳ lib/tasks/dev.rake:19
+  [1m[35m (2.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:19
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:19
+  [1m[36mImageClass Create (0.1ms)[0m  [1m[32mINSERT INTO "image_classes" ("name", "domain_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "young"], ["domain_id", 50], ["created_at", "2020-09-11 01:01:26.730253"], ["updated_at", "2020-09-11 01:01:26.730253"]]
+  ↳ lib/tasks/dev.rake:19
+  [1m[35m (2.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:19
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:19
+  [1m[36mImageClass Create (0.1ms)[0m  [1m[32mINSERT INTO "image_classes" ("name", "domain_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "puppy"], ["domain_id", 50], ["created_at", "2020-09-11 01:01:26.734464"], ["updated_at", "2020-09-11 01:01:26.734464"]]
+  ↳ lib/tasks/dev.rake:19
+  [1m[35m (2.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:19
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:19
+  [1m[36mImageClass Create (0.1ms)[0m  [1m[32mINSERT INTO "image_classes" ("name", "domain_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "young"], ["domain_id", 50], ["created_at", "2020-09-11 01:01:26.738638"], ["updated_at", "2020-09-11 01:01:26.738638"]]
+  ↳ lib/tasks/dev.rake:19
+  [1m[35m (3.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:19
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:19
+  [1m[36mImageClass Create (0.1ms)[0m  [1m[32mINSERT INTO "image_classes" ("name", "domain_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "puppy"], ["domain_id", 51], ["created_at", "2020-09-11 01:01:26.743916"], ["updated_at", "2020-09-11 01:01:26.743916"]]
+  ↳ lib/tasks/dev.rake:19
+  [1m[35m (2.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:19
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:19
+  [1m[36mImageClass Create (0.1ms)[0m  [1m[32mINSERT INTO "image_classes" ("name", "domain_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "adult"], ["domain_id", 51], ["created_at", "2020-09-11 01:01:26.748319"], ["updated_at", "2020-09-11 01:01:26.748319"]]
+  ↳ lib/tasks/dev.rake:19
+  [1m[35m (2.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:19
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:19
+  [1m[36mImageClass Create (0.1ms)[0m  [1m[32mINSERT INTO "image_classes" ("name", "domain_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "adult"], ["domain_id", 51], ["created_at", "2020-09-11 01:01:26.752205"], ["updated_at", "2020-09-11 01:01:26.752205"]]
+  ↳ lib/tasks/dev.rake:19
+  [1m[35m (2.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:19
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:19
+  [1m[36mImageClass Create (0.2ms)[0m  [1m[32mINSERT INTO "image_classes" ("name", "domain_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "adult"], ["domain_id", 52], ["created_at", "2020-09-11 01:01:26.757652"], ["updated_at", "2020-09-11 01:01:26.757652"]]
+  ↳ lib/tasks/dev.rake:19
+  [1m[35m (2.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:19
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:19
+  [1m[36mImageClass Create (0.1ms)[0m  [1m[32mINSERT INTO "image_classes" ("name", "domain_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "young"], ["domain_id", 52], ["created_at", "2020-09-11 01:01:26.761761"], ["updated_at", "2020-09-11 01:01:26.761761"]]
+  ↳ lib/tasks/dev.rake:19
+  [1m[35m (2.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:19
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:19
+  [1m[36mImageClass Create (0.1ms)[0m  [1m[32mINSERT INTO "image_classes" ("name", "domain_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "young"], ["domain_id", 52], ["created_at", "2020-09-11 01:01:26.765934"], ["updated_at", "2020-09-11 01:01:26.765934"]]
+  ↳ lib/tasks/dev.rake:19
+  [1m[35m (2.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:19
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:19
+  [1m[36mImageClass Create (0.1ms)[0m  [1m[32mINSERT INTO "image_classes" ("name", "domain_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "puppy"], ["domain_id", 53], ["created_at", "2020-09-11 01:01:26.770034"], ["updated_at", "2020-09-11 01:01:26.770034"]]
+  ↳ lib/tasks/dev.rake:19
+  [1m[35m (2.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:19
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:19
+  [1m[36mImageClass Create (0.1ms)[0m  [1m[32mINSERT INTO "image_classes" ("name", "domain_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "senior"], ["domain_id", 53], ["created_at", "2020-09-11 01:01:26.775133"], ["updated_at", "2020-09-11 01:01:26.775133"]]
+  ↳ lib/tasks/dev.rake:19
+  [1m[35m (2.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:19
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:19
+  [1m[36mImageClass Create (0.1ms)[0m  [1m[32mINSERT INTO "image_classes" ("name", "domain_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "puppy"], ["domain_id", 53], ["created_at", "2020-09-11 01:01:26.779371"], ["updated_at", "2020-09-11 01:01:26.779371"]]
+  ↳ lib/tasks/dev.rake:19
+  [1m[35m (2.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:19
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:19
+  [1m[36mImageClass Create (0.1ms)[0m  [1m[32mINSERT INTO "image_classes" ("name", "domain_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "puppy"], ["domain_id", 54], ["created_at", "2020-09-11 01:01:26.783715"], ["updated_at", "2020-09-11 01:01:26.783715"]]
+  ↳ lib/tasks/dev.rake:19
+  [1m[35m (2.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:19
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:19
+  [1m[36mImageClass Create (0.1ms)[0m  [1m[32mINSERT INTO "image_classes" ("name", "domain_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "puppy"], ["domain_id", 54], ["created_at", "2020-09-11 01:01:26.787781"], ["updated_at", "2020-09-11 01:01:26.787781"]]
+  ↳ lib/tasks/dev.rake:19
+  [1m[35m (10.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:19
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:19
+  [1m[36mImageClass Create (0.5ms)[0m  [1m[32mINSERT INTO "image_classes" ("name", "domain_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "adult"], ["domain_id", 54], ["created_at", "2020-09-11 01:01:26.801951"], ["updated_at", "2020-09-11 01:01:26.801951"]]
+  ↳ lib/tasks/dev.rake:19
+  [1m[35m (3.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:19
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:19
+  [1m[36mImageClass Create (0.5ms)[0m  [1m[32mINSERT INTO "image_classes" ("name", "domain_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "young"], ["domain_id", 55], ["created_at", "2020-09-11 01:01:26.811162"], ["updated_at", "2020-09-11 01:01:26.811162"]]
+  ↳ lib/tasks/dev.rake:19
+  [1m[35m (3.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:19
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:19
+  [1m[36mImageClass Create (0.5ms)[0m  [1m[32mINSERT INTO "image_classes" ("name", "domain_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "puppy"], ["domain_id", 55], ["created_at", "2020-09-11 01:01:26.820582"], ["updated_at", "2020-09-11 01:01:26.820582"]]
+  ↳ lib/tasks/dev.rake:19
+  [1m[35m (4.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:19
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:19
+  [1m[36mImageClass Create (0.5ms)[0m  [1m[32mINSERT INTO "image_classes" ("name", "domain_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "adult"], ["domain_id", 55], ["created_at", "2020-09-11 01:01:26.830887"], ["updated_at", "2020-09-11 01:01:26.830887"]]
+  ↳ lib/tasks/dev.rake:19
+  [1m[35m (3.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:19
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:19
+  [1m[36mImageClass Create (0.3ms)[0m  [1m[32mINSERT INTO "image_classes" ("name", "domain_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "senior"], ["domain_id", 56], ["created_at", "2020-09-11 01:01:26.839136"], ["updated_at", "2020-09-11 01:01:26.839136"]]
+  ↳ lib/tasks/dev.rake:19
+  [1m[35m (2.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:19
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:19
+  [1m[36mImageClass Create (0.2ms)[0m  [1m[32mINSERT INTO "image_classes" ("name", "domain_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "young"], ["domain_id", 56], ["created_at", "2020-09-11 01:01:26.844930"], ["updated_at", "2020-09-11 01:01:26.844930"]]
+  ↳ lib/tasks/dev.rake:19
+  [1m[35m (2.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:19
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:19
+  [1m[36mImageClass Create (0.2ms)[0m  [1m[32mINSERT INTO "image_classes" ("name", "domain_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "adult"], ["domain_id", 56], ["created_at", "2020-09-11 01:01:26.850142"], ["updated_at", "2020-09-11 01:01:26.850142"]]
+  ↳ lib/tasks/dev.rake:19
+  [1m[35m (2.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:19
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:19
+  [1m[36mImageClass Create (0.1ms)[0m  [1m[32mINSERT INTO "image_classes" ("name", "domain_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "senior"], ["domain_id", 57], ["created_at", "2020-09-11 01:01:26.854705"], ["updated_at", "2020-09-11 01:01:26.854705"]]
+  ↳ lib/tasks/dev.rake:19
+  [1m[35m (3.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:19
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:19
+  [1m[36mImageClass Create (0.1ms)[0m  [1m[32mINSERT INTO "image_classes" ("name", "domain_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "young"], ["domain_id", 57], ["created_at", "2020-09-11 01:01:26.860224"], ["updated_at", "2020-09-11 01:01:26.860224"]]
+  ↳ lib/tasks/dev.rake:19
+  [1m[35m (2.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:19
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:19
+  [1m[36mImageClass Create (0.1ms)[0m  [1m[32mINSERT INTO "image_classes" ("name", "domain_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "puppy"], ["domain_id", 57], ["created_at", "2020-09-11 01:01:26.864121"], ["updated_at", "2020-09-11 01:01:26.864121"]]
+  ↳ lib/tasks/dev.rake:19
+  [1m[35m (2.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:19
