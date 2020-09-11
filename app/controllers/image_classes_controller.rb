@@ -3,8 +3,13 @@ class ImageClassesController < ApplicationController
 
   # GET /image_classes
   def index
-    @image_classes = ImageClass.all
-
+    param_domain_id = params[:domain_id]
+    if param_domain_id
+      @image_classes = ImageClass.where(domain_id: param_domain_id)
+    else
+      @image_classes = ImageClass.all
+    end
+    
     render json: @image_classes
   end
 
