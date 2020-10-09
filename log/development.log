@@ -4005,3 +4005,1753 @@ Processing by ImageClassesController#index as */*
 Completed 200 OK in 11ms (Views: 6.7ms | ActiveRecord: 1.5ms)
 
 
+Started GET "/domains/1" for 192.168.10.102 at 2020-09-15 14:49:19 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/douglas/.rvm/gems/ruby-2.7.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+Processing by DomainsController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mDomain Load (0.3ms)[0m  [1m[34mSELECT  "domains".* FROM "domains" WHERE "domains"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/domains_controller.rb:44
+Completed 200 OK in 13ms (Views: 0.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/image_classes/1" for 192.168.10.102 at 2020-09-15 14:49:43 -0300
+Processing by ImageClassesController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mImageClass Load (0.4ms)[0m  [1m[34mSELECT  "image_classes".* FROM "image_classes" WHERE "image_classes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/image_classes_controller.rb:49
+Completed 200 OK in 9ms (Views: 0.4ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/image_classes/1" for 192.168.10.102 at 2020-09-15 22:08:21 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/douglas/.rvm/gems/ruby-2.7.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+Processing by ImageClassesController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mImageClass Load (0.5ms)[0m  [1m[34mSELECT  "image_classes".* FROM "image_classes" WHERE "image_classes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/image_classes_controller.rb:49
+Completed 200 OK in 11ms (Views: 0.5ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/domains/" for 127.0.0.1 at 2020-09-15 22:09:04 -0300
+Processing by DomainsController#index as HTML
+  [1m[36mDomain Load (1.0ms)[0m  [1m[34mSELECT "domains".* FROM "domains"[0m
+  ↳ app/controllers/domains_controller.rb:8
+Completed 200 OK in 11ms (Views: 6.8ms | ActiveRecord: 1.4ms)
+
+
+Started POST "/domains/" for 127.0.0.1 at 2020-09-15 22:09:53 -0300
+Processing by DomainsController#create as HTML
+  Parameters: {"description"=>"dorime", "domain"=>{"description"=>"dorime"}}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/domains_controller.rb:20
+  [1m[36mDomain Create (0.5ms)[0m  [1m[32mINSERT INTO "domains" ("description", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["description", "dorime"], ["created_at", "2020-09-16 01:09:53.160983"], ["updated_at", "2020-09-16 01:09:53.160983"]]
+  ↳ app/controllers/domains_controller.rb:20
+  [1m[35m (2.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/domains_controller.rb:20
+Completed 201 Created in 6ms (Views: 0.5ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/domains/" for 127.0.0.1 at 2020-09-15 22:09:55 -0300
+Processing by DomainsController#index as HTML
+  [1m[36mDomain Load (0.2ms)[0m  [1m[34mSELECT "domains".* FROM "domains"[0m
+  ↳ app/controllers/domains_controller.rb:8
+Completed 200 OK in 2ms (Views: 1.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/domains/" for 127.0.0.1 at 2020-09-15 22:12:55 -0300
+Processing by DomainsController#index as HTML
+  [1m[36mDomain Load (0.1ms)[0m  [1m[34mSELECT "domains".* FROM "domains"[0m
+  ↳ app/controllers/domains_controller.rb:8
+Completed 200 OK in 1ms (Views: 0.8ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/domains/" for 127.0.0.1 at 2020-09-15 22:13:05 -0300
+Processing by DomainsController#create as HTML
+  Parameters: {"description"=>"aterimo", "domain"=>{"description"=>"aterimo"}}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/domains_controller.rb:20
+  [1m[36mDomain Create (1.6ms)[0m  [1m[32mINSERT INTO "domains" ("description", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["description", "aterimo"], ["created_at", "2020-09-16 01:13:05.234095"], ["updated_at", "2020-09-16 01:13:05.234095"]]
+  ↳ app/controllers/domains_controller.rb:20
+  [1m[35m (334.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/domains_controller.rb:20
+Completed 201 Created in 342ms (Views: 1.0ms | ActiveRecord: 336.3ms)
+
+
+Started GET "/domains/" for 127.0.0.1 at 2020-09-15 22:13:10 -0300
+Processing by DomainsController#index as HTML
+  [1m[36mDomain Load (0.1ms)[0m  [1m[34mSELECT "domains".* FROM "domains"[0m
+  ↳ app/controllers/domains_controller.rb:8
+Completed 200 OK in 1ms (Views: 0.9ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/domains/" for 127.0.0.1 at 2020-09-15 22:14:35 -0300
+Processing by DomainsController#create as HTML
+  Parameters: {"description"=>"adapare", "domain"=>{"description"=>"adapare"}}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/domains_controller.rb:20
+  [1m[36mDomain Create (0.1ms)[0m  [1m[32mINSERT INTO "domains" ("description", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["description", "adapare"], ["created_at", "2020-09-16 01:14:35.920642"], ["updated_at", "2020-09-16 01:14:35.920642"]]
+  ↳ app/controllers/domains_controller.rb:20
+  [1m[35m (2.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/domains_controller.rb:20
+Completed 201 Created in 5ms (Views: 0.3ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/domains/" for 127.0.0.1 at 2020-09-15 22:14:41 -0300
+Processing by DomainsController#index as HTML
+  [1m[36mDomain Load (0.1ms)[0m  [1m[34mSELECT "domains".* FROM "domains"[0m
+  ↳ app/controllers/domains_controller.rb:8
+Completed 200 OK in 1ms (Views: 1.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/domains/" for 127.0.0.1 at 2020-09-15 22:30:19 -0300
+Processing by DomainsController#index as HTML
+  [1m[36mDomain Load (0.1ms)[0m  [1m[34mSELECT "domains".* FROM "domains"[0m
+  ↳ app/controllers/domains_controller.rb:8
+Completed 200 OK in 9ms (Views: 8.6ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/domains/" for 127.0.0.1 at 2020-09-15 22:30:26 -0300
+Processing by DomainsController#create as HTML
+  Parameters: {"description"=>"sign", "domain"=>{"description"=>"sign"}}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/domains_controller.rb:20
+  [1m[36mDomain Create (0.2ms)[0m  [1m[32mINSERT INTO "domains" ("description", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["description", "sign"], ["created_at", "2020-09-16 01:30:26.926907"], ["updated_at", "2020-09-16 01:30:26.926907"]]
+  ↳ app/controllers/domains_controller.rb:20
+  [1m[35m (3.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/domains_controller.rb:20
+Completed 201 Created in 7ms (Views: 0.4ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/domains/" for 127.0.0.1 at 2020-09-15 22:30:28 -0300
+Processing by DomainsController#index as HTML
+  [1m[36mDomain Load (0.2ms)[0m  [1m[34mSELECT "domains".* FROM "domains"[0m
+  ↳ app/controllers/domains_controller.rb:8
+Completed 200 OK in 2ms (Views: 1.8ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/domains/" for 127.0.0.1 at 2020-09-15 22:31:20 -0300
+Processing by DomainsController#create as HTML
+  Parameters: {"description"=>"signa", "domain"=>{"description"=>"signa"}}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/domains_controller.rb:20
+  [1m[36mDomain Create (0.3ms)[0m  [1m[32mINSERT INTO "domains" ("description", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["description", "signa"], ["created_at", "2020-09-16 01:31:20.860902"], ["updated_at", "2020-09-16 01:31:20.860902"]]
+  ↳ app/controllers/domains_controller.rb:20
+  [1m[35m (2.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/domains_controller.rb:20
+Completed 201 Created in 6ms (Views: 0.3ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/domains/" for 127.0.0.1 at 2020-09-15 22:31:33 -0300
+Processing by DomainsController#index as HTML
+  [1m[36mDomain Load (0.1ms)[0m  [1m[34mSELECT "domains".* FROM "domains"[0m
+  ↳ app/controllers/domains_controller.rb:8
+Completed 200 OK in 1ms (Views: 1.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/domains/" for 127.0.0.1 at 2020-09-15 22:33:56 -0300
+Processing by DomainsController#index as HTML
+  [1m[36mDomain Load (0.1ms)[0m  [1m[34mSELECT "domains".* FROM "domains"[0m
+  ↳ app/controllers/domains_controller.rb:8
+Completed 200 OK in 1ms (Views: 1.1ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/domains/" for 127.0.0.1 at 2020-09-15 22:34:02 -0300
+Processing by DomainsController#create as HTML
+  Parameters: {"description"=>"asd", "domain"=>{"description"=>"asd"}}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/domains_controller.rb:20
+  [1m[36mDomain Create (0.2ms)[0m  [1m[32mINSERT INTO "domains" ("description", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["description", "asd"], ["created_at", "2020-09-16 01:34:02.151516"], ["updated_at", "2020-09-16 01:34:02.151516"]]
+  ↳ app/controllers/domains_controller.rb:20
+  [1m[35m (3.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/domains_controller.rb:20
+Completed 201 Created in 7ms (Views: 0.4ms | ActiveRecord: 4.2ms)
+
+
+Started GET "/domains/" for 127.0.0.1 at 2020-09-15 22:35:53 -0300
+Processing by DomainsController#index as HTML
+  [1m[36mDomain Load (0.1ms)[0m  [1m[34mSELECT "domains".* FROM "domains"[0m
+  ↳ app/controllers/domains_controller.rb:8
+Completed 200 OK in 1ms (Views: 1.1ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/domains/" for 127.0.0.1 at 2020-09-15 22:36:00 -0300
+Processing by DomainsController#create as HTML
+  Parameters: {"description"=>"qweqwe", "domain"=>{"description"=>"qweqwe"}}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/domains_controller.rb:20
+  [1m[36mDomain Create (0.1ms)[0m  [1m[32mINSERT INTO "domains" ("description", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["description", "qweqwe"], ["created_at", "2020-09-16 01:36:00.067183"], ["updated_at", "2020-09-16 01:36:00.067183"]]
+  ↳ app/controllers/domains_controller.rb:20
+  [1m[35m (6.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/domains_controller.rb:20
+Completed 201 Created in 9ms (Views: 0.4ms | ActiveRecord: 6.3ms)
+
+
+Started POST "/domains/" for 127.0.0.1 at 2020-09-15 22:36:17 -0300
+Processing by DomainsController#create as HTML
+  Parameters: {"description"=>"qweqwe", "domain"=>{"description"=>"qweqwe"}}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/domains_controller.rb:20
+  [1m[36mDomain Create (0.2ms)[0m  [1m[32mINSERT INTO "domains" ("description", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["description", "qweqwe"], ["created_at", "2020-09-16 01:36:17.362129"], ["updated_at", "2020-09-16 01:36:17.362129"]]
+  ↳ app/controllers/domains_controller.rb:20
+  [1m[35m (2.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/domains_controller.rb:20
+Completed 201 Created in 6ms (Views: 0.4ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/domains/" for 127.0.0.1 at 2020-09-15 22:38:06 -0300
+Processing by DomainsController#index as HTML
+  [1m[36mDomain Load (0.1ms)[0m  [1m[34mSELECT "domains".* FROM "domains"[0m
+  ↳ app/controllers/domains_controller.rb:8
+Completed 200 OK in 1ms (Views: 1.2ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/domains/" for 127.0.0.1 at 2020-09-15 22:38:15 -0300
+Processing by DomainsController#create as HTML
+  Parameters: {"description"=>"teste1", "domain"=>{"description"=>"teste1"}}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/domains_controller.rb:20
+  [1m[36mDomain Create (0.2ms)[0m  [1m[32mINSERT INTO "domains" ("description", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["description", "teste1"], ["created_at", "2020-09-16 01:38:15.655497"], ["updated_at", "2020-09-16 01:38:15.655497"]]
+  ↳ app/controllers/domains_controller.rb:20
+  [1m[35m (568.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/domains_controller.rb:20
+Completed 201 Created in 573ms (Views: 1.0ms | ActiveRecord: 568.3ms)
+
+
+Started GET "/domains/" for 127.0.0.1 at 2020-09-15 22:38:17 -0300
+Processing by DomainsController#index as HTML
+  [1m[36mDomain Load (0.2ms)[0m  [1m[34mSELECT "domains".* FROM "domains"[0m
+  ↳ app/controllers/domains_controller.rb:8
+Completed 200 OK in 3ms (Views: 2.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/domains/" for 127.0.0.1 at 2020-09-15 22:39:32 -0300
+Processing by DomainsController#index as HTML
+  [1m[36mDomain Load (0.3ms)[0m  [1m[34mSELECT "domains".* FROM "domains"[0m
+  ↳ app/controllers/domains_controller.rb:8
+Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/domains/" for 127.0.0.1 at 2020-09-15 22:39:54 -0300
+Processing by DomainsController#create as HTML
+  Parameters: {"description"=>"teste2", "domain"=>{"description"=>"teste2"}}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/domains_controller.rb:20
+  [1m[36mDomain Create (0.2ms)[0m  [1m[32mINSERT INTO "domains" ("description", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["description", "teste2"], ["created_at", "2020-09-16 01:39:54.165446"], ["updated_at", "2020-09-16 01:39:54.165446"]]
+  ↳ app/controllers/domains_controller.rb:20
+  [1m[35m (475.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/domains_controller.rb:20
+Completed 201 Created in 481ms (Views: 1.0ms | ActiveRecord: 475.2ms)
+
+
+Started GET "/domains/" for 127.0.0.1 at 2020-09-15 22:40:05 -0300
+Processing by DomainsController#index as HTML
+  [1m[36mDomain Load (0.1ms)[0m  [1m[34mSELECT "domains".* FROM "domains"[0m
+  ↳ app/controllers/domains_controller.rb:8
+Completed 200 OK in 2ms (Views: 1.9ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/domains/" for 127.0.0.1 at 2020-09-15 22:41:07 -0300
+Processing by DomainsController#create as HTML
+  Parameters: {"description"=>"teste3", "domain"=>{"description"=>"teste3"}}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/domains_controller.rb:20
+  [1m[36mDomain Create (0.2ms)[0m  [1m[32mINSERT INTO "domains" ("description", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["description", "teste3"], ["created_at", "2020-09-16 01:41:07.577046"], ["updated_at", "2020-09-16 01:41:07.577046"]]
+  ↳ app/controllers/domains_controller.rb:20
+  [1m[35m (2.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/domains_controller.rb:20
+Completed 201 Created in 5ms (Views: 0.4ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/domains" for 192.168.10.102 at 2020-09-15 22:41:45 -0300
+Processing by DomainsController#index as */*
+  [1m[36mDomain Load (0.1ms)[0m  [1m[34mSELECT "domains".* FROM "domains"[0m
+  ↳ app/controllers/domains_controller.rb:8
+Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/domains/" for 127.0.0.1 at 2020-09-15 22:41:52 -0300
+Processing by DomainsController#index as HTML
+  [1m[36mDomain Load (0.1ms)[0m  [1m[34mSELECT "domains".* FROM "domains"[0m
+  ↳ app/controllers/domains_controller.rb:8
+Completed 200 OK in 2ms (Views: 1.9ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/domains/" for 127.0.0.1 at 2020-09-15 22:43:00 -0300
+Processing by DomainsController#create as HTML
+  Parameters: {"description"=>"teste4", "domain"=>{"description"=>"teste4"}}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/domains_controller.rb:20
+  [1m[36mDomain Create (0.3ms)[0m  [1m[32mINSERT INTO "domains" ("description", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["description", "teste4"], ["created_at", "2020-09-16 01:43:00.830691"], ["updated_at", "2020-09-16 01:43:00.830691"]]
+  ↳ app/controllers/domains_controller.rb:20
+  [1m[35m (3.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/domains_controller.rb:20
+Completed 201 Created in 11ms (Views: 0.8ms | ActiveRecord: 3.6ms)
+
+
+Started GET "/domains/" for 127.0.0.1 at 2020-09-15 22:43:08 -0300
+Processing by DomainsController#index as HTML
+  [1m[36mDomain Load (0.1ms)[0m  [1m[34mSELECT "domains".* FROM "domains"[0m
+  ↳ app/controllers/domains_controller.rb:8
+Completed 200 OK in 2ms (Views: 2.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/domains/" for 127.0.0.1 at 2020-09-15 22:45:14 -0300
+Processing by DomainsController#index as HTML
+  [1m[36mDomain Load (0.1ms)[0m  [1m[34mSELECT "domains".* FROM "domains"[0m
+  ↳ app/controllers/domains_controller.rb:8
+Completed 200 OK in 2ms (Views: 1.5ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/domains/" for 127.0.0.1 at 2020-09-15 22:46:13 -0300
+Processing by DomainsController#create as HTML
+  Parameters: {"description"=>"teste5", "domain"=>{"description"=>"teste5"}}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/domains_controller.rb:20
+  [1m[36mDomain Create (0.3ms)[0m  [1m[32mINSERT INTO "domains" ("description", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["description", "teste5"], ["created_at", "2020-09-16 01:46:13.905345"], ["updated_at", "2020-09-16 01:46:13.905345"]]
+  ↳ app/controllers/domains_controller.rb:20
+  [1m[35m (2.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/domains_controller.rb:20
+Completed 201 Created in 7ms (Views: 0.4ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/domains/" for 127.0.0.1 at 2020-09-15 22:46:16 -0300
+Processing by DomainsController#index as HTML
+  [1m[36mDomain Load (0.1ms)[0m  [1m[34mSELECT "domains".* FROM "domains"[0m
+  ↳ app/controllers/domains_controller.rb:8
+Completed 200 OK in 2ms (Views: 1.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/domains/" for 127.0.0.1 at 2020-09-15 22:46:52 -0300
+Processing by DomainsController#index as HTML
+  [1m[36mDomain Load (0.1ms)[0m  [1m[34mSELECT "domains".* FROM "domains"[0m
+  ↳ app/controllers/domains_controller.rb:8
+Completed 200 OK in 2ms (Views: 1.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/domains/" for 127.0.0.1 at 2020-09-15 22:46:54 -0300
+Processing by DomainsController#index as HTML
+  [1m[36mDomain Load (0.1ms)[0m  [1m[34mSELECT "domains".* FROM "domains"[0m
+  ↳ app/controllers/domains_controller.rb:8
+Completed 200 OK in 2ms (Views: 1.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/domains/" for 127.0.0.1 at 2020-09-15 22:47:06 -0300
+Processing by DomainsController#index as HTML
+  [1m[36mDomain Load (0.1ms)[0m  [1m[34mSELECT "domains".* FROM "domains"[0m
+  ↳ app/controllers/domains_controller.rb:8
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/domains/" for 127.0.0.1 at 2020-09-15 22:47:24 -0300
+Processing by DomainsController#index as HTML
+  [1m[36mDomain Load (1.1ms)[0m  [1m[34mSELECT "domains".* FROM "domains"[0m
+  ↳ app/controllers/domains_controller.rb:8
+Completed 200 OK in 3ms (Views: 1.6ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/domains/" for 127.0.0.1 at 2020-09-15 22:47:50 -0300
+Processing by DomainsController#index as HTML
+  [1m[36mDomain Load (0.1ms)[0m  [1m[34mSELECT "domains".* FROM "domains"[0m
+  ↳ app/controllers/domains_controller.rb:8
+Completed 200 OK in 2ms (Views: 1.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/domains/" for 127.0.0.1 at 2020-09-15 22:50:03 -0300
+Processing by DomainsController#index as HTML
+  [1m[36mDomain Load (0.1ms)[0m  [1m[34mSELECT "domains".* FROM "domains"[0m
+  ↳ app/controllers/domains_controller.rb:8
+Completed 200 OK in 2ms (Views: 1.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/domains/" for 127.0.0.1 at 2020-09-15 22:50:42 -0300
+Processing by DomainsController#index as HTML
+  [1m[36mDomain Load (0.1ms)[0m  [1m[34mSELECT "domains".* FROM "domains"[0m
+  ↳ app/controllers/domains_controller.rb:8
+Completed 200 OK in 2ms (Views: 1.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/domains" for 192.168.10.102 at 2020-09-15 22:51:32 -0300
+Processing by DomainsController#index as */*
+  [1m[36mDomain Load (0.1ms)[0m  [1m[34mSELECT "domains".* FROM "domains"[0m
+  ↳ app/controllers/domains_controller.rb:8
+Completed 200 OK in 2ms (Views: 2.1ms | ActiveRecord: 0.1ms)
+
+
+Started DELETE "/domains/16" for 192.168.10.102 at 2020-09-15 22:53:13 -0300
+Processing by DomainsController#destroy as */*
+  Parameters: {"id"=>"16"}
+  [1m[36mDomain Load (0.2ms)[0m  [1m[34mSELECT  "domains".* FROM "domains" WHERE "domains"."id" = ? LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/domains_controller.rb:44
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/domains_controller.rb:38
+  [1m[36mDomain Destroy (0.4ms)[0m  [1m[31mDELETE FROM "domains" WHERE "domains"."id" = ?[0m  [["id", 16]]
+  ↳ app/controllers/domains_controller.rb:38
+  [1m[35m (4.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/domains_controller.rb:38
+Completed 204 No Content in 7ms (ActiveRecord: 5.2ms)
+
+
+Started DELETE "/domains/15" for 192.168.10.102 at 2020-09-15 22:53:18 -0300
+Processing by DomainsController#destroy as */*
+  Parameters: {"id"=>"15"}
+  [1m[36mDomain Load (0.1ms)[0m  [1m[34mSELECT  "domains".* FROM "domains" WHERE "domains"."id" = ? LIMIT ?[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/controllers/domains_controller.rb:44
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/domains_controller.rb:38
+  [1m[36mDomain Destroy (0.2ms)[0m  [1m[31mDELETE FROM "domains" WHERE "domains"."id" = ?[0m  [["id", 15]]
+  ↳ app/controllers/domains_controller.rb:38
+  [1m[35m (2.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/domains_controller.rb:38
+Completed 204 No Content in 5ms (ActiveRecord: 2.9ms)
+
+
+Started DELETE "/domains/14" for 192.168.10.102 at 2020-09-15 22:53:20 -0300
+Processing by DomainsController#destroy as */*
+  Parameters: {"id"=>"14"}
+  [1m[36mDomain Load (0.1ms)[0m  [1m[34mSELECT  "domains".* FROM "domains" WHERE "domains"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/domains_controller.rb:44
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/domains_controller.rb:38
+  [1m[36mDomain Destroy (0.1ms)[0m  [1m[31mDELETE FROM "domains" WHERE "domains"."id" = ?[0m  [["id", 14]]
+  ↳ app/controllers/domains_controller.rb:38
+  [1m[35m (4.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/domains_controller.rb:38
+Completed 204 No Content in 6ms (ActiveRecord: 4.4ms)
+
+
+Started DELETE "/domains/13" for 192.168.10.102 at 2020-09-15 22:53:21 -0300
+Processing by DomainsController#destroy as */*
+  Parameters: {"id"=>"13"}
+  [1m[36mDomain Load (0.1ms)[0m  [1m[34mSELECT  "domains".* FROM "domains" WHERE "domains"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/domains_controller.rb:44
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/domains_controller.rb:38
+  [1m[36mDomain Destroy (0.2ms)[0m  [1m[31mDELETE FROM "domains" WHERE "domains"."id" = ?[0m  [["id", 13]]
+  ↳ app/controllers/domains_controller.rb:38
+  [1m[35m (3.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/domains_controller.rb:38
+Completed 204 No Content in 6ms (ActiveRecord: 4.0ms)
+
+
+Started DELETE "/domains/12" for 192.168.10.102 at 2020-09-15 22:53:23 -0300
+Processing by DomainsController#destroy as */*
+  Parameters: {"id"=>"12"}
+  [1m[36mDomain Load (0.1ms)[0m  [1m[34mSELECT  "domains".* FROM "domains" WHERE "domains"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/domains_controller.rb:44
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/domains_controller.rb:38
+  [1m[36mDomain Destroy (0.2ms)[0m  [1m[31mDELETE FROM "domains" WHERE "domains"."id" = ?[0m  [["id", 12]]
+  ↳ app/controllers/domains_controller.rb:38
+  [1m[35m (2.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/domains_controller.rb:38
+Completed 204 No Content in 5ms (ActiveRecord: 3.1ms)
+
+
+Started DELETE "/domains/11" for 192.168.10.102 at 2020-09-15 22:53:26 -0300
+Processing by DomainsController#destroy as */*
+  Parameters: {"id"=>"11"}
+  [1m[36mDomain Load (0.1ms)[0m  [1m[34mSELECT  "domains".* FROM "domains" WHERE "domains"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/domains_controller.rb:44
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/domains_controller.rb:38
+  [1m[36mDomain Destroy (0.2ms)[0m  [1m[31mDELETE FROM "domains" WHERE "domains"."id" = ?[0m  [["id", 11]]
+  ↳ app/controllers/domains_controller.rb:38
+  [1m[35m (4.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/domains_controller.rb:38
+Completed 204 No Content in 6ms (ActiveRecord: 4.5ms)
+
+
+Started DELETE "/domains/10" for 192.168.10.102 at 2020-09-15 22:53:27 -0300
+Processing by DomainsController#destroy as */*
+  Parameters: {"id"=>"10"}
+  [1m[36mDomain Load (0.1ms)[0m  [1m[34mSELECT  "domains".* FROM "domains" WHERE "domains"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/domains_controller.rb:44
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/domains_controller.rb:38
+  [1m[36mDomain Destroy (0.2ms)[0m  [1m[31mDELETE FROM "domains" WHERE "domains"."id" = ?[0m  [["id", 10]]
+  ↳ app/controllers/domains_controller.rb:38
+  [1m[35m (6.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/domains_controller.rb:38
+Completed 204 No Content in 9ms (ActiveRecord: 7.0ms)
+
+
+Started DELETE "/domains/9" for 192.168.10.102 at 2020-09-15 22:53:29 -0300
+Processing by DomainsController#destroy as */*
+  Parameters: {"id"=>"9"}
+  [1m[36mDomain Load (0.1ms)[0m  [1m[34mSELECT  "domains".* FROM "domains" WHERE "domains"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/domains_controller.rb:44
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/domains_controller.rb:38
+  [1m[36mDomain Destroy (0.2ms)[0m  [1m[31mDELETE FROM "domains" WHERE "domains"."id" = ?[0m  [["id", 9]]
+  ↳ app/controllers/domains_controller.rb:38
+  [1m[35m (576.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/domains_controller.rb:38
+Completed 204 No Content in 580ms (ActiveRecord: 576.7ms)
+
+
+Started GET "/domains" for 192.168.10.102 at 2020-09-15 22:53:38 -0300
+Processing by DomainsController#index as */*
+  [1m[36mDomain Load (0.1ms)[0m  [1m[34mSELECT "domains".* FROM "domains"[0m
+  ↳ app/controllers/domains_controller.rb:8
+Completed 200 OK in 1ms (Views: 1.2ms | ActiveRecord: 0.1ms)
+
+
+Started DELETE "/domains/18" for 192.168.10.102 at 2020-09-15 22:53:48 -0300
+Processing by DomainsController#destroy as */*
+  Parameters: {"id"=>"18"}
+  [1m[36mDomain Load (0.1ms)[0m  [1m[34mSELECT  "domains".* FROM "domains" WHERE "domains"."id" = ? LIMIT ?[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/domains_controller.rb:44
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/domains_controller.rb:38
+  [1m[36mDomain Destroy (0.1ms)[0m  [1m[31mDELETE FROM "domains" WHERE "domains"."id" = ?[0m  [["id", 18]]
+  ↳ app/controllers/domains_controller.rb:38
+  [1m[35m (4.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/domains_controller.rb:38
+Completed 204 No Content in 7ms (ActiveRecord: 5.0ms)
+
+
+Started DELETE "/domains/17" for 192.168.10.102 at 2020-09-15 22:53:50 -0300
+Processing by DomainsController#destroy as */*
+  Parameters: {"id"=>"17"}
+  [1m[36mDomain Load (0.1ms)[0m  [1m[34mSELECT  "domains".* FROM "domains" WHERE "domains"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/domains_controller.rb:44
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/domains_controller.rb:38
+  [1m[36mDomain Destroy (0.2ms)[0m  [1m[31mDELETE FROM "domains" WHERE "domains"."id" = ?[0m  [["id", 17]]
+  ↳ app/controllers/domains_controller.rb:38
+  [1m[35m (4.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/domains_controller.rb:38
+Completed 204 No Content in 7ms (ActiveRecord: 5.1ms)
+
+
+Started DELETE "/domains/9" for 192.168.10.102 at 2020-09-15 22:53:53 -0300
+Processing by DomainsController#destroy as */*
+  Parameters: {"id"=>"9"}
+  [1m[36mDomain Load (0.1ms)[0m  [1m[34mSELECT  "domains".* FROM "domains" WHERE "domains"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/domains_controller.rb:44
+Completed 404 Not Found in 0ms (ActiveRecord: 0.1ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Domain with 'id'=9):
+  
+app/controllers/domains_controller.rb:44:in `set_domain'
+Started DELETE "/domains/8" for 192.168.10.102 at 2020-09-15 22:53:56 -0300
+Processing by DomainsController#destroy as */*
+  Parameters: {"id"=>"8"}
+  [1m[36mDomain Load (0.1ms)[0m  [1m[34mSELECT  "domains".* FROM "domains" WHERE "domains"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/domains_controller.rb:44
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/domains_controller.rb:38
+  [1m[36mDomain Destroy (0.2ms)[0m  [1m[31mDELETE FROM "domains" WHERE "domains"."id" = ?[0m  [["id", 8]]
+  ↳ app/controllers/domains_controller.rb:38
+  [1m[35m (4.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/domains_controller.rb:38
+Completed 204 No Content in 7ms (ActiveRecord: 4.8ms)
+
+
+Started DELETE "/domains/7" for 192.168.10.102 at 2020-09-15 22:53:58 -0300
+Processing by DomainsController#destroy as */*
+  Parameters: {"id"=>"7"}
+  [1m[36mDomain Load (0.1ms)[0m  [1m[34mSELECT  "domains".* FROM "domains" WHERE "domains"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/domains_controller.rb:44
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/domains_controller.rb:38
+  [1m[36mDomain Destroy (0.2ms)[0m  [1m[31mDELETE FROM "domains" WHERE "domains"."id" = ?[0m  [["id", 7]]
+  ↳ app/controllers/domains_controller.rb:38
+  [1m[35m (4.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/domains_controller.rb:38
+Completed 204 No Content in 7ms (ActiveRecord: 4.5ms)
+
+
+Started GET "/domains" for 192.168.10.102 at 2020-09-15 22:54:03 -0300
+Processing by DomainsController#index as */*
+  [1m[36mDomain Load (0.1ms)[0m  [1m[34mSELECT "domains".* FROM "domains"[0m
+  ↳ app/controllers/domains_controller.rb:8
+Completed 200 OK in 1ms (Views: 0.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/domains/" for 127.0.0.1 at 2020-09-15 22:54:21 -0300
+Processing by DomainsController#index as HTML
+  [1m[36mDomain Load (0.1ms)[0m  [1m[34mSELECT "domains".* FROM "domains"[0m
+  ↳ app/controllers/domains_controller.rb:8
+Completed 200 OK in 1ms (Views: 0.8ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/domains/" for 127.0.0.1 at 2020-09-15 22:54:34 -0300
+Processing by DomainsController#create as HTML
+  Parameters: {"description"=>"item7", "domain"=>{"description"=>"item7"}}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/domains_controller.rb:20
+  [1m[36mDomain Create (0.2ms)[0m  [1m[32mINSERT INTO "domains" ("description", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["description", "item7"], ["created_at", "2020-09-16 01:54:34.438118"], ["updated_at", "2020-09-16 01:54:34.438118"]]
+  ↳ app/controllers/domains_controller.rb:20
+  [1m[35m (2.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/domains_controller.rb:20
+Completed 201 Created in 6ms (Views: 0.4ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/domains/" for 127.0.0.1 at 2020-09-15 22:54:36 -0300
+Processing by DomainsController#index as HTML
+  [1m[36mDomain Load (0.1ms)[0m  [1m[34mSELECT "domains".* FROM "domains"[0m
+  ↳ app/controllers/domains_controller.rb:8
+Completed 200 OK in 2ms (Views: 1.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/domains" for 192.168.10.102 at 2020-09-15 22:55:04 -0300
+Processing by DomainsController#index as */*
+  [1m[36mDomain Load (0.1ms)[0m  [1m[34mSELECT "domains".* FROM "domains"[0m
+  ↳ app/controllers/domains_controller.rb:8
+Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.1ms)
+
+
+Started DELETE "/domains/19" for 192.168.10.102 at 2020-09-15 22:55:25 -0300
+Processing by DomainsController#destroy as */*
+  Parameters: {"id"=>"19"}
+  [1m[36mDomain Load (0.1ms)[0m  [1m[34mSELECT  "domains".* FROM "domains" WHERE "domains"."id" = ? LIMIT ?[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/controllers/domains_controller.rb:44
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/domains_controller.rb:38
+  [1m[36mDomain Destroy (0.2ms)[0m  [1m[31mDELETE FROM "domains" WHERE "domains"."id" = ?[0m  [["id", 19]]
+  ↳ app/controllers/domains_controller.rb:38
+  [1m[35m (3.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/domains_controller.rb:38
+Completed 204 No Content in 6ms (ActiveRecord: 4.2ms)
+
+
+Started GET "/domains/" for 127.0.0.1 at 2020-09-15 22:55:41 -0300
+Processing by DomainsController#index as HTML
+  [1m[36mDomain Load (0.1ms)[0m  [1m[34mSELECT "domains".* FROM "domains"[0m
+  ↳ app/controllers/domains_controller.rb:8
+Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/domains/" for 127.0.0.1 at 2020-09-15 22:55:55 -0300
+Processing by DomainsController#create as HTML
+  Parameters: {"description"=>"i7", "domain"=>{"description"=>"i7"}}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/domains_controller.rb:20
+  [1m[36mDomain Create (0.4ms)[0m  [1m[32mINSERT INTO "domains" ("description", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["description", "i7"], ["created_at", "2020-09-16 01:55:55.064115"], ["updated_at", "2020-09-16 01:55:55.064115"]]
+  ↳ app/controllers/domains_controller.rb:20
+  [1m[35m (170.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/domains_controller.rb:20
+Completed 201 Created in 177ms (Views: 1.0ms | ActiveRecord: 171.0ms)
+
+
+Started GET "/domains/" for 127.0.0.1 at 2020-09-15 22:55:56 -0300
+Processing by DomainsController#index as HTML
+  [1m[36mDomain Load (0.1ms)[0m  [1m[34mSELECT "domains".* FROM "domains"[0m
+  ↳ app/controllers/domains_controller.rb:8
+Completed 200 OK in 2ms (Views: 1.5ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/domains/" for 127.0.0.1 at 2020-09-15 22:56:01 -0300
+Processing by DomainsController#create as HTML
+  Parameters: {"description"=>"i8", "domain"=>{"description"=>"i8"}}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/domains_controller.rb:20
+  [1m[36mDomain Create (0.1ms)[0m  [1m[32mINSERT INTO "domains" ("description", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["description", "i8"], ["created_at", "2020-09-16 01:56:01.507910"], ["updated_at", "2020-09-16 01:56:01.507910"]]
+  ↳ app/controllers/domains_controller.rb:20
+  [1m[35m (3.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/domains_controller.rb:20
+Completed 201 Created in 6ms (Views: 0.3ms | ActiveRecord: 3.6ms)
+
+
+Started GET "/domains/" for 127.0.0.1 at 2020-09-15 22:56:03 -0300
+Processing by DomainsController#index as HTML
+  [1m[36mDomain Load (0.2ms)[0m  [1m[34mSELECT "domains".* FROM "domains"[0m
+  ↳ app/controllers/domains_controller.rb:8
+Completed 200 OK in 3ms (Views: 2.0ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/domains/" for 127.0.0.1 at 2020-09-15 22:56:07 -0300
+Processing by DomainsController#create as HTML
+  Parameters: {"description"=>"i9", "domain"=>{"description"=>"i9"}}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/domains_controller.rb:20
+  [1m[36mDomain Create (0.5ms)[0m  [1m[32mINSERT INTO "domains" ("description", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["description", "i9"], ["created_at", "2020-09-16 01:56:07.669904"], ["updated_at", "2020-09-16 01:56:07.669904"]]
+  ↳ app/controllers/domains_controller.rb:20
+  [1m[35m (3.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/domains_controller.rb:20
+Completed 201 Created in 9ms (Views: 0.6ms | ActiveRecord: 3.7ms)
+
+
+Started GET "/domains/" for 127.0.0.1 at 2020-09-15 22:56:09 -0300
+Processing by DomainsController#index as HTML
+  [1m[36mDomain Load (0.2ms)[0m  [1m[34mSELECT "domains".* FROM "domains"[0m
+  ↳ app/controllers/domains_controller.rb:8
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/domains/" for 127.0.0.1 at 2020-09-15 22:56:14 -0300
+Processing by DomainsController#create as HTML
+  Parameters: {"description"=>"i10", "domain"=>{"description"=>"i10"}}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/domains_controller.rb:20
+  [1m[36mDomain Create (0.6ms)[0m  [1m[32mINSERT INTO "domains" ("description", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["description", "i10"], ["created_at", "2020-09-16 01:56:14.344729"], ["updated_at", "2020-09-16 01:56:14.344729"]]
+  ↳ app/controllers/domains_controller.rb:20
+  [1m[35m (3.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/domains_controller.rb:20
+Completed 201 Created in 12ms (Views: 0.7ms | ActiveRecord: 4.3ms)
+
+
+Started GET "/domains/" for 127.0.0.1 at 2020-09-15 22:56:15 -0300
+Processing by DomainsController#index as HTML
+  [1m[36mDomain Load (0.3ms)[0m  [1m[34mSELECT "domains".* FROM "domains"[0m
+  ↳ app/controllers/domains_controller.rb:8
+Completed 200 OK in 4ms (Views: 3.0ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/domains/" for 127.0.0.1 at 2020-09-15 22:56:31 -0300
+Processing by DomainsController#create as HTML
+  Parameters: {"description"=>"i11", "domain"=>{"description"=>"i11"}}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/domains_controller.rb:20
+  [1m[36mDomain Create (0.3ms)[0m  [1m[32mINSERT INTO "domains" ("description", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["description", "i11"], ["created_at", "2020-09-16 01:56:31.595258"], ["updated_at", "2020-09-16 01:56:31.595258"]]
+  ↳ app/controllers/domains_controller.rb:20
+  [1m[35m (4.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/domains_controller.rb:20
+Completed 201 Created in 9ms (Views: 0.8ms | ActiveRecord: 4.5ms)
+
+
+Started GET "/domains/" for 127.0.0.1 at 2020-09-15 22:56:32 -0300
+Processing by DomainsController#index as HTML
+  [1m[36mDomain Load (0.1ms)[0m  [1m[34mSELECT "domains".* FROM "domains"[0m
+  ↳ app/controllers/domains_controller.rb:8
+Completed 200 OK in 3ms (Views: 2.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/domains" for 192.168.10.102 at 2020-09-15 22:57:22 -0300
+Processing by DomainsController#index as */*
+  [1m[36mDomain Load (0.1ms)[0m  [1m[34mSELECT "domains".* FROM "domains"[0m
+  ↳ app/controllers/domains_controller.rb:8
+Completed 200 OK in 1ms (Views: 1.2ms | ActiveRecord: 0.1ms)
+
+
+Started DELETE "/domains/20" for 192.168.10.102 at 2020-09-15 22:57:37 -0300
+Processing by DomainsController#destroy as */*
+  Parameters: {"id"=>"20"}
+  [1m[36mDomain Load (0.1ms)[0m  [1m[34mSELECT  "domains".* FROM "domains" WHERE "domains"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ app/controllers/domains_controller.rb:44
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/domains_controller.rb:38
+  [1m[36mDomain Destroy (0.2ms)[0m  [1m[31mDELETE FROM "domains" WHERE "domains"."id" = ?[0m  [["id", 20]]
+  ↳ app/controllers/domains_controller.rb:38
+  [1m[35m (3.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/domains_controller.rb:38
+Completed 204 No Content in 6ms (ActiveRecord: 4.0ms)
+
+
+Started DELETE "/domains/21" for 192.168.10.102 at 2020-09-15 22:57:39 -0300
+Processing by DomainsController#destroy as */*
+  Parameters: {"id"=>"21"}
+  [1m[36mDomain Load (0.1ms)[0m  [1m[34mSELECT  "domains".* FROM "domains" WHERE "domains"."id" = ? LIMIT ?[0m  [["id", 21], ["LIMIT", 1]]
+  ↳ app/controllers/domains_controller.rb:44
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/domains_controller.rb:38
+  [1m[36mDomain Destroy (0.1ms)[0m  [1m[31mDELETE FROM "domains" WHERE "domains"."id" = ?[0m  [["id", 21]]
+  ↳ app/controllers/domains_controller.rb:38
+  [1m[35m (3.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/domains_controller.rb:38
+Completed 204 No Content in 5ms (ActiveRecord: 3.5ms)
+
+
+Started DELETE "/domains/22" for 192.168.10.102 at 2020-09-15 22:57:40 -0300
+Processing by DomainsController#destroy as */*
+  Parameters: {"id"=>"22"}
+  [1m[36mDomain Load (0.1ms)[0m  [1m[34mSELECT  "domains".* FROM "domains" WHERE "domains"."id" = ? LIMIT ?[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/controllers/domains_controller.rb:44
+  [1m[35m (1.7ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/domains_controller.rb:38
+  [1m[36mDomain Destroy (0.1ms)[0m  [1m[31mDELETE FROM "domains" WHERE "domains"."id" = ?[0m  [["id", 22]]
+  ↳ app/controllers/domains_controller.rb:38
+  [1m[35m (3.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/domains_controller.rb:38
+Completed 204 No Content in 8ms (ActiveRecord: 5.6ms)
+
+
+Started DELETE "/domains/23" for 192.168.10.102 at 2020-09-15 22:57:41 -0300
+Processing by DomainsController#destroy as */*
+  Parameters: {"id"=>"23"}
+  [1m[36mDomain Load (0.1ms)[0m  [1m[34mSELECT  "domains".* FROM "domains" WHERE "domains"."id" = ? LIMIT ?[0m  [["id", 23], ["LIMIT", 1]]
+  ↳ app/controllers/domains_controller.rb:44
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/domains_controller.rb:38
+  [1m[36mDomain Destroy (0.2ms)[0m  [1m[31mDELETE FROM "domains" WHERE "domains"."id" = ?[0m  [["id", 23]]
+  ↳ app/controllers/domains_controller.rb:38
+  [1m[35m (3.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/domains_controller.rb:38
+Completed 204 No Content in 6ms (ActiveRecord: 3.9ms)
+
+
+Started DELETE "/domains/24" for 192.168.10.102 at 2020-09-15 22:57:43 -0300
+Processing by DomainsController#destroy as */*
+  Parameters: {"id"=>"24"}
+  [1m[36mDomain Load (0.1ms)[0m  [1m[34mSELECT  "domains".* FROM "domains" WHERE "domains"."id" = ? LIMIT ?[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ app/controllers/domains_controller.rb:44
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/domains_controller.rb:38
+  [1m[36mDomain Destroy (0.2ms)[0m  [1m[31mDELETE FROM "domains" WHERE "domains"."id" = ?[0m  [["id", 24]]
+  ↳ app/controllers/domains_controller.rb:38
+  [1m[35m (3.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/domains_controller.rb:38
+Completed 204 No Content in 6ms (ActiveRecord: 4.2ms)
+
+
+Started DELETE "/domains/25" for 192.168.10.102 at 2020-09-15 22:57:46 -0300
+Processing by DomainsController#destroy as */*
+  Parameters: {"id"=>"25"}
+  [1m[36mDomain Load (0.1ms)[0m  [1m[34mSELECT  "domains".* FROM "domains" WHERE "domains"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/controllers/domains_controller.rb:44
+Completed 404 Not Found in 1ms (ActiveRecord: 0.1ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Domain with 'id'=25):
+  
+app/controllers/domains_controller.rb:44:in `set_domain'
+Started GET "/domains/" for 127.0.0.1 at 2020-09-15 22:57:59 -0300
+Processing by DomainsController#index as HTML
+  [1m[36mDomain Load (0.1ms)[0m  [1m[34mSELECT "domains".* FROM "domains"[0m
+  ↳ app/controllers/domains_controller.rb:8
+Completed 200 OK in 1ms (Views: 0.8ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/domains/" for 127.0.0.1 at 2020-09-15 22:58:05 -0300
+Processing by DomainsController#create as HTML
+  Parameters: {"description"=>"i7", "domain"=>{"description"=>"i7"}}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/domains_controller.rb:20
+  [1m[36mDomain Create (0.2ms)[0m  [1m[32mINSERT INTO "domains" ("description", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["description", "i7"], ["created_at", "2020-09-16 01:58:05.527806"], ["updated_at", "2020-09-16 01:58:05.527806"]]
+  ↳ app/controllers/domains_controller.rb:20
+  [1m[35m (496.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/domains_controller.rb:20
+Completed 201 Created in 499ms (Views: 1.0ms | ActiveRecord: 496.2ms)
+
+
+Started GET "/domains/" for 127.0.0.1 at 2020-09-15 22:58:07 -0300
+Processing by DomainsController#index as HTML
+  [1m[36mDomain Load (0.1ms)[0m  [1m[34mSELECT "domains".* FROM "domains"[0m
+  ↳ app/controllers/domains_controller.rb:8
+Completed 200 OK in 2ms (Views: 1.8ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/domains/" for 127.0.0.1 at 2020-09-15 22:58:11 -0300
+Processing by DomainsController#create as HTML
+  Parameters: {"description"=>"i8", "domain"=>{"description"=>"i8"}}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/domains_controller.rb:20
+  [1m[36mDomain Create (0.6ms)[0m  [1m[32mINSERT INTO "domains" ("description", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["description", "i8"], ["created_at", "2020-09-16 01:58:11.117018"], ["updated_at", "2020-09-16 01:58:11.117018"]]
+  ↳ app/controllers/domains_controller.rb:20
+  [1m[35m (632.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/domains_controller.rb:20
+Completed 201 Created in 641ms (Views: 1.0ms | ActiveRecord: 632.9ms)
+
+
+Started GET "/domains/" for 127.0.0.1 at 2020-09-15 22:58:12 -0300
+Processing by DomainsController#index as HTML
+  [1m[36mDomain Load (0.1ms)[0m  [1m[34mSELECT "domains".* FROM "domains"[0m
+  ↳ app/controllers/domains_controller.rb:8
+Completed 200 OK in 3ms (Views: 3.1ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/domains/" for 127.0.0.1 at 2020-09-15 22:58:16 -0300
+Processing by DomainsController#create as HTML
+  Parameters: {"description"=>"i9", "domain"=>{"description"=>"i9"}}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/domains_controller.rb:20
+  [1m[36mDomain Create (0.1ms)[0m  [1m[32mINSERT INTO "domains" ("description", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["description", "i9"], ["created_at", "2020-09-16 01:58:16.945767"], ["updated_at", "2020-09-16 01:58:16.945767"]]
+  ↳ app/controllers/domains_controller.rb:20
+  [1m[35m (4.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/domains_controller.rb:20
+Completed 201 Created in 6ms (Views: 0.4ms | ActiveRecord: 4.2ms)
+
+
+Started GET "/domains/" for 127.0.0.1 at 2020-09-15 22:58:18 -0300
+Processing by DomainsController#index as HTML
+  [1m[36mDomain Load (0.2ms)[0m  [1m[34mSELECT "domains".* FROM "domains"[0m
+  ↳ app/controllers/domains_controller.rb:8
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/domains/" for 127.0.0.1 at 2020-09-15 22:58:23 -0300
+Processing by DomainsController#create as HTML
+  Parameters: {"description"=>"i10", "domain"=>{"description"=>"i10"}}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/domains_controller.rb:20
+  [1m[36mDomain Create (0.5ms)[0m  [1m[32mINSERT INTO "domains" ("description", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["description", "i10"], ["created_at", "2020-09-16 01:58:23.550275"], ["updated_at", "2020-09-16 01:58:23.550275"]]
+  ↳ app/controllers/domains_controller.rb:20
+  [1m[35m (4.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/domains_controller.rb:20
+Completed 201 Created in 18ms (Views: 1.1ms | ActiveRecord: 5.2ms)
+
+
+Started GET "/domains/" for 127.0.0.1 at 2020-09-15 22:58:25 -0300
+Processing by DomainsController#index as HTML
+  [1m[36mDomain Load (0.2ms)[0m  [1m[34mSELECT "domains".* FROM "domains"[0m
+  ↳ app/controllers/domains_controller.rb:8
+Completed 200 OK in 3ms (Views: 2.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/domains/" for 127.0.0.1 at 2020-09-15 23:00:24 -0300
+Processing by DomainsController#index as HTML
+  [1m[36mDomain Load (0.1ms)[0m  [1m[34mSELECT "domains".* FROM "domains"[0m
+  ↳ app/controllers/domains_controller.rb:8
+Completed 200 OK in 1ms (Views: 1.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/domains" for 192.168.10.102 at 2020-09-15 23:00:32 -0300
+Processing by DomainsController#index as */*
+  [1m[36mDomain Load (0.1ms)[0m  [1m[34mSELECT "domains".* FROM "domains"[0m
+  ↳ app/controllers/domains_controller.rb:8
+Completed 200 OK in 1ms (Views: 1.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/domains/" for 127.0.0.1 at 2020-09-15 23:02:20 -0300
+Processing by DomainsController#index as HTML
+  [1m[36mDomain Load (0.2ms)[0m  [1m[34mSELECT "domains".* FROM "domains"[0m
+  ↳ app/controllers/domains_controller.rb:8
+Completed 200 OK in 3ms (Views: 2.0ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/domains/" for 127.0.0.1 at 2020-09-15 23:02:32 -0300
+Processing by DomainsController#create as HTML
+  Parameters: {"description"=>"i11", "domain"=>{"description"=>"i11"}}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/domains_controller.rb:20
+  [1m[36mDomain Create (0.4ms)[0m  [1m[32mINSERT INTO "domains" ("description", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["description", "i11"], ["created_at", "2020-09-16 02:02:32.274384"], ["updated_at", "2020-09-16 02:02:32.274384"]]
+  ↳ app/controllers/domains_controller.rb:20
+  [1m[35m (3.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/domains_controller.rb:20
+Completed 201 Created in 8ms (Views: 0.4ms | ActiveRecord: 4.4ms)
+
+
+Started GET "/domains/" for 127.0.0.1 at 2020-09-15 23:02:33 -0300
+Processing by DomainsController#index as HTML
+  [1m[36mDomain Load (0.2ms)[0m  [1m[34mSELECT "domains".* FROM "domains"[0m
+  ↳ app/controllers/domains_controller.rb:8
+Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/domains/" for 127.0.0.1 at 2020-09-16 21:53:41 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/douglas/.rvm/gems/ruby-2.7.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+Processing by DomainsController#index as HTML
+  [1m[36mDomain Load (0.8ms)[0m  [1m[34mSELECT "domains".* FROM "domains"[0m
+  ↳ app/controllers/domains_controller.rb:8
+Completed 200 OK in 21ms (Views: 9.1ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/domains/" for 127.0.0.1 at 2020-09-16 21:54:49 -0300
+Processing by DomainsController#index as HTML
+  [1m[36mDomain Load (0.2ms)[0m  [1m[34mSELECT "domains".* FROM "domains"[0m
+  ↳ app/controllers/domains_controller.rb:8
+Completed 200 OK in 3ms (Views: 2.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/domains/" for 127.0.0.1 at 2020-09-16 21:54:51 -0300
+Processing by DomainsController#index as HTML
+  [1m[36mDomain Load (0.2ms)[0m  [1m[34mSELECT "domains".* FROM "domains"[0m
+  ↳ app/controllers/domains_controller.rb:8
+Completed 200 OK in 3ms (Views: 2.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/domains/1/image_classes" for 192.168.10.102 at 2020-09-16 22:00:47 -0300
+Processing by ImageClassesController#index as */*
+  Parameters: {"domain_id"=>"1"}
+  [1m[36mImageClass Load (0.9ms)[0m  [1m[34mSELECT "image_classes".* FROM "image_classes" WHERE "image_classes"."domain_id" = ?[0m  [["domain_id", 1]]
+  ↳ app/controllers/image_classes_controller.rb:13
+Completed 200 OK in 10ms (Views: 5.5ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/domains/" for 127.0.0.1 at 2020-09-17 22:48:26 -0300
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/douglas/.rvm/gems/ruby-2.7.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+Processing by DomainsController#index as HTML
+  [1m[36mDomain Load (2.7ms)[0m  [1m[34mSELECT "domains".* FROM "domains"[0m
+  ↳ app/controllers/domains_controller.rb:8
+Completed 200 OK in 21ms (Views: 10.3ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/domains/1/image_classes" for 127.0.0.1 at 2020-09-17 22:48:36 -0300
+Processing by ImageClassesController#index as HTML
+  Parameters: {"domain_id"=>"1"}
+  [1m[36mImageClass Load (1.6ms)[0m  [1m[34mSELECT "image_classes".* FROM "image_classes" WHERE "image_classes"."domain_id" = ?[0m  [["domain_id", 1]]
+  ↳ app/controllers/image_classes_controller.rb:13
+Completed 200 OK in 13ms (Views: 6.4ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/domains/" for 127.0.0.1 at 2020-09-22 22:25:11 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/douglas/.rvm/gems/ruby-2.7.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+Processing by DomainsController#index as HTML
+  [1m[36mDomain Load (0.5ms)[0m  [1m[34mSELECT "domains".* FROM "domains"[0m
+  ↳ app/controllers/domains_controller.rb:8
+Completed 200 OK in 7ms (Views: 4.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/domains/1/image_classes" for 127.0.0.1 at 2020-09-22 22:25:16 -0300
+Processing by ImageClassesController#index as HTML
+  Parameters: {"domain_id"=>"1"}
+  [1m[36mImageClass Load (0.7ms)[0m  [1m[34mSELECT "image_classes".* FROM "image_classes" WHERE "image_classes"."domain_id" = ?[0m  [["domain_id", 1]]
+  ↳ app/controllers/image_classes_controller.rb:13
+Completed 200 OK in 13ms (Views: 6.6ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/domains/" for 127.0.0.1 at 2020-09-22 22:26:07 -0300
+Processing by DomainsController#index as HTML
+  [1m[36mDomain Load (0.1ms)[0m  [1m[34mSELECT "domains".* FROM "domains"[0m
+  ↳ app/controllers/domains_controller.rb:8
+Completed 200 OK in 2ms (Views: 1.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/domains/1/image_classes" for 127.0.0.1 at 2020-09-22 22:26:09 -0300
+Processing by ImageClassesController#index as HTML
+  Parameters: {"domain_id"=>"1"}
+  [1m[36mImageClass Load (0.1ms)[0m  [1m[34mSELECT "image_classes".* FROM "image_classes" WHERE "image_classes"."domain_id" = ?[0m  [["domain_id", 1]]
+  ↳ app/controllers/image_classes_controller.rb:13
+Completed 200 OK in 1ms (Views: 0.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/domains/" for 127.0.0.1 at 2020-09-22 22:27:27 -0300
+Processing by DomainsController#index as HTML
+  [1m[36mDomain Load (0.1ms)[0m  [1m[34mSELECT "domains".* FROM "domains"[0m
+  ↳ app/controllers/domains_controller.rb:8
+Completed 200 OK in 1ms (Views: 1.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/domains/1/image_classes" for 127.0.0.1 at 2020-09-22 22:27:28 -0300
+Processing by ImageClassesController#index as HTML
+  Parameters: {"domain_id"=>"1"}
+  [1m[36mImageClass Load (0.1ms)[0m  [1m[34mSELECT "image_classes".* FROM "image_classes" WHERE "image_classes"."domain_id" = ?[0m  [["domain_id", 1]]
+  ↳ app/controllers/image_classes_controller.rb:13
+Completed 200 OK in 1ms (Views: 1.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/domains/" for 127.0.0.1 at 2020-09-22 22:28:13 -0300
+Processing by DomainsController#index as HTML
+  [1m[36mDomain Load (0.1ms)[0m  [1m[34mSELECT "domains".* FROM "domains"[0m
+  ↳ app/controllers/domains_controller.rb:8
+Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/domains/1/image_classes" for 127.0.0.1 at 2020-09-22 22:28:14 -0300
+Processing by ImageClassesController#index as HTML
+  Parameters: {"domain_id"=>"1"}
+  [1m[36mImageClass Load (0.1ms)[0m  [1m[34mSELECT "image_classes".* FROM "image_classes" WHERE "image_classes"."domain_id" = ?[0m  [["domain_id", 1]]
+  ↳ app/controllers/image_classes_controller.rb:13
+Completed 200 OK in 1ms (Views: 0.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/domains/" for 127.0.0.1 at 2020-09-22 22:28:16 -0300
+Processing by DomainsController#index as HTML
+  [1m[36mDomain Load (0.1ms)[0m  [1m[34mSELECT "domains".* FROM "domains"[0m
+  ↳ app/controllers/domains_controller.rb:8
+Completed 200 OK in 2ms (Views: 1.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/domains/1/image_classes" for 127.0.0.1 at 2020-09-22 22:28:26 -0300
+Processing by ImageClassesController#index as HTML
+  Parameters: {"domain_id"=>"1"}
+  [1m[36mImageClass Load (0.1ms)[0m  [1m[34mSELECT "image_classes".* FROM "image_classes" WHERE "image_classes"."domain_id" = ?[0m  [["domain_id", 1]]
+  ↳ app/controllers/image_classes_controller.rb:13
+Completed 200 OK in 1ms (Views: 0.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/domains/" for 127.0.0.1 at 2020-09-23 13:16:18 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/douglas/.rvm/gems/ruby-2.7.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+Processing by DomainsController#index as HTML
+  [1m[36mDomain Load (0.4ms)[0m  [1m[34mSELECT "domains".* FROM "domains"[0m
+  ↳ app/controllers/domains_controller.rb:8
+Completed 200 OK in 7ms (Views: 4.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/domains/" for 127.0.0.1 at 2020-09-23 16:51:32 -0300
+Processing by DomainsController#index as HTML
+  [1m[36mDomain Load (0.3ms)[0m  [1m[34mSELECT "domains".* FROM "domains"[0m
+  ↳ app/controllers/domains_controller.rb:8
+Completed 200 OK in 2ms (Views: 1.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/domains/1/image_classes" for 127.0.0.1 at 2020-09-23 16:53:00 -0300
+Processing by ImageClassesController#index as HTML
+Started GET "/domains/" for 127.0.0.1 at 2020-09-23 16:53:02 -0300
+Processing by DomainsController#index as HTML
+  [1m[36mDomain Load (0.1ms)[0m  [1m[34mSELECT "domains".* FROM "domains"[0m
+  ↳ app/controllers/domains_controller.rb:8
+Completed 200 OK in 2ms (Views: 1.5ms | ActiveRecord: 0.1ms)
+
+
+  Parameters: {"domain_id"=>"1"}
+  [1m[36mImageClass Load (4.7ms)[0m  [1m[34mSELECT "image_classes".* FROM "image_classes" WHERE "image_classes"."domain_id" = ?[0m  [["domain_id", 1]]
+  ↳ app/controllers/image_classes_controller.rb:13
+Completed 200 OK in 20ms (Views: 6.0ms | ActiveRecord: 6.9ms)
+
+
+Started GET "/domains/" for 127.0.0.1 at 2020-09-23 16:53:18 -0300
+Processing by DomainsController#index as HTML
+  [1m[36mDomain Load (0.1ms)[0m  [1m[34mSELECT "domains".* FROM "domains"[0m
+  ↳ app/controllers/domains_controller.rb:8
+Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/domains/" for 127.0.0.1 at 2020-09-23 16:53:34 -0300
+Processing by DomainsController#index as HTML
+  [1m[36mDomain Load (0.1ms)[0m  [1m[34mSELECT "domains".* FROM "domains"[0m
+  ↳ app/controllers/domains_controller.rb:8
+Completed 200 OK in 1ms (Views: 1.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/domains/1/image_classes" for 127.0.0.1 at 2020-09-23 16:53:40 -0300
+Processing by ImageClassesController#index as HTML
+  Parameters: {"domain_id"=>"1"}
+  [1m[36mImageClass Load (0.1ms)[0m  [1m[34mSELECT "image_classes".* FROM "image_classes" WHERE "image_classes"."domain_id" = ?[0m  [["domain_id", 1]]
+  ↳ app/controllers/image_classes_controller.rb:13
+Completed 200 OK in 1ms (Views: 0.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/domains/" for 127.0.0.1 at 2020-09-23 16:53:42 -0300
+Processing by DomainsController#index as HTML
+  [1m[36mDomain Load (0.2ms)[0m  [1m[34mSELECT "domains".* FROM "domains"[0m
+  ↳ app/controllers/domains_controller.rb:8
+Completed 200 OK in 3ms (Views: 2.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/domains/1/image_classes" for 192.168.10.102 at 2020-10-05 22:03:38 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/douglas/.rvm/gems/ruby-2.7.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+Processing by ImageClassesController#index as */*
+  Parameters: {"domain_id"=>"1"}
+  [1m[36mImageClass Load (0.7ms)[0m  [1m[34mSELECT "image_classes".* FROM "image_classes" WHERE "image_classes"."domain_id" = ?[0m  [["domain_id", 1]]
+  ↳ app/controllers/image_classes_controller.rb:13
+Completed 200 OK in 10ms (Views: 5.4ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/domains" for 192.168.10.102 at 2020-10-05 22:03:46 -0300
+Processing by DomainsController#index as */*
+  [1m[36mDomain Load (0.9ms)[0m  [1m[34mSELECT "domains".* FROM "domains"[0m
+  ↳ app/controllers/domains_controller.rb:8
+Completed 200 OK in 21ms (Views: 15.5ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/domains/1" for 192.168.10.102 at 2020-10-05 22:05:41 -0300
+Processing by DomainsController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mDomain Load (0.2ms)[0m  [1m[34mSELECT  "domains".* FROM "domains" WHERE "domains"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/domains_controller.rb:44
+Completed 200 OK in 2ms (Views: 0.4ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/domains/1" for 192.168.10.102 at 2020-10-05 22:05:51 -0300
+  
+ActionController::RoutingError (No route matches [POST] "/domains/1"):
+  
+actionpack (5.2.4.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+actionpack (5.2.4.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.3) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.4.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.4.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started PUT "/domains/1" for 192.168.10.102 at 2020-10-05 22:06:03 -0300
+Processing by DomainsController#update as */*
+  Parameters: {"description"=>"Doug", "id"=>"1", "domain"=>{"description"=>"Doug"}}
+  [1m[36mDomain Load (0.1ms)[0m  [1m[34mSELECT  "domains".* FROM "domains" WHERE "domains"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/domains_controller.rb:44
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/domains_controller.rb:29
+  [1m[36mDomain Update (0.3ms)[0m  [1m[33mUPDATE "domains" SET "description" = ?, "updated_at" = ? WHERE "domains"."id" = ?[0m  [["description", "Doug"], ["updated_at", "2020-10-06 01:06:03.085298"], ["id", 1]]
+  ↳ app/controllers/domains_controller.rb:29
+  [1m[35m (3.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/domains_controller.rb:29
+Completed 200 OK in 8ms (Views: 0.2ms | ActiveRecord: 4.3ms)
+
+
+Started GET "/domains/" for 127.0.0.1 at 2020-10-06 22:50:55 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/douglas/.rvm/gems/ruby-2.7.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+Processing by DomainsController#index as HTML
+  [1m[36mDomain Load (0.4ms)[0m  [1m[34mSELECT "domains".* FROM "domains"[0m
+  ↳ app/controllers/domains_controller.rb:8
+Completed 200 OK in 9ms (Views: 5.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/domains/" for 127.0.0.1 at 2020-10-06 22:57:56 -0300
+Processing by DomainsController#index as HTML
+  [1m[36mDomain Load (0.1ms)[0m  [1m[34mSELECT "domains".* FROM "domains"[0m
+  ↳ app/controllers/domains_controller.rb:8
+Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/domains/1/image_classes" for 127.0.0.1 at 2020-10-06 22:58:01 -0300
+Processing by ImageClassesController#index as HTML
+  Parameters: {"domain_id"=>"1"}
+  [1m[36mImageClass Load (285.3ms)[0m  [1m[34mSELECT "image_classes".* FROM "image_classes" WHERE "image_classes"."domain_id" = ?[0m  [["domain_id", 1]]
+  ↳ app/controllers/image_classes_controller.rb:13
+Completed 200 OK in 969ms (Views: 198.4ms | ActiveRecord: 287.0ms)
+
+
+Started POST "/image_classes/" for 127.0.0.1 at 2020-10-06 22:58:19 -0300
+Processing by ImageClassesController#create as HTML
+  Parameters: {"domain_id"=>1, "name"=>"Periquito", "image_class"=>{"name"=>"Periquito", "domain_id"=>1}}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/image_classes_controller.rb:25
+  [1m[36mDomain Load (0.1ms)[0m  [1m[34mSELECT  "domains".* FROM "domains" WHERE "domains"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/image_classes_controller.rb:25
+  [1m[36mImageClass Create (1.1ms)[0m  [1m[32mINSERT INTO "image_classes" ("name", "domain_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Periquito"], ["domain_id", 1], ["created_at", "2020-10-07 01:58:19.921331"], ["updated_at", "2020-10-07 01:58:19.921331"]]
+  ↳ app/controllers/image_classes_controller.rb:25
+  [1m[35m (11.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/image_classes_controller.rb:25
+Completed 201 Created in 27ms (Views: 0.5ms | ActiveRecord: 13.0ms)
+
+
+Started GET "/domains/" for 127.0.0.1 at 2020-10-06 23:07:53 -0300
+Processing by DomainsController#index as HTML
+  [1m[36mDomain Load (0.1ms)[0m  [1m[34mSELECT "domains".* FROM "domains"[0m
+  ↳ app/controllers/domains_controller.rb:8
+Completed 200 OK in 1ms (Views: 1.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/domains/1/image_classes" for 127.0.0.1 at 2020-10-06 23:07:56 -0300
+Processing by ImageClassesController#index as HTML
+  Parameters: {"domain_id"=>"1"}
+  [1m[36mImageClass Load (0.1ms)[0m  [1m[34mSELECT "image_classes".* FROM "image_classes" WHERE "image_classes"."domain_id" = ?[0m  [["domain_id", 1]]
+  ↳ app/controllers/image_classes_controller.rb:13
+Completed 200 OK in 1ms (Views: 0.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/domains/" for 127.0.0.1 at 2020-10-06 23:09:01 -0300
+Processing by DomainsController#index as HTML
+  [1m[36mDomain Load (0.1ms)[0m  [1m[34mSELECT "domains".* FROM "domains"[0m
+  ↳ app/controllers/domains_controller.rb:8
+Completed 200 OK in 2ms (Views: 1.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/domains/1/image_classes" for 127.0.0.1 at 2020-10-06 23:09:03 -0300
+Processing by ImageClassesController#index as HTML
+  Parameters: {"domain_id"=>"1"}
+  [1m[36mImageClass Load (0.2ms)[0m  [1m[34mSELECT "image_classes".* FROM "image_classes" WHERE "image_classes"."domain_id" = ?[0m  [["domain_id", 1]]
+  ↳ app/controllers/image_classes_controller.rb:13
+Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/image_classes/" for 127.0.0.1 at 2020-10-06 23:09:17 -0300
+Processing by ImageClassesController#create as HTML
+  Parameters: {"domain_id"=>1, "name"=>"", "image_class"=>{"name"=>"", "domain_id"=>1}}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/image_classes_controller.rb:25
+  [1m[36mDomain Load (0.3ms)[0m  [1m[34mSELECT  "domains".* FROM "domains" WHERE "domains"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/image_classes_controller.rb:25
+  [1m[36mImageClass Create (0.5ms)[0m  [1m[32mINSERT INTO "image_classes" ("name", "domain_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", ""], ["domain_id", 1], ["created_at", "2020-10-07 02:09:17.078742"], ["updated_at", "2020-10-07 02:09:17.078742"]]
+  ↳ app/controllers/image_classes_controller.rb:25
+  [1m[35m (819.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/image_classes_controller.rb:25
+Completed 201 Created in 839ms (Views: 2.4ms | ActiveRecord: 819.9ms)
+
+
+Started GET "/domains/" for 127.0.0.1 at 2020-10-06 23:09:54 -0300
+Processing by DomainsController#index as HTML
+  [1m[36mDomain Load (0.1ms)[0m  [1m[34mSELECT "domains".* FROM "domains"[0m
+  ↳ app/controllers/domains_controller.rb:8
+Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/domains/2/image_classes" for 127.0.0.1 at 2020-10-06 23:09:57 -0300
+Processing by ImageClassesController#index as HTML
+  Parameters: {"domain_id"=>"2"}
+  [1m[36mImageClass Load (0.1ms)[0m  [1m[34mSELECT "image_classes".* FROM "image_classes" WHERE "image_classes"."domain_id" = ?[0m  [["domain_id", 2]]
+  ↳ app/controllers/image_classes_controller.rb:13
+Completed 200 OK in 2ms (Views: 1.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/domains/" for 127.0.0.1 at 2020-10-06 23:10:40 -0300
+Processing by DomainsController#index as HTML
+  [1m[36mDomain Load (0.1ms)[0m  [1m[34mSELECT "domains".* FROM "domains"[0m
+  ↳ app/controllers/domains_controller.rb:8
+Completed 200 OK in 1ms (Views: 1.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/domains/1/image_classes" for 127.0.0.1 at 2020-10-06 23:10:43 -0300
+Processing by ImageClassesController#index as HTML
+  Parameters: {"domain_id"=>"1"}
+  [1m[36mImageClass Load (0.1ms)[0m  [1m[34mSELECT "image_classes".* FROM "image_classes" WHERE "image_classes"."domain_id" = ?[0m  [["domain_id", 1]]
+  ↳ app/controllers/image_classes_controller.rb:13
+Completed 200 OK in 1ms (Views: 1.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/domains/" for 127.0.0.1 at 2020-10-06 23:12:37 -0300
+Processing by DomainsController#index as HTML
+  [1m[36mDomain Load (0.1ms)[0m  [1m[34mSELECT "domains".* FROM "domains"[0m
+  ↳ app/controllers/domains_controller.rb:8
+Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/domains/1/image_classes" for 127.0.0.1 at 2020-10-06 23:12:39 -0300
+Processing by ImageClassesController#index as HTML
+  Parameters: {"domain_id"=>"1"}
+  [1m[36mImageClass Load (0.1ms)[0m  [1m[34mSELECT "image_classes".* FROM "image_classes" WHERE "image_classes"."domain_id" = ?[0m  [["domain_id", 1]]
+  ↳ app/controllers/image_classes_controller.rb:13
+Completed 200 OK in 2ms (Views: 1.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/domains/" for 127.0.0.1 at 2020-10-06 23:18:56 -0300
+Processing by DomainsController#index as HTML
+  [1m[36mDomain Load (0.1ms)[0m  [1m[34mSELECT "domains".* FROM "domains"[0m
+  ↳ app/controllers/domains_controller.rb:8
+Completed 200 OK in 1ms (Views: 1.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/domains/1/image_classes" for 127.0.0.1 at 2020-10-06 23:18:59 -0300
+Processing by ImageClassesController#index as HTML
+  Parameters: {"domain_id"=>"1"}
+  [1m[36mImageClass Load (0.1ms)[0m  [1m[34mSELECT "image_classes".* FROM "image_classes" WHERE "image_classes"."domain_id" = ?[0m  [["domain_id", 1]]
+  ↳ app/controllers/image_classes_controller.rb:13
+Completed 200 OK in 1ms (Views: 0.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/domains/" for 127.0.0.1 at 2020-10-06 23:20:44 -0300
+Processing by DomainsController#index as HTML
+  [1m[36mDomain Load (0.1ms)[0m  [1m[34mSELECT "domains".* FROM "domains"[0m
+  ↳ app/controllers/domains_controller.rb:8
+Completed 200 OK in 1ms (Views: 1.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/domains/1/image_classes" for 127.0.0.1 at 2020-10-06 23:20:47 -0300
+Processing by ImageClassesController#index as HTML
+  Parameters: {"domain_id"=>"1"}
+  [1m[36mImageClass Load (0.1ms)[0m  [1m[34mSELECT "image_classes".* FROM "image_classes" WHERE "image_classes"."domain_id" = ?[0m  [["domain_id", 1]]
+  ↳ app/controllers/image_classes_controller.rb:13
+Completed 200 OK in 2ms (Views: 1.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/domains/" for 127.0.0.1 at 2020-10-06 23:22:42 -0300
+Processing by DomainsController#index as HTML
+  [1m[36mDomain Load (0.1ms)[0m  [1m[34mSELECT "domains".* FROM "domains"[0m
+  ↳ app/controllers/domains_controller.rb:8
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/domains/1/image_classes" for 127.0.0.1 at 2020-10-06 23:22:45 -0300
+Processing by ImageClassesController#index as HTML
+  Parameters: {"domain_id"=>"1"}
+  [1m[36mImageClass Load (0.1ms)[0m  [1m[34mSELECT "image_classes".* FROM "image_classes" WHERE "image_classes"."domain_id" = ?[0m  [["domain_id", 1]]
+  ↳ app/controllers/image_classes_controller.rb:13
+Completed 200 OK in 1ms (Views: 1.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/domains/" for 127.0.0.1 at 2020-10-06 23:26:30 -0300
+Processing by DomainsController#index as HTML
+  [1m[36mDomain Load (0.1ms)[0m  [1m[34mSELECT "domains".* FROM "domains"[0m
+  ↳ app/controllers/domains_controller.rb:8
+Completed 200 OK in 1ms (Views: 1.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/domains/1/image_classes" for 127.0.0.1 at 2020-10-06 23:26:36 -0300
+Processing by ImageClassesController#index as HTML
+  Parameters: {"domain_id"=>"1"}
+  [1m[36mImageClass Load (0.1ms)[0m  [1m[34mSELECT "image_classes".* FROM "image_classes" WHERE "image_classes"."domain_id" = ?[0m  [["domain_id", 1]]
+  ↳ app/controllers/image_classes_controller.rb:13
+Completed 200 OK in 1ms (Views: 1.0ms | ActiveRecord: 0.1ms)
+
+
+Started PUT "/domains/1" for 127.0.0.1 at 2020-10-06 23:26:45 -0300
+Processing by DomainsController#update as HTML
+  Parameters: {"description"=>"Douglas", "id"=>"1", "domain"=>{"description"=>"Douglas"}}
+  [1m[36mDomain Load (0.1ms)[0m  [1m[34mSELECT  "domains".* FROM "domains" WHERE "domains"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/domains_controller.rb:44
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/domains_controller.rb:29
+  [1m[36mDomain Update (0.1ms)[0m  [1m[33mUPDATE "domains" SET "description" = ?, "updated_at" = ? WHERE "domains"."id" = ?[0m  [["description", "Douglas"], ["updated_at", "2020-10-07 02:26:45.048517"], ["id", 1]]
+  ↳ app/controllers/domains_controller.rb:29
+  [1m[35m (2.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/domains_controller.rb:29
+Completed 200 OK in 7ms (Views: 0.3ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/domains/" for 127.0.0.1 at 2020-10-06 23:28:11 -0300
+Processing by DomainsController#index as HTML
+  [1m[36mDomain Load (0.1ms)[0m  [1m[34mSELECT "domains".* FROM "domains"[0m
+  ↳ app/controllers/domains_controller.rb:8
+Completed 200 OK in 1ms (Views: 1.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/domains/1/image_classes" for 127.0.0.1 at 2020-10-06 23:28:18 -0300
+Processing by ImageClassesController#index as HTML
+  Parameters: {"domain_id"=>"1"}
+  [1m[36mImageClass Load (0.1ms)[0m  [1m[34mSELECT "image_classes".* FROM "image_classes" WHERE "image_classes"."domain_id" = ?[0m  [["domain_id", 1]]
+  ↳ app/controllers/image_classes_controller.rb:13
+Completed 200 OK in 1ms (Views: 0.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/domains/" for 127.0.0.1 at 2020-10-06 23:29:07 -0300
+Processing by DomainsController#index as HTML
+  [1m[36mDomain Load (0.1ms)[0m  [1m[34mSELECT "domains".* FROM "domains"[0m
+  ↳ app/controllers/domains_controller.rb:8
+Completed 200 OK in 1ms (Views: 1.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/domains/" for 127.0.0.1 at 2020-10-06 23:31:19 -0300
+Processing by DomainsController#index as HTML
+  [1m[36mDomain Load (0.3ms)[0m  [1m[34mSELECT "domains".* FROM "domains"[0m
+  ↳ app/controllers/domains_controller.rb:8
+Completed 200 OK in 3ms (Views: 1.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/domains/1/image_classes" for 127.0.0.1 at 2020-10-06 23:31:21 -0300
+Processing by ImageClassesController#index as HTML
+  Parameters: {"domain_id"=>"1"}
+  [1m[36mImageClass Load (0.1ms)[0m  [1m[34mSELECT "image_classes".* FROM "image_classes" WHERE "image_classes"."domain_id" = ?[0m  [["domain_id", 1]]
+  ↳ app/controllers/image_classes_controller.rb:13
+Completed 200 OK in 1ms (Views: 1.1ms | ActiveRecord: 0.1ms)
+
+
+Started PUT "/domains/1" for 127.0.0.1 at 2020-10-06 23:31:33 -0300
+Processing by DomainsController#update as HTML
+  Parameters: {"description"=>"IDK", "id"=>"1", "domain"=>{"description"=>"IDK"}}
+  [1m[36mDomain Load (0.1ms)[0m  [1m[34mSELECT  "domains".* FROM "domains" WHERE "domains"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/domains_controller.rb:44
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/domains_controller.rb:29
+  [1m[36mDomain Update (0.2ms)[0m  [1m[33mUPDATE "domains" SET "description" = ?, "updated_at" = ? WHERE "domains"."id" = ?[0m  [["description", "IDK"], ["updated_at", "2020-10-07 02:31:33.246465"], ["id", 1]]
+  ↳ app/controllers/domains_controller.rb:29
+  [1m[35m (4.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/domains_controller.rb:29
+Completed 200 OK in 13ms (Views: 0.4ms | ActiveRecord: 4.8ms)
+
+
+Started GET "/domains/" for 127.0.0.1 at 2020-10-07 12:08:03 -0300
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/douglas/.rvm/gems/ruby-2.7.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+Processing by DomainsController#index as HTML
+  [1m[36mDomain Load (1.0ms)[0m  [1m[34mSELECT "domains".* FROM "domains"[0m
+  ↳ app/controllers/domains_controller.rb:8
+Completed 200 OK in 20ms (Views: 15.2ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/domains/1/image_classes" for 127.0.0.1 at 2020-10-07 12:08:07 -0300
+Processing by ImageClassesController#index as HTML
+  Parameters: {"domain_id"=>"1"}
+  [1m[36mImageClass Load (0.4ms)[0m  [1m[34mSELECT "image_classes".* FROM "image_classes" WHERE "image_classes"."domain_id" = ?[0m  [["domain_id", 1]]
+  ↳ app/controllers/image_classes_controller.rb:13
+Completed 200 OK in 7ms (Views: 3.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/domains/" for 127.0.0.1 at 2020-10-07 12:09:04 -0300
+Processing by DomainsController#index as HTML
+  [1m[36mDomain Load (0.1ms)[0m  [1m[34mSELECT "domains".* FROM "domains"[0m
+  ↳ app/controllers/domains_controller.rb:8
+Completed 200 OK in 1ms (Views: 1.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/domains/1/image_classes" for 127.0.0.1 at 2020-10-07 12:09:07 -0300
+Processing by ImageClassesController#index as HTML
+  Parameters: {"domain_id"=>"1"}
+  [1m[36mImageClass Load (0.1ms)[0m  [1m[34mSELECT "image_classes".* FROM "image_classes" WHERE "image_classes"."domain_id" = ?[0m  [["domain_id", 1]]
+  ↳ app/controllers/image_classes_controller.rb:13
+Completed 200 OK in 1ms (Views: 0.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/domains/" for 127.0.0.1 at 2020-10-08 23:12:44 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/douglas/.rvm/gems/ruby-2.7.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+Processing by DomainsController#index as HTML
+  [1m[36mDomain Load (0.8ms)[0m  [1m[34mSELECT "domains".* FROM "domains"[0m
+  ↳ app/controllers/domains_controller.rb:8
+Completed 200 OK in 7ms (Views: 4.3ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/domains/1/image_classes" for 127.0.0.1 at 2020-10-08 23:13:08 -0300
+Processing by ImageClassesController#index as HTML
+  Parameters: {"domain_id"=>"1"}
+  [1m[36mImageClass Load (0.5ms)[0m  [1m[34mSELECT "image_classes".* FROM "image_classes" WHERE "image_classes"."domain_id" = ?[0m  [["domain_id", 1]]
+  ↳ app/controllers/image_classes_controller.rb:13
+Completed 200 OK in 7ms (Views: 3.9ms | ActiveRecord: 0.9ms)
+
+
+Started DELETE "/domains/1" for 127.0.0.1 at 2020-10-08 23:13:12 -0300
+Processing by DomainsController#destroy as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mDomain Load (0.2ms)[0m  [1m[34mSELECT  "domains".* FROM "domains" WHERE "domains"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/domains_controller.rb:44
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/domains_controller.rb:38
+  [1m[36mDomain Destroy (0.4ms)[0m  [1m[31mDELETE FROM "domains" WHERE "domains"."id" = ?[0m  [["id", 1]]
+  ↳ app/controllers/domains_controller.rb:38
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/domains_controller.rb:38
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.8ms)
+
+
+  
+ActiveRecord::InvalidForeignKey (SQLite3::ConstraintException: FOREIGN KEY constraint failed: DELETE FROM "domains" WHERE "domains"."id" = ?):
+  
+app/controllers/domains_controller.rb:38:in `destroy'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /usr/share/rvm/rubies/ruby-2.7.0/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /usr/share/rvm/rubies/ruby-2.7.0/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /usr/share/rvm/rubies/ruby-2.7.0/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /usr/share/rvm/rubies/ruby-2.7.0/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /usr/share/rvm/rubies/ruby-2.7.0/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+Started DELETE "/domains/1" for 127.0.0.1 at 2020-10-08 23:18:18 -0300
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/douglas/.rvm/gems/ruby-2.7.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+Processing by DomainsController#destroy as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mDomain Load (0.1ms)[0m  [1m[34mSELECT  "domains".* FROM "domains" WHERE "domains"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/domains_controller.rb:44
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/domains_controller.rb:38
+  [1m[36mImageClass Load (0.2ms)[0m  [1m[34mSELECT "image_classes".* FROM "image_classes" WHERE "image_classes"."domain_id" = ?[0m  [["domain_id", 1]]
+  ↳ app/controllers/domains_controller.rb:38
+  [1m[36mImageClass Destroy (0.5ms)[0m  [1m[31mDELETE FROM "image_classes" WHERE "image_classes"."id" = ?[0m  [["id", 1]]
+  ↳ app/controllers/domains_controller.rb:38
+  [1m[36mImageClass Destroy (0.4ms)[0m  [1m[31mDELETE FROM "image_classes" WHERE "image_classes"."id" = ?[0m  [["id", 2]]
+  ↳ app/controllers/domains_controller.rb:38
+  [1m[36mImageClass Destroy (0.2ms)[0m  [1m[31mDELETE FROM "image_classes" WHERE "image_classes"."id" = ?[0m  [["id", 3]]
+  ↳ app/controllers/domains_controller.rb:38
+  [1m[36mImageClass Destroy (0.2ms)[0m  [1m[31mDELETE FROM "image_classes" WHERE "image_classes"."id" = ?[0m  [["id", 16]]
+  ↳ app/controllers/domains_controller.rb:38
+  [1m[36mImageClass Destroy (0.1ms)[0m  [1m[31mDELETE FROM "image_classes" WHERE "image_classes"."id" = ?[0m  [["id", 17]]
+  ↳ app/controllers/domains_controller.rb:38
+  [1m[36mDomain Destroy (0.1ms)[0m  [1m[31mDELETE FROM "domains" WHERE "domains"."id" = ?[0m  [["id", 1]]
+  ↳ app/controllers/domains_controller.rb:38
+  [1m[35m (3.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/domains_controller.rb:38
+Completed 204 No Content in 46ms (ActiveRecord: 6.2ms)
+
+
+Started GET "/domains/" for 127.0.0.1 at 2020-10-08 23:18:30 -0300
+Processing by DomainsController#index as HTML
+  [1m[36mDomain Load (0.1ms)[0m  [1m[34mSELECT "domains".* FROM "domains"[0m
+  ↳ app/controllers/domains_controller.rb:8
+Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/domains/2/image_classes" for 127.0.0.1 at 2020-10-08 23:18:32 -0300
+Processing by ImageClassesController#index as HTML
+  Parameters: {"domain_id"=>"2"}
+  [1m[36mImageClass Load (0.2ms)[0m  [1m[34mSELECT "image_classes".* FROM "image_classes" WHERE "image_classes"."domain_id" = ?[0m  [["domain_id", 2]]
+  ↳ app/controllers/image_classes_controller.rb:13
+Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.2ms)
+
+
+Started DELETE "/domains/2" for 127.0.0.1 at 2020-10-08 23:18:48 -0300
+Processing by DomainsController#destroy as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mDomain Load (0.2ms)[0m  [1m[34mSELECT  "domains".* FROM "domains" WHERE "domains"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/domains_controller.rb:44
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/domains_controller.rb:38
+  [1m[36mImageClass Load (0.1ms)[0m  [1m[34mSELECT "image_classes".* FROM "image_classes" WHERE "image_classes"."domain_id" = ?[0m  [["domain_id", 2]]
+  ↳ app/controllers/domains_controller.rb:38
+  [1m[36mImageClass Destroy (0.2ms)[0m  [1m[31mDELETE FROM "image_classes" WHERE "image_classes"."id" = ?[0m  [["id", 4]]
+  ↳ app/controllers/domains_controller.rb:38
+  [1m[36mImageClass Destroy (0.0ms)[0m  [1m[31mDELETE FROM "image_classes" WHERE "image_classes"."id" = ?[0m  [["id", 5]]
+  ↳ app/controllers/domains_controller.rb:38
+  [1m[36mImageClass Destroy (0.0ms)[0m  [1m[31mDELETE FROM "image_classes" WHERE "image_classes"."id" = ?[0m  [["id", 6]]
+  ↳ app/controllers/domains_controller.rb:38
+  [1m[36mDomain Destroy (0.1ms)[0m  [1m[31mDELETE FROM "domains" WHERE "domains"."id" = ?[0m  [["id", 2]]
+  ↳ app/controllers/domains_controller.rb:38
+  [1m[35m (569.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/domains_controller.rb:38
+Completed 204 No Content in 576ms (ActiveRecord: 570.4ms)
+
+
+Started GET "/domains/" for 127.0.0.1 at 2020-10-08 23:22:38 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/douglas/.rvm/gems/ruby-2.7.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+Processing by DomainsController#index as HTML
+  [1m[36mDomain Load (0.2ms)[0m  [1m[34mSELECT "domains".* FROM "domains"[0m
+  ↳ app/controllers/domains_controller.rb:8
+Completed 200 OK in 9ms (Views: 6.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/domains/3/image_classes" for 127.0.0.1 at 2020-10-08 23:22:42 -0300
+Processing by ImageClassesController#index as HTML
+  Parameters: {"domain_id"=>"3"}
+  [1m[36mImageClass Load (0.1ms)[0m  [1m[34mSELECT "image_classes".* FROM "image_classes" WHERE "image_classes"."domain_id" = ?[0m  [["domain_id", 3]]
+  ↳ app/controllers/image_classes_controller.rb:13
+Completed 200 OK in 6ms (Views: 3.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/domains/" for 127.0.0.1 at 2020-10-08 23:22:44 -0300
+Processing by DomainsController#index as HTML
+  [1m[36mDomain Load (0.1ms)[0m  [1m[34mSELECT "domains".* FROM "domains"[0m
+  ↳ app/controllers/domains_controller.rb:8
+Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/domains/29/image_classes" for 127.0.0.1 at 2020-10-08 23:22:46 -0300
+Processing by ImageClassesController#index as HTML
+  Parameters: {"domain_id"=>"29"}
+  [1m[36mImageClass Load (0.1ms)[0m  [1m[34mSELECT "image_classes".* FROM "image_classes" WHERE "image_classes"."domain_id" = ?[0m  [["domain_id", 29]]
+  ↳ app/controllers/image_classes_controller.rb:13
+Completed 200 OK in 1ms (Views: 0.5ms | ActiveRecord: 0.1ms)
+
+
+Started DELETE "/domains/29" for 127.0.0.1 at 2020-10-08 23:22:49 -0300
+Processing by DomainsController#destroy as HTML
+  Parameters: {"id"=>"29"}
+  [1m[36mDomain Load (0.2ms)[0m  [1m[34mSELECT  "domains".* FROM "domains" WHERE "domains"."id" = ? LIMIT ?[0m  [["id", 29], ["LIMIT", 1]]
+  ↳ app/controllers/domains_controller.rb:44
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/domains_controller.rb:38
+  [1m[36mImageClass Load (0.1ms)[0m  [1m[34mSELECT "image_classes".* FROM "image_classes" WHERE "image_classes"."domain_id" = ?[0m  [["domain_id", 29]]
+  ↳ app/controllers/domains_controller.rb:38
+  [1m[36mDomain Destroy (0.2ms)[0m  [1m[31mDELETE FROM "domains" WHERE "domains"."id" = ?[0m  [["id", 29]]
+  ↳ app/controllers/domains_controller.rb:38
+  [1m[35m (3.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/domains_controller.rb:38
+Completed 204 No Content in 11ms (ActiveRecord: 3.6ms)
+
+
+Started GET "/domains/" for 127.0.0.1 at 2020-10-08 23:22:54 -0300
+Processing by DomainsController#index as HTML
+  [1m[36mDomain Load (0.1ms)[0m  [1m[34mSELECT "domains".* FROM "domains"[0m
+  ↳ app/controllers/domains_controller.rb:8
+Completed 200 OK in 1ms (Views: 1.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/domains/28/image_classes" for 127.0.0.1 at 2020-10-08 23:22:56 -0300
+Processing by ImageClassesController#index as HTML
+  Parameters: {"domain_id"=>"28"}
+  [1m[36mImageClass Load (0.1ms)[0m  [1m[34mSELECT "image_classes".* FROM "image_classes" WHERE "image_classes"."domain_id" = ?[0m  [["domain_id", 28]]
+  ↳ app/controllers/image_classes_controller.rb:13
+Completed 200 OK in 1ms (Views: 0.5ms | ActiveRecord: 0.1ms)
+
+
+Started DELETE "/domains/28" for 127.0.0.1 at 2020-10-08 23:22:58 -0300
+Processing by DomainsController#destroy as HTML
+  Parameters: {"id"=>"28"}
+  [1m[36mDomain Load (0.1ms)[0m  [1m[34mSELECT  "domains".* FROM "domains" WHERE "domains"."id" = ? LIMIT ?[0m  [["id", 28], ["LIMIT", 1]]
+  ↳ app/controllers/domains_controller.rb:44
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/domains_controller.rb:38
+  [1m[36mImageClass Load (0.0ms)[0m  [1m[34mSELECT "image_classes".* FROM "image_classes" WHERE "image_classes"."domain_id" = ?[0m  [["domain_id", 28]]
+  ↳ app/controllers/domains_controller.rb:38
+  [1m[36mDomain Destroy (0.2ms)[0m  [1m[31mDELETE FROM "domains" WHERE "domains"."id" = ?[0m  [["id", 28]]
+  ↳ app/controllers/domains_controller.rb:38
+  [1m[35m (3.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/domains_controller.rb:38
+Completed 204 No Content in 7ms (ActiveRecord: 4.0ms)
+
+
+Started GET "/domains/" for 127.0.0.1 at 2020-10-08 23:22:58 -0300
+Processing by DomainsController#index as HTML
+  [1m[36mDomain Load (0.1ms)[0m  [1m[34mSELECT "domains".* FROM "domains"[0m
+  ↳ app/controllers/domains_controller.rb:8
+Completed 200 OK in 1ms (Views: 0.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/domains/27/image_classes" for 127.0.0.1 at 2020-10-08 23:22:59 -0300
+Processing by ImageClassesController#index as HTML
+  Parameters: {"domain_id"=>"27"}
+  [1m[36mImageClass Load (0.1ms)[0m  [1m[34mSELECT "image_classes".* FROM "image_classes" WHERE "image_classes"."domain_id" = ?[0m  [["domain_id", 27]]
+  ↳ app/controllers/image_classes_controller.rb:13
+Completed 200 OK in 1ms (Views: 0.4ms | ActiveRecord: 0.1ms)
+
+
+Started DELETE "/domains/27" for 127.0.0.1 at 2020-10-08 23:23:01 -0300
+Processing by DomainsController#destroy as HTML
+  Parameters: {"id"=>"27"}
+  [1m[36mDomain Load (0.1ms)[0m  [1m[34mSELECT  "domains".* FROM "domains" WHERE "domains"."id" = ? LIMIT ?[0m  [["id", 27], ["LIMIT", 1]]
+  ↳ app/controllers/domains_controller.rb:44
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/domains_controller.rb:38
+  [1m[36mImageClass Load (0.0ms)[0m  [1m[34mSELECT "image_classes".* FROM "image_classes" WHERE "image_classes"."domain_id" = ?[0m  [["domain_id", 27]]
+  ↳ app/controllers/domains_controller.rb:38
+  [1m[36mDomain Destroy (0.2ms)[0m  [1m[31mDELETE FROM "domains" WHERE "domains"."id" = ?[0m  [["id", 27]]
+  ↳ app/controllers/domains_controller.rb:38
+  [1m[35m (5.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/domains_controller.rb:38
+Completed 204 No Content in 8ms (ActiveRecord: 5.8ms)
+
+
+Started GET "/domains/" for 127.0.0.1 at 2020-10-08 23:23:01 -0300
+Processing by DomainsController#index as HTML
+  [1m[36mDomain Load (0.1ms)[0m  [1m[34mSELECT "domains".* FROM "domains"[0m
+  ↳ app/controllers/domains_controller.rb:8
+Completed 200 OK in 1ms (Views: 0.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/domains/26/image_classes" for 127.0.0.1 at 2020-10-08 23:23:02 -0300
+Processing by ImageClassesController#index as HTML
+  Parameters: {"domain_id"=>"26"}
+  [1m[36mImageClass Load (0.1ms)[0m  [1m[34mSELECT "image_classes".* FROM "image_classes" WHERE "image_classes"."domain_id" = ?[0m  [["domain_id", 26]]
+  ↳ app/controllers/image_classes_controller.rb:13
+Completed 200 OK in 1ms (Views: 0.6ms | ActiveRecord: 0.1ms)
+
+
+Started DELETE "/domains/26" for 127.0.0.1 at 2020-10-08 23:23:05 -0300
+Processing by DomainsController#destroy as HTML
+  Parameters: {"id"=>"26"}
+  [1m[36mDomain Load (0.1ms)[0m  [1m[34mSELECT  "domains".* FROM "domains" WHERE "domains"."id" = ? LIMIT ?[0m  [["id", 26], ["LIMIT", 1]]
+  ↳ app/controllers/domains_controller.rb:44
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/domains_controller.rb:38
+  [1m[36mImageClass Load (0.1ms)[0m  [1m[34mSELECT "image_classes".* FROM "image_classes" WHERE "image_classes"."domain_id" = ?[0m  [["domain_id", 26]]
+  ↳ app/controllers/domains_controller.rb:38
+  [1m[36mDomain Destroy (0.2ms)[0m  [1m[31mDELETE FROM "domains" WHERE "domains"."id" = ?[0m  [["id", 26]]
+  ↳ app/controllers/domains_controller.rb:38
+  [1m[35m (579.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/domains_controller.rb:38
+Completed 204 No Content in 585ms (ActiveRecord: 580.1ms)
+
+
+Started GET "/domains/" for 127.0.0.1 at 2020-10-08 23:23:05 -0300
+Processing by DomainsController#index as HTML
+  [1m[36mDomain Load (0.1ms)[0m  [1m[34mSELECT "domains".* FROM "domains"[0m
+  ↳ app/controllers/domains_controller.rb:8
+Completed 200 OK in 1ms (Views: 0.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/domains/25/image_classes" for 127.0.0.1 at 2020-10-08 23:23:07 -0300
+Processing by ImageClassesController#index as HTML
+  Parameters: {"domain_id"=>"25"}
+  [1m[36mImageClass Load (0.1ms)[0m  [1m[34mSELECT "image_classes".* FROM "image_classes" WHERE "image_classes"."domain_id" = ?[0m  [["domain_id", 25]]
+  ↳ app/controllers/image_classes_controller.rb:13
+Completed 200 OK in 1ms (Views: 0.4ms | ActiveRecord: 0.1ms)
+
+
+Started DELETE "/domains/25" for 127.0.0.1 at 2020-10-08 23:23:09 -0300
+Processing by DomainsController#destroy as HTML
+  Parameters: {"id"=>"25"}
+  [1m[36mDomain Load (0.1ms)[0m  [1m[34mSELECT  "domains".* FROM "domains" WHERE "domains"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/controllers/domains_controller.rb:44
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/domains_controller.rb:38
+  [1m[36mImageClass Load (0.0ms)[0m  [1m[34mSELECT "image_classes".* FROM "image_classes" WHERE "image_classes"."domain_id" = ?[0m  [["domain_id", 25]]
+  ↳ app/controllers/domains_controller.rb:38
+  [1m[36mDomain Destroy (0.1ms)[0m  [1m[31mDELETE FROM "domains" WHERE "domains"."id" = ?[0m  [["id", 25]]
+  ↳ app/controllers/domains_controller.rb:38
+  [1m[35m (3.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/domains_controller.rb:38
+Completed 204 No Content in 6ms (ActiveRecord: 3.7ms)
+
+
+Started GET "/domains/" for 127.0.0.1 at 2020-10-08 23:23:09 -0300
+Processing by DomainsController#index as HTML
+  [1m[36mDomain Load (0.1ms)[0m  [1m[34mSELECT "domains".* FROM "domains"[0m
+  ↳ app/controllers/domains_controller.rb:8
+Completed 200 OK in 1ms (Views: 0.8ms | ActiveRecord: 0.1ms)
+
+
