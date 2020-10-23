@@ -10,8 +10,10 @@
 /test/tmp/
 /test/version_tmp/
 db/*.sqlite3
-log/*
-tmp/*
+/log/*
+/tmp/*
+!/log/.keep
+!/tmp/.keep
 # Used by dotenv library to load environment variables.
 # .env
 
