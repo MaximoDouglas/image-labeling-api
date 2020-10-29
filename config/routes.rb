@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :images
   resources :image_classes
   
   resources :domains do 

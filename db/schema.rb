@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_09_09_020743) do
+ActiveRecord::Schema.define(version: 2020_10_29_162518) do
 
   create_table "domains", force: :cascade do |t|
     t.string "description"
@@ -24,6 +24,14 @@ ActiveRecord::Schema.define(version: 2020_09_09_020743) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["domain_id"], name: "index_image_classes_on_domain_id"
+  end
+
+  create_table "images", force: :cascade do |t|
+    t.string "url"
+    t.integer "image_class_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["image_class_id"], name: "index_images_on_image_class_id"
   end
 
 end
