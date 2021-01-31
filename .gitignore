@@ -15,7 +15,7 @@ db/*.sqlite3
 ./tmp/*
 .idea/
 !/log/.keep
-!/tmp/.keep
+/tmp/.keep
 # Used by dotenv library to load environment variables.
 # .env
 
