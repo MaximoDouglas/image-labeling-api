@@ -13,6 +13,7 @@ db/*.sqlite3
 /log/*
 /tmp/*
 tmp/
+**/tmp/
 .idea/
 !/log/.keep
 /tmp/.keep
