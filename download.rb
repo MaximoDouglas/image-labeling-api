@@ -5,10 +5,10 @@ def get_args
     OptionParser.new do |opts|
         opts.banner = "Usage: download_images [options]"
         opts.on('-d [ARG]', '--domain [ARG]', "Specify the domain id to download its images") do |v|
-            hash_options[:argument_a] = v
+            hash_options[:domain_id] = v
         end
-        opts.on('-l [ARG]', '--list_domain [ARG]', "To list every possible domain with its id") do |v|
-            hash_options[:argument_b] = v
+        opts.on('-l', '--list_domains', "To list every possible domain with its id") do
+            hash_options[:list_domains] = true
         end
         opts.on('-h', '--help', 'To get the available arguments') do 
             puts opts
@@ -20,4 +20,3 @@ def get_args
 end
 
 args = get_args()
-puts args
