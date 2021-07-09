@@ -7,6 +7,9 @@ def get_args
         opts.on('-d [ARG]', '--domain [ARG]', "Specify the domain id to download its images") do |v|
             hash_options[:domain_id] = v
         end
+        opts.on('-dir [ARG]', '--directory [ARG]', "Root folder to save the downloaded images") do |v|
+            hash_options[:directory] = v
+        end
         opts.on('-l', '--list_domains', "To list every possible domain with its id") do
             hash_options[:list_domains] = true
         end
