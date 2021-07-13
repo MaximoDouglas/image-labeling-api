@@ -1,8 +1,12 @@
 require 'optparse'
+require 'uri'
+require 'net/http'
+require 'json'
 
 DOMAIN_ID_KEY = :domain_id
 FOLDER_KEY = :folder
 LIST_DOMAINS_KEY = :list_domains
+BASE_URL = 'http://127.0.0.1:3000'
 
 def get_args
     hash_options = {}
@@ -27,7 +31,18 @@ def get_args
 end
 
 def list_domains()
-    puts "Listing domains..."
+    uri = URI(BASE_URL+'/domains')
+    response = Net::HTTP.get_response(uri)
+
+    if (response.is_a?(Net::HTTPSuccess))
+        domain_list = JSON.parse(response.body)
+
+        domain_list.each do |domain_object|
+            puts domain_object["id"]
+        end
+    else
+        puts "Resource not found - try again"
+    end
 end
 
 def download_images(domain_id, folder)
