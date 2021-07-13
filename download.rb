@@ -38,7 +38,10 @@ def list_domains()
         domain_list = JSON.parse(response.body)
 
         domain_list.each do |domain_object|
-            puts domain_object["id"]
+            domain_id = String(domain_object['id'])
+            domain_description = domain_object['description']
+
+            puts domain_id + " - " + domain_description
         end
     else
         puts "Resource not found - try again"
