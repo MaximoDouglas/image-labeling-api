@@ -7,8 +7,9 @@ DOMAIN_ID_KEY = :domain_id
 FOLDER_KEY = :folder
 LIST_DOMAINS_KEY = :list_domains
 BASE_URL = 'http://127.0.0.1:3000'
+DOMAINS_END_POINT = '/domains/'
 
-def get_args
+def get_args()
     hash_options = {}
     OptionParser.new do |opts|
         opts.banner = "Usage: download_images [options]"
@@ -31,7 +32,7 @@ def get_args
 end
 
 def list_domains()
-    uri = URI(BASE_URL+'/domains')
+    uri = URI(BASE_URL+DOMAINS_END_POINT)
     response = Net::HTTP.get_response(uri)
 
     if (response.is_a?(Net::HTTPSuccess))
@@ -48,9 +49,41 @@ def list_domains()
     end
 end
 
-def download_images(domain_id, folder)
-    puts "Domain ID: #{domain_id}"
-    puts "Root folder: #{folder}"
+def get_domain(domain_id)
+    uri = URI(BASE_URL+DOMAINS_END_POINT+domain_id)
+    response = Net::HTTP.get_response(uri)
+
+    domain_object = nil
+    if (response.is_a?(Net::HTTPSuccess))
+        domain_object = JSON.parse(response.body)
+    else
+        puts "Resource not found - try again"
+    end
+
+    return domain_object
+end
+
+def download_images(domain_object, folder)
+    puts domain_object['description']
+end
+
+def download_images_gui(domain_id, folder)
+    puts "Input data:"
+    puts "|--- Domain ID: #{domain_id}" 
+    puts "|--- Root folder: #{folder ? folder : "."}"
+
+    puts "Procced with the request? (y/N)"
+    input = gets.chomp
+    
+    if (input == "y")
+        domain_object = get_domain(domain_id)
+
+        if (not domain_object.nil?)
+            download_images(domain_object, folder)
+        end
+    end
+
+    puts "Finish execution"
 end
 
 def handle_args
@@ -63,7 +96,7 @@ def handle_args
     if (is_list_domains)
         list_domains()
     elsif (not domain_id.nil?)
-        download_images(domain_id, folder)
+        download_images_gui(domain_id, folder)
     else
         puts "Please, use valid arguments"
     end
