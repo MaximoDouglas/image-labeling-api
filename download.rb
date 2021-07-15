@@ -2,10 +2,14 @@ require 'optparse'
 require 'uri'
 require 'net/http'
 require 'json'
+require 'fileutils'
+
+DOWNLOADS_FOLDER = './downloads'
 
 DOMAIN_ID_KEY = :domain_id
 FOLDER_KEY = :folder
 LIST_DOMAINS_KEY = :list_domains
+
 BASE_URL = 'http://127.0.0.1:3000'
 DOMAINS_END_POINT = '/domains/'
 
@@ -63,14 +67,30 @@ def get_domain(domain_id)
     return domain_object
 end
 
-def download_images(domain_object, folder)
-    puts domain_object['description']
+def create_dir_if_not_exists(dir_name)
+    unless File.directory?(dir_name)
+        FileUtils.mkdir_p(dir_name)
+    end
 end
 
-def download_images_gui(domain_id, folder)
+def download_images(domain_object, root_folder)
+    domain_id = String(domain_object['id'])
+    domain_description = domain_object['description']
+    
+    domain_folder_path = root_folder + '/' + domain_id + ' - ' + domain_description
+    create_dir_if_not_exists(domain_folder_path)
+end
+
+def build_root_folder_path(folder_name)
+    return folder_name ? DOWNLOADS_FOLDER + '/' + folder_name : DOWNLOADS_FOLDER
+end
+
+def download_images_gui(domain_id, folder_name)
     puts "Input data:"
-    puts "|--- Domain ID: #{domain_id}" 
-    puts "|--- Root folder: #{folder ? folder : "."}"
+    puts "|--- Domain ID: #{domain_id}"
+
+    root_folder = build_root_folder_path(folder_name)
+    puts "|--- Root folder: #{root_folder}"
 
     puts "Procced with the request? (y/N)"
     input = gets.chomp
@@ -79,7 +99,7 @@ def download_images_gui(domain_id, folder)
         domain_object = get_domain(domain_id)
 
         if (not domain_object.nil?)
-            download_images(domain_object, folder)
+            download_images(domain_object, root_folder)
         end
     end
 
