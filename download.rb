@@ -104,9 +104,9 @@ def download_images(domain_object, root_folder)
 
     image_clases.each do |image_class_object|
         image_class_id = String(image_class_object['id'])
-        image_class_description = image_class_object['description']
+        image_class_name = image_class_object['name']
 
-        puts image_class_id + " - " + image_class_description
+        puts image_class_id + " - " + image_class_name
     end
 
     # domain_folder_path = root_folder + '/' + domain_id + ' - ' + domain_description
@@ -134,7 +134,7 @@ def download_images_gui(domain_id, folder_name)
         end
     end
 
-    puts "Finish execution"
+    puts "Finish execution..."
 end
 
 def handle_args
