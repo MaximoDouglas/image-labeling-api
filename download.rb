@@ -12,6 +12,7 @@ LIST_DOMAINS_KEY = :list_domains
 
 BASE_URL = 'http://127.0.0.1:3000'
 DOMAINS_END_POINT = '/domains/'
+IMAGE_CLASSES_END_POINT = '/image_classes/'
 
 def get_args()
     hash_options = {}
@@ -73,12 +74,42 @@ def create_dir_if_not_exists(dir_name)
     end
 end
 
+def get_image_classes_end_point_uri(domain_id)
+    return URI(
+                BASE_URL+
+                DOMAINS_END_POINT+
+                String(domain_id)+
+                IMAGE_CLASSES_END_POINT
+            )
+end
+
+def get_image_classes_by_domain(domain_id)
+    uri = get_image_classes_end_point_uri(domain_id)
+    response = Net::HTTP.get_response(uri)
+
+    domain_list = []
+
+    if (response.is_a?(Net::HTTPSuccess))
+        domain_list = JSON.parse(response.body)
+    end
+    
+    return domain_list
+end
+
 def download_images(domain_object, root_folder)
-    domain_id = String(domain_object['id'])
+    domain_id = domain_object['id']
     domain_description = domain_object['description']
     
-    domain_folder_path = root_folder + '/' + domain_id + ' - ' + domain_description
-    create_dir_if_not_exists(domain_folder_path)
+    image_clases = get_image_classes_by_domain(domain_id)
+
+    image_clases.each do |image_class_object|
+        image_class_id = String(image_class_object['id'])
+        image_class_description = image_class_object['description']
+
+        puts image_class_id + " - " + image_class_description
+    end
+
+    # domain_folder_path = root_folder + '/' + domain_id + ' - ' + domain_description
 end
 
 def build_root_folder_path(folder_name)
