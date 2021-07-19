@@ -96,6 +96,10 @@ def get_image_classes_by_domain(domain_id)
     return domain_list
 end
 
+def download_image_files_by_class(class_id, image_class_folder_path)
+    
+end
+
 def download_images(domain_object, root_folder)
     domain_id = domain_object['id']
     domain_description = domain_object['description']
@@ -103,10 +107,13 @@ def download_images(domain_object, root_folder)
     image_clases = get_image_classes_by_domain(domain_id)
 
     image_clases.each do |image_class_object|
-        image_class_id = String(image_class_object['id'])
-        image_class_name = image_class_object['name']
+        class_id = String(image_class_object['id'])
+        class_name = image_class_object['name']
 
-        puts image_class_id + " - " + image_class_name
+        image_class_folder_path = root_folder + '/' + class_id + '-' + class_name
+        create_dir_if_not_exists(image_class_folder_path)
+
+        download_image_files_by_class(class_id, image_class_folder_path)
     end
 end
 
@@ -139,7 +146,7 @@ def download_images_gui(domain_id, folder_name)
     puts "Finish execution..."
 end
 
-def handle_args
+def handle_args()
     args = get_args()
 
     domain_id = args[DOMAIN_ID_KEY]
