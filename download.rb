@@ -108,19 +108,20 @@ def download_images(domain_object, root_folder)
 
         puts image_class_id + " - " + image_class_name
     end
-
-    # domain_folder_path = root_folder + '/' + domain_id + ' - ' + domain_description
 end
 
-def build_root_folder_path(folder_name)
-    return folder_name ? DOWNLOADS_FOLDER + '/' + folder_name : DOWNLOADS_FOLDER
+def build_root_folder_path(folder_name, domain_object)
+    base_folder = folder_name ? DOWNLOADS_FOLDER + '/' + folder_name : DOWNLOADS_FOLDER
+
+    domain_id = domain_object['id']
+    domain_description = domain_object['description']
+    
+    return base_folder + '/' + domain_id + '-' + domain_description
 end
 
 def download_images_gui(domain_id, folder_name)
     puts "Input data:"
     puts "|--- Domain ID: #{domain_id}"
-
-    root_folder = build_root_folder_path(folder_name)
     puts "|--- Root folder: #{root_folder}"
 
     puts "Procced with the request? (y/N)"
@@ -130,6 +131,7 @@ def download_images_gui(domain_id, folder_name)
         domain_object = get_domain(domain_id)
 
         if (not domain_object.nil?)
+            root_folder = build_root_folder_path(folder_name, domain_object)
             download_images(domain_object, root_folder)
         end
     end
