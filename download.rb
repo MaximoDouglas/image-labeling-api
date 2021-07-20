@@ -96,6 +96,19 @@ def get_image_classes_by_domain(domain_id)
     return domain_list
 end
 
+def get_images_by_class(domain_id)
+    uri = get_image_classes_end_point_uri(domain_id)
+    response = Net::HTTP.get_response(uri)
+
+    domain_list = []
+
+    if (response.is_a?(Net::HTTPSuccess))
+        domain_list = JSON.parse(response.body)
+    end
+    
+    return domain_list
+end
+
 def download_image_files_by_class(class_id, image_class_folder_path)
     
 end

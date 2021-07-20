@@ -24,7 +24,18 @@ namespace :dev do
     }
 
     p "Image classes recorded"
+
+    p "Recording Images"
+
+    ImageClass.all.each { |image_class_instance|
+      3.times do |i|  
+        Image.create!(
+          url: Faker::Internet.url(scheme: 'https'),
+          image_class: image_class_instance
+        )
+      end
+    }
+
+    p "Image classes recorded"
   end
-
-
 end
