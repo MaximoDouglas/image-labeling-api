@@ -30,7 +30,7 @@ namespace :dev do
     ImageClass.all.each { |image_class_instance|
       3.times do |i|  
         Image.create!(
-          url: Faker::Internet.url(scheme: 'https'),
+          url: "https://picsum.photos/200/300",
           image_class: image_class_instance
         )
       end
