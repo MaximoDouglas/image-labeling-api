@@ -13,6 +13,7 @@ LIST_DOMAINS_KEY = :list_domains
 BASE_URL = 'http://127.0.0.1:3000'
 DOMAINS_END_POINT = '/domains/'
 IMAGE_CLASSES_END_POINT = '/image_classes/'
+IMAGES_END_POINT = '/images/'
 
 def get_args()
     hash_options = {}
@@ -96,21 +97,33 @@ def get_image_classes_by_domain(domain_id)
     return domain_list
 end
 
-def get_images_by_class(domain_id)
-    uri = get_image_classes_end_point_uri(domain_id)
+def get_images_by_class_end_point_uri(image_class_id)
+    request_url = URI(
+        BASE_URL+
+        IMAGE_CLASSES_END_POINT+
+        String(image_class_id)+
+        IMAGES_END_POINT
+    )
+
+    return request_url
+end
+
+def get_images_by_class(image_class_id)
+    uri = get_images_by_class_end_point_uri(image_class_id)
     response = Net::HTTP.get_response(uri)
 
-    domain_list = []
+    images_list = []
 
     if (response.is_a?(Net::HTTPSuccess))
-        domain_list = JSON.parse(response.body)
+        images_list = JSON.parse(response.body)
     end
     
-    return domain_list
+    return images_list
 end
 
 def download_image_files_by_class(class_id, image_class_folder_path)
-    
+    puts "----------------"
+    puts get_images_by_class(class_id)
 end
 
 def download_images(domain_object, root_folder)
@@ -136,13 +149,13 @@ def build_root_folder_path(folder_name, domain_object)
     domain_id = domain_object['id']
     domain_description = domain_object['description']
     
-    return base_folder + '/' + domain_id + '-' + domain_description
+    return base_folder + '/' + String(domain_id) + '-' + domain_description
 end
 
 def download_images_gui(domain_id, folder_name)
     puts "Input data:"
     puts "|--- Domain ID: #{domain_id}"
-    puts "|--- Root folder: #{root_folder}"
+    puts "|--- Root folder: #{folder_name}"
 
     puts "Procced with the request? (y/N)"
     input = gets.chomp
