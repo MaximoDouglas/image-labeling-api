@@ -3,8 +3,9 @@ require 'uri'
 require 'net/http'
 require 'json'
 require 'fileutils'
+require "open-uri"
 
-DOWNLOADS_FOLDER = './downloads'
+DOWNLOADS_FOLDER = './downloads/domains'
 
 DOMAIN_ID_KEY = :domain_id
 FOLDER_KEY = :folder
@@ -122,8 +123,21 @@ def get_images_by_class(image_class_id)
 end
 
 def download_image_files_by_class(class_id, image_class_folder_path)
-    puts "----------------"
-    puts get_images_by_class(class_id)
+    images = get_images_by_class(class_id)
+
+    images.each do |image_object|
+        image_id = String(image_object['id'])
+        image_url = image_object['url']
+
+        uri = URI(image_url)
+        save_path = image_class_folder_path + '/' + image_id + '.jpg'
+
+        uri.open do |image|
+            File.open(save_path, "wb") do |file|
+              file.write(image.read)
+            end
+        end
+    end 
 end
 
 def download_images(domain_object, root_folder)
@@ -169,7 +183,7 @@ def download_images_gui(domain_id, folder_name)
         end
     end
 
-    puts "Finish execution..."
+    puts "End of execution..."
 end
 
 def handle_args()
