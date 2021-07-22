@@ -122,8 +122,11 @@ def get_images_by_class(image_class_id)
     return images_list
 end
 
-def download_image_files_by_class(class_id, image_class_folder_path)
-    images = get_images_by_class(class_id)
+def download_image_files_by_class(image_class, image_class_folder_path)
+    puts "Start download for class: #{image_class['name']}"
+    
+    image_class_id = String(image_class['id'])
+    images = get_images_by_class(image_class_id)
 
     images.each do |image_object|
         image_id = String(image_object['id'])
@@ -137,23 +140,26 @@ def download_image_files_by_class(class_id, image_class_folder_path)
               file.write(image.read)
             end
         end
-    end 
+    end
+
+    puts "Finished download for class: #{image_class['name']}"
+    puts "-------"
 end
 
 def download_images(domain_object, root_folder)
     domain_id = domain_object['id']
     domain_description = domain_object['description']
     
-    image_clases = get_image_classes_by_domain(domain_id)
+    image_classes = get_image_classes_by_domain(domain_id)
 
-    image_clases.each do |image_class_object|
+    image_classes.each do |image_class_object|
         class_id = String(image_class_object['id'])
         class_name = image_class_object['name']
 
         image_class_folder_path = root_folder + '/' + class_id + '-' + class_name
         create_dir_if_not_exists(image_class_folder_path)
 
-        download_image_files_by_class(class_id, image_class_folder_path)
+        download_image_files_by_class(image_class_object, image_class_folder_path)
     end
 end
 
@@ -169,7 +175,7 @@ end
 def download_images_gui(domain_id, folder_name)
     puts "Input data:"
     puts "|--- Domain ID: #{domain_id}"
-    puts "|--- Root folder: #{folder_name}"
+    puts "|--- Domain Folder Name: #{folder_name}"
 
     puts "Procced with the request? (y/N)"
     input = gets.chomp
@@ -178,8 +184,15 @@ def download_images_gui(domain_id, folder_name)
         domain_object = get_domain(domain_id)
 
         if (not domain_object.nil?)
-            root_folder = build_root_folder_path(folder_name, domain_object)
-            download_images(domain_object, root_folder)
+            puts "|--- Domain Name: #{domain_object['description']}"
+        
+            puts "Procced with the request? (y/N)"
+            input = gets.chomp
+
+            if (input == "y")
+                root_folder = build_root_folder_path(folder_name, domain_object)
+                download_images(domain_object, root_folder)
+            end            
         end
     end
 
