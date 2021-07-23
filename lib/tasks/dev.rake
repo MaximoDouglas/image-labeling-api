@@ -24,7 +24,18 @@ namespace :dev do
     }
 
     p "Image classes recorded"
+
+    p "Recording Images"
+
+    ImageClass.all.each { |image_class_instance|
+      3.times do |i|  
+        Image.create!(
+          url: "https://picsum.photos/200/300",
+          image_class: image_class_instance
+        )
+      end
+    }
+
+    p "Image classes recorded"
   end
-
-
 end
