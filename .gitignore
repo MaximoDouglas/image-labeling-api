@@ -17,6 +17,8 @@ tmp/*
 .idea/
 !/log/.keep
 /tmp/.keep
+/downloads/*
+downloads/*
 # Used by dotenv library to load environment variables.
 # .env
 
