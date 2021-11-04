@@ -5,7 +5,7 @@
 4. [Running the API](#running-the-api)
 5. Setup and run app - [go to the app repository](https://github.com/MaximoDouglas/image-labeling-app)
 
-This is the Android app side of a project created to facilitate the __data acquisition__ and the __data labelling__ steps for supervised computer vision tasks. 
+This is the API side of a project created to facilitate the __data acquisition__ and the __data labelling__ steps for supervised computer vision tasks. 
 
 You just need to create an image __Domain__ (e.g. **animals**) and its __Classes__ (e.g. **Dog**, **Cat** and **Duck**) to start the labeling.
 
